@@ -1,0 +1,28 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:form="http://www.springframework.org/tags/form"
+          xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes" />
+
+    <jsp:directive.attribute name="path" type="java.lang.String"
+                             required="true" rtexprvalue="true" description="The path of link" />
+    <jsp:directive.attribute name="iconupdate" type="java.lang.String"
+                             required="false" rtexprvalue="true"
+                             description="Include icon 'update' link into table" />
+    <jsp:directive.attribute name="update_label" type="java.lang.String"
+                             required="false" rtexprvalue="true"
+                             description="Include icon 'update' link into table" />
+
+    <c:if test="${empty iconupdate}">
+        <c:set var="iconupdate" value="/resources/images/update.png" />
+    </c:if>
+    <c:if test="${empty update_label}">
+        <c:set var="update_label" value="Update property of application" />
+    </c:if>
+    <spring:url value="${path}" var="update_form_url" />
+    <spring:url value="${iconupdate}" var="update_image_url" />
+    <a href="${update_form_url}" title="${fn:escapeXml(update_label)}">
+        <img src="${update_image_url}" alt="${fn:escapeXml(update_label)}" />
+    </a>
+</jsp:root>

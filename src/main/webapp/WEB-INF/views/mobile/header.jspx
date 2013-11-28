@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <spring:url var="banner" value="/resources/images/logo.png" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="search_url" value="/search" />
+    <spring:url var="login_url" value="/login" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="js_url" value="/resources/js" />
+
+    <header class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <ul class="nav nav-tabs" id="myTabs">
+                <li class="navItem " id="menu">
+                    <a href="http://sohastore.vn/#view-menu" data-toggle="tab">
+                        <i class="navIcon menu"><!----></i>
+                        <div class="navLabel">Menu</div>
+                    </a>
+                </li>
+                <li class="navItem ">
+                    <a id="search" href="${search_url}">
+                        <i class="navIcon search"><!----></i>
+                        <div class="navLabel">Search</div>
+                    </a>
+                </li>
+                <li class="navItem active">
+                    <a id="home" href="${home_url}">
+                        <i class="navIcon home"><!----></i>
+                        <div class="navLabel">Store</div>
+                    </a>
+                </li>
+                <li class="navItem ">
+                    <a id="notification" href="#">
+                        <i class="navIcon notification"><!----></i>
+                        <div class="navLabel">Notification</div>
+                    </a>
+                </li>
+                <li class="navItem ">
+                    <a id="user" href="${login_url}">
+                        <div class="wrapper"><i class="navIcon user"><!----></i></div>
+                        <div class="navLabel">Account</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+</div>

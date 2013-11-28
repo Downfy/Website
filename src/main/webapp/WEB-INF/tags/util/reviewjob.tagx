@@ -1,0 +1,39 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:mtd="http://mangtuyendung.vn/functions"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.tag import="vn.mangtuyendung.common.JobUtils" />
+    <jsp:output omit-xml-declaration="yes" />
+    <jsp:directive.attribute name="id" type="java.lang.String"
+                             required="true" rtexprvalue="true" description="The path of link" />
+    <jsp:directive.attribute name="title" type="java.lang.String"
+                             required="true" rtexprvalue="true" description="The title of link" />
+    <jsp:directive.attribute name="href" type="java.lang.String"
+                             required="false" rtexprvalue="true" description="The title of link" />
+    <jsp:directive.attribute name="label" type="java.lang.String"
+                             required="false" rtexprvalue="true" description="The title of link" />
+    <jsp:directive.attribute name="maxlength" type="java.lang.Integer"
+                             required="false" rtexprvalue="true" description="The title of link" />
+    <jsp:directive.attribute name="escapeXml" type="java.lang.Boolean"
+                             required="false" rtexprvalue="true" description="The title of link" />
+
+    <c:if test="${maxlength == null}">
+        <c:set var="maxlength" value="40"/>
+    </c:if>
+    <c:if test="${escapeXml == null}">
+        <c:set var="escapeXml" value="true"/>
+    </c:if>
+    <c:if test="${href == null}">
+        <c:set var="href" value="${title}"/>
+    </c:if>
+    <c:set var="location" value="Tìm việc làm ${href}"/>
+    <c:set var="url" value="${fn:toLowerCase(mtd:convertURL(location))}"/>
+    <spring:url var="home_url" value="/thanh-vien/tin-tuyen-dung/id-${id}.html" />
+    <a href="${home_url}" title="${href}" target="_blank">
+        <h2 style="font-size: 13px; display: inline; font-weight: normal; line-height: 20px"><c:out value="${label}" /> ${fn:substring(title, 0, maxlength)}</h2>
+        <c:if test="${fn:length(href) > maxlength}">
+            ...
+        </c:if>
+    </a>
+</jsp:root>

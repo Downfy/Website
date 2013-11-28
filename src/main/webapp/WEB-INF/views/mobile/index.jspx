@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+     xmlns:form="urn:jsptagdir:/WEB-INF/tags/form"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+     xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <spring:url var="images" value="/resources/images/" />
+
+    <div class="items">
+        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+            <div class="wrapper">
+                <div class="body">
+                    <div class="wrapper">
+                        <div class="heading">Thời Đại Hắc Ám</div>
+                        <div class="stats clearfix">
+                            <div class="stars">
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                            </div>
+                            <div class="views_number">
+                                <i><!----></i>1</div>
+                        </div>
+                        <div class="sapo">
+                            Đa dạng về hệ thống nhân vật, vật phẩm
+                        </div>
+                    </div>
+                </div>
+                <div class="thumb_wrapper">
+                    <div class="artwork">
+                        <img class="thumb-icon-app" src="${images}/1385373761icon.jpg" alt="Thời Đại Hắc Ám"/>
+                        <span class="mask"><!----></span>
+                    </div>
+                </div>
+                <div class="download">
+                    <div class="button">
+                        Free
+                    </div>
+                </div>
+            </div>
+            <div class="space-line"><!----></div>
+        </a>
+    </div>
+    <div class="items even ">
+        <a href="http://sohastore.vn/ionline-536.html">
+            <div class="wrapper">
+                <div class="body">
+                    <div class="wrapper">
+                        <div class="heading">iOnline</div>
+                        <div class="stats clearfix">
+                            <div class="stars">
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                            </div>
+                            <div class="views_number">
+                                <i><!----></i>25,774</div>
+                        </div>
+                        <div class="sapo">
+                            iOnline- Game online thuần Việt
+                        </div>
+                    </div>
+                </div>
+                <div class="thumb_wrapper">
+                    <div class="artwork">
+                        <img class="thumb-icon-app" src="${images}/1359430298200x200.png" alt="iOnline"/>
+                        <span class="mask"><!----></span>
+                    </div>
+                </div>
+                <div class="download">
+                    <div class="button">
+                        Free
+                    </div>
+                </div>
+            </div>
+            <div class="space-line"><!----></div>
+        </a>
+    </div>
+    <div class="items">
+        <a href="http://sohastore.vn/phong-van-truyen-ky-718.html">
+            <div class="wrapper">
+                <div class="body">
+                    <div class="wrapper">
+                        <div class="heading">Phong Vân Truyền Kỳ</div>
+                        <div class="stats clearfix">
+                            <div class="stars">
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                                <i class="gray_star"><!----></i>
+                            </div>
+                            <div class="views_number">
+                                <i><!----></i>403</div>
+                        </div>
+                        <div class="sapo">
+                            Game Võ Hiệp hay nhất
+                        </div>
+                    </div>
+                </div>
+                <div class="thumb_wrapper">
+                    <div class="artwork">
+                        <img class="thumb-icon-app" src="${images}/13835402792.png" alt="Phong Vân Truyền Kỳ"/>
+                        <span class="mask"><!----></span>
+                    </div>
+                </div>
+                <div class="download">
+                    <div class="button">
+                        Free
+                    </div>
+                </div>
+            </div>
+            <div class="space-line"><!----></div>
+        </a>
+    </div>
+</div>

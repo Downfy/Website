@@ -1,0 +1,49 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <spring:url var="banner" value="/resources/images/logo.png" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="js_url" value="/resources/js" />
+
+    <nav class="navbar navbar-inverse navbar-fixed-top store-nav" role="banner">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="${home_url}" title="Tìm việc làm thêm">
+                        <b class="glyphicon glyphicon-home white"><!----></b> 
+                        <img style="padding-left: 5px" src="${banner}" alt="Tìm việc làm thêm"/>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <c:if test="${pageContext['request'].userPrincipal != null}">
+                    <li>
+                        <spring:url value="/resources/j_spring_security_logout" var="logout"/>
+                        <spring:url value="/thanh-vien.html" var="cv_url" />
+                        <a href="${cv_url}" title="Hồ sơ ứng viên">Hồ sơ ứng viên</a>
+                    </li>
+                    <li>
+                        <a href="${logout}">
+                            Thoát
+                        </a>
+                    </li>
+                </c:if>
+                <c:if test="${pageContext['request'].userPrincipal == null}">
+                    <li>
+                        <spring:url value="/create-account.html" var="register_url" />
+                        <spring:message code="login_form_create_new_account" var="login_form_create_new_account"/>
+                        <a href="${register_url}" title="${login_form_create_new_account}">${login_form_create_new_account}</a>
+                    </li>
+                    <li>
+                        <spring:url value="/login" var="login"/>
+                        <spring:message code="login_form_login" var="login_form_login"/>
+                        <a href="${login}" title="${login_form_login}">${login_form_login}</a>
+                    </li>
+                </c:if>
+            </ul>
+        </div>
+    </nav>
+</div>

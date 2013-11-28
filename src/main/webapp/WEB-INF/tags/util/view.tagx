@@ -1,0 +1,27 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:form="http://www.springframework.org/tags/form"
+          xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes" />
+
+    <jsp:directive.attribute name="path" type="java.lang.String"
+                             required="true" rtexprvalue="true" description="The path of link" />
+    <jsp:directive.attribute name="iconview" type="java.lang.String"
+                             required="false" rtexprvalue="true"
+                             description="Include icon 'view' link into table" />
+    <jsp:directive.attribute name="viewlabel" type="java.lang.String"
+                             required="false" rtexprvalue="true"
+                             description="Include icon 'view' link into table" />
+
+    <c:if test="${empty iconview}">
+        <c:set var="iconview" value="/resources/images/show.png" />
+    </c:if>
+    <c:if test="${empty view_label}">
+        <c:set var="view_label" value="Remove property of application" />
+    </c:if>
+    <spring:url value="${path}" var="view_form_url" />
+    <spring:url value="${iconview}" var="view_image_url" />
+    <a href="${view_form_url}" title="${fn:escapeXml(view_label)}"> <img
+            src="${view_image_url}" alt="${fn:escapeXml(view_label)}" /> </a>
+</jsp:root>

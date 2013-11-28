@@ -1,0 +1,37 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:spring="http://www.springframework.org/tags"
+          xmlns:form="http://www.springframework.org/tags/form"
+          xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:output omit-xml-declaration="yes" />
+
+    <jsp:directive.attribute name="path" type="java.lang.String"
+                             required="true" rtexprvalue="true" description="The path of link" />
+    <jsp:directive.attribute name="icondelete" type="java.lang.String"
+                             required="false" rtexprvalue="true"
+                             description="Include icon 'delete' link into table" />
+
+    <c:if test="${empty icondelete}">
+        <c:set var="icondelete" value="/resources/images/delete.png" />
+    </c:if>
+
+    <c:set var="delete_label" value="Remove property of application" />
+
+    <spring:url value="${path}" var="delete_form_url" />
+    <spring:url value="${icondelete}" var="delete_image_url" />
+    <form:form action="${fn:escapeXml(delete_form_url)}" method="DELETE">
+        <spring:message arguments="${typeName}" code="entity_delete"
+                        var="delete_label" htmlEscape="false" />
+        <c:set var="delete_confirm_msg">
+            <spring:escapeBody javaScriptEscape="true">
+                <spring:message code="entity_delete_confirm" />
+            </spring:escapeBody>
+        </c:set>
+        <input alt="${fn:escapeXml(delete_label)}" class="image"
+               style="max-width: 24px; max-height: 24px;"
+               src="${fn:escapeXml(delete_image_url)}"
+               title="${fn:escapeXml(delete_label)}" type="image"
+               value="${fn:escapeXml(delete_label)}"
+               onclick="return confirm('${delete_confirm_msg}');" />
+    </form:form>
+</jsp:root>

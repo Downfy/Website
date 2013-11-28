@@ -1,0 +1,144 @@
+/** Common style **/
+body {
+    background: #FBFBFB;
+    font-size: 13px;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.clean {
+    clear: both;
+}
+
+span.title-jobs { font-size: 20px; font-weight: normal; line-height: 20px; }
+
+text-normal { font-size: 13px; display: inline; font-weight: normal}
+
+.box {
+    padding: 20px 0 0 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.box-info {
+    background: #DAF2F6;
+    border-top: 2px solid #64C4D5;
+    border-bottom: 1px solid #64C4D5;
+}
+
+.box-error {
+    background: #F2DEDE;
+    border-top: 2px solid #BD362F;
+    border-bottom: 1px solid #BD362F
+;}
+
+.box a.floatbtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.box ul.list-info {
+    float: left;
+    width: 33%;
+}
+
+.box ul.list-info li {
+    color: #666;
+    list-style: disc;
+    font-size: 12px;
+    padding: 0;
+    margin: 0 15px;
+}
+.navbar .nav > li > a {
+    padding: 10px 15px 0px;
+}
+
+.total-jobs {
+    display: inline-block;
+    color: #fff;
+    margin-top: 12px;
+}
+
+ul { list-style-type: none;}
+
+.list-keyword .main { background: #dedede; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; padding: 20px; }
+.list-keyword ul li { float: left; font-size: 11px; padding-right: 5px; }
+.list-keyword ul li a { color: #666; }
+
+.container {
+    width: 1200px !important;
+}
+
+.border-radius {
+    background: #E8E8E8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.border-core {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.border-radius hr {
+    width: 100%;
+}
+/**** End common style ***/
+
+#search {
+    margin-top: 5px;
+}
+
+#footer {
+    background: #303030;
+}
+
+#footer a {
+    color: #999;
+    text-decoration: none !important;
+}
+
+#footer a:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+#footer li {
+    list-style-image: none;
+    list-style: none;
+}
+
+#footer .container {
+    padding: 20px 10px;
+    background: #3A3A3A;
+}
+
+#footer .tit {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#footer p {
+    float: left;
+    padding: 0 25px;
+}
+
+#footer .clearfix {
+    clear: both;
+}
+
+#footer li.list-logo-ft {
+    float: left;
+    height: 38px;
+    width: 38px;
+    overflow: hidden;
+    margin-right: 5px;
+}
