@@ -55,21 +55,17 @@
 
     <body>
         <tiles:insertAttribute name="header"/> 
-        <div class="container-fluid">
-            <div class="mainContent">
-                <div class="pull-left sidebar">
-                    <!--Sidebar content-->
-                    <tiles:insertAttribute name="menu"/>
-                </div>
-                <div class="mainContentWrapper">
-                    <!--Body content-->
-                    <tiles:insertAttribute name="body"/>
-                </div>
+        <div class="mainContent">
+            <div class="pull-left sidebar">
+                <!--Sidebar content-->
+                <tiles:insertAttribute name="menu"/>
             </div>
-            <div class="row">
-                <tiles:insertAttribute name="footer" ignore="true"/>
+            <div class="mainContentWrapper">
+                <!--Body content-->
+                <tiles:insertAttribute name="body"/>
             </div>
         </div>
+        <tiles:insertAttribute name="footer" ignore="true"/>
     </body>
     <!--[if lt IE 9]>
     <script src="${js_path}/css3-mediaqueries.js" type="text/javascript"></script>
