@@ -11,14 +11,14 @@
     </definition>
     
     <definition name="tablet" template="/WEB-INF/layouts/tablet.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/header.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jspx" />
         <put-attribute name="menu" value="/WEB-INF/views/tablet/home/menu.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/footer.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
     </definition>
     
     <definition name="error" template="/WEB-INF/layouts/error.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/header.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/footer.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/error/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/error/footer.jspx" />
     </definition>
 
 </tiles-definitions>

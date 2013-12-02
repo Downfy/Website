@@ -17,25 +17,25 @@
             <ul class="nav nav-tabs" id="myTabs">
                 <li class="navItem " id="menu">
                     <a href="http://sohastore.vn/#view-menu" data-toggle="tab">
-                        <i class="navIcon menu"><!----></i>
+                        <div class="wrapper"><i class="navIcon menu"><!----></i></div>
                         <div class="navLabel">Menu</div>
                     </a>
                 </li>
                 <li class="navItem ">
                     <a id="search" href="${search_url}">
-                        <i class="navIcon search"><!----></i>
+                        <div class="wrapper"><i class="navIcon search"><!----></i></div>
                         <div class="navLabel">Search</div>
                     </a>
                 </li>
                 <li class="navItem active">
                     <a id="home" href="${home_url}">
-                        <i class="navIcon home"><!----></i>
+                        <div class="wrapper"><i class="navIcon home"><!----></i></div>
                         <div class="navLabel">Store</div>
                     </a>
                 </li>
                 <li class="navItem ">
                     <a id="notification" href="#">
-                        <i class="navIcon notification"><!----></i>
+                        <div class="wrapper"><i class="navIcon notification"><!----></i></div>
                         <div class="navLabel">Notification</div>
                     </a>
                 </li>

@@ -9,7 +9,7 @@
     <c:set var="href" value="${fn:escapeXml(href)}" />
     <div class="panel panel-default" id="${id}">
         <div class="panel-heading">
-            <center><b><c:out value="${title}" /></b></center>
+            <center><label><b><c:out value="${title}" /></b></label></center>
         </div>
         <div class="accordion-body">
             <jsp:doBody />

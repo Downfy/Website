@@ -2,30 +2,22 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
 
-    <definition extends="error" name="index">
-        <put-attribute name="body" value="/WEB-INF/views/index.jspx" />
-    </definition>
-
     <definition extends="error" name="dataAccessFailure">
         <put-attribute name="body"
-                       value="/WEB-INF/views/dataAccessFailure.jspx" />
+                       value="/WEB-INF/views/error/dataAccessFailure.jspx" />
     </definition>
 
     <definition extends="error" name="resourceNotFound">
         <put-attribute name="body"
-                       value="/WEB-INF/views/resourceNotFound.jspx" />
+                       value="/WEB-INF/views/error/resourceNotFound.jspx" />
     </definition>
 
     <definition extends="error" name="uncaughtException">
         <put-attribute name="body"
-                       value="/WEB-INF/views/uncaughtException.jspx" />
+                       value="/WEB-INF/views/error/uncaughtException.jspx" />
     </definition>
 
     <definition extends="error" name="accessDenied">
-        <put-attribute name="body" value="/WEB-INF/views/accessDenied.jspx" />
-    </definition>
-
-    <definition extends="error" name="home/login">
-        <put-attribute name="body" value="/WEB-INF/views/tablet/login.jspx" />
+        <put-attribute name="body" value="/WEB-INF/views/error/accessDenied.jspx" />
     </definition>
 </tiles-definitions>

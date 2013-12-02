@@ -17,7 +17,7 @@
         <c:if test="${empty param.login_error}">
             <div class="alert alert-info">
                 <button type="button" class="close" data-dismiss="alert">×</button>
-                <spring:message code="security_login_message" />
+                <label><spring:message code="security_login_message" /></label>
             </div>
         </c:if>
         <spring:url value="/resources/j_spring_security_check" var="form_url" />
@@ -50,17 +50,21 @@
                     <spring:url value="/forgot-password.html" var="lostpassword_url" />
                     <c:out value=" "/>
                     <spring:message code="login_form_forgot_password" var="login_form_forgot_password"/>
-                    <a href="${lostpassword_url}" title="${login_form_forgot_password}" class="sapo">${login_form_forgot_password}?</a>
+                    <label>
+                        <a href="${lostpassword_url}" title="${login_form_forgot_password}" class="sapo">${login_form_forgot_password}?</a>
+                    </label>
                 </div>
             </div>
         </form>
         <c:if test="${empty param.login_error}">
             <div class="alert alert-danger">
-                <spring:message code="login_form_dont_have_account" var="login_form_dont_have_account"/>
-                ${login_form_dont_have_account}: 
-                <spring:url value="/create-account.html" var="register_url" />
-                <spring:message code="login_form_create_new_account" var="login_form_create_new_account"/>
-                <a href="${register_url}" title="${login_form_create_new_account}" class="sapo">${login_form_create_new_account}</a>
+                <label>
+                    <spring:message code="login_form_dont_have_account" var="login_form_dont_have_account"/>
+                    ${login_form_dont_have_account}: 
+                    <spring:url value="/create-account.html" var="register_url" />
+                    <spring:message code="login_form_create_new_account" var="login_form_create_new_account"/>
+                    <a href="${register_url}" title="${login_form_create_new_account}" class="sapo">${login_form_create_new_account}</a>
+                </label>
             </div>
         </c:if>
     </util:panel>

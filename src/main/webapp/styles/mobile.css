@@ -13,7 +13,7 @@ a, a:hover {
 }
 
 i {
-    background: transparent url(../images/sprite_mobile.png) no-repeat 0 0;
+    background: transparent url(../images/mobile/sprite_mobile.png) no-repeat 0 0;
     display: inline-block;
     background-size: 256px 256px;
     -webkit-background-size: 256px 256px;
@@ -22,6 +22,10 @@ i {
 
 [class*="span"] {
     margin: 0;
+}
+
+label {
+    font-size: 12px;
 }
 
 form {
@@ -55,7 +59,7 @@ form {
 
 .hr i {
     height: 3px;
-    background: transparent url(../images/bg/hr.png) no-repeat 0 0;
+    background: transparent url(../images/mobile/hr.png) no-repeat 0 0;
     display: inline-block;
     background-size: 320px 3px;
     -webkit-background-size: 320px 3px;
@@ -394,7 +398,7 @@ header.navbar .nav-tabs li {
 }
 
 div.app_container .dropshadow {
-    background: url("../images/bg/top_app_shadow.png") repeat-x;
+    background: url("../images/mobile/top_app_shadow.png") repeat-x;
     background-size: contain;
     position: absolute;
     top: 0;
@@ -553,7 +557,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-menu div.title span {
-    background: url(../images/icon/arrow.png) no-repeat;
+    background: url(../images/mobile/arrow.png) no-repeat;
     position: absolute;
     width: 8px;
     height: 14px;
@@ -601,7 +605,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-menu .footer {
-    background: url("../images/bg/cat_footer.png") repeat-x;
+    background: url("../images/mobile/cat_footer.png") repeat-x;
     height: 7px;
     background-size: contain;
     position: absolute;
@@ -626,7 +630,7 @@ div.app_container .dropshadow .stars {
 }
 
 .thumb-icon {
-    background: url(../images/category_sprite.png) -310px -124px no-repeat;
+    background: url(../images/mobile/category_sprite.png) -310px -124px no-repeat;
     width: 60px;
     height: 60px;
     border: none;
@@ -703,7 +707,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-detail .btn_download s {
-    background: url("../images/download_arrow.png") no-repeat;
+    background: url("../images/mobile/download_arrow.png") no-repeat;
     width: 33px;
     height: 18px;
     background-size: contain;
@@ -747,7 +751,7 @@ div.app_container .dropshadow .stars {
 
 #download_wrapper .hr i {
     height: 2px;
-    background: url("../images/bg/hr_detail.png") transparent;
+    background: url("../images/mobile/hr_detail.png") transparent;
     background-size: 320px 2px;
 }
 
@@ -778,7 +782,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-detail .tab_metadata_wrapper .nav li.active i {
-    background: url("../images/metadata_tab_arrow.png") no-repeat transparent;
+    background: url("../images/mobile/metadata_tab_arrow.png") no-repeat transparent;
     width: 14px;
     height: 8px;
     background-size: contain;
@@ -949,7 +953,7 @@ div.app_container .dropshadow .stars {
 }
 
 #download_wrapper .download_container {
-    background: url("../images/icon/arrow_right") center right no-repeat transparent;
+    background: url("../images/mobile/arrow_right") center right no-repeat transparent;
     background-size: 10px 14px;
     padding: 10px 0;
     font-size: 1.2em;
@@ -996,12 +1000,12 @@ div.app_container .dropshadow .stars {
 }
 
 #download_link .logo {
-    background: url("../images/icon/download_app_store.png") no-repeat;
+    background: url("../images/mobile/download_app_store.png") no-repeat;
     background-size: contain;
 }
 
 #store_link .logo {
-    background: url("../images/icon/download_sohastore.png") no-repeat;
+    background: url("../images/mobile/download_sohastore.png") no-repeat;
     background-size: contain;
 }
 
@@ -1069,8 +1073,8 @@ div.app_container .dropshadow .stars {
 .items .download {
     margin-top: 19px;
     float: left;
-    width: 60px;
-    margin-left: -65px;
+    width: 55px;
+    margin-left: -55px;
 }
 
 .items .download .button, .user-logout {
@@ -1091,7 +1095,7 @@ div.app_container .dropshadow .stars {
 }
 
 .bg {
-    background: url("../images/bg/sprites.png") repeat-x;
+    background: url("../images/mobile/sprites.png") repeat-x;
     background-size: 11px 256px;
 }
 
@@ -1100,7 +1104,7 @@ div.app_container .dropshadow .stars {
 }
 
 #category-detail .top_bar, .profile .top_bar {
-    background: url("../images/bg/sprites.png") repeat-x;
+    background: url("../images/mobile/sprites.png") repeat-x;
     background-size: 11px 256px;
     height: 47px;
 }
@@ -1153,7 +1157,7 @@ div.app_container .dropshadow .stars {
 }
 
 .top_bar .active div.down_arrow {
-    background: url(../images/tab_active.png) no-repeat center bottom;
+    background: url(../images/mobile/tab_active.png) no-repeat center bottom;
     height: 7px;
     width: 98px;
     display: block;
@@ -1300,126 +1304,6 @@ div.app_container .dropshadow .stars {
     float: left;
 }
 
-#view-menu .thumb-icon-app {
-    width: 30px;
-    height: 30px;
-    background: url(../images/category_sprite.png);
-    background-size: 256px 256px;
-    display: block;
-}
-
-#view-menu .thumb-icon-app.tintuc {
-    background-position: -124px -62px;
-}
-
-#view-menu .thumb-icon-app.hoctap {
-    background-position: -31px -31px;
-}
-
-#view-menu .thumb-icon-app.amnhac {
-    background-position: 0px 0px;
-}
-
-#view-menu .thumb-icon-app.app_giaitri {
-    background-position: -15.5px 0px;
-}
-
-#view-menu .thumb-icon-app.bansung {
-    background-position: -31px 0px;
-}
-
-#view-menu .thumb-icon-app.casino {
-    background-position: -93px 0px
-}
-
-#view-menu .thumb-icon-app.chienthuat {
-    background-position: -124px 0px
-}
-
-#view-menu .thumb-icon-app.dangian {
-    background-position: -155px 0px
-}
-
-#view-menu .thumb-icon-app.foodampdrink {
-    background-position: -186px 0px
-}
-
-#view-menu .thumb-icon-app.giaitri {
-    background-position: -217px 0px
-}
-
-#view-menu .thumb-icon-app.hanhdong {
-    background-position: 0px -31px
-}
-
-#view-menu .thumb-icon-app.kinhdien {
-    background-position: -62px -31px
-}
-
-#view-menu .thumb-icon-app.kinhdoanh {
-    background-position: -93px -31px
-}
-
-#view-menu .thumb-icon-app.mophong {
-    background-position: -62px -93px
-}
-
-#view-menu .thumb-icon-app.nhanong {
-    background-position: -124px -31px
-}
-
-#view-menu .thumb-icon-app.nhapvai {
-    background-position: -155px -31px
-}
-
-#view-menu .thumb-icon-app.photo {
-    background-position: -186px -31px
-}
-
-#view-menu .thumb-icon-app.quanly {
-    background-position: -217px -31px
-}
-
-#view-menu .thumb-icon-app.sach {
-    background-position: 0px -62px
-}
-
-#view-menu .thumb-icon-app.suckhoe {
-    background-position: -31px -62px
-}
-
-#view-menu .thumb-icon-app.thethao {
-    background-position: -62px -62px
-}
-
-#view-menu .thumb-icon-app.tienich {
-    background-position: -93px -62px
-}
-
-#view-menu .thumb-icon-app.tocdo {
-    background-position: -155px -62px
-}
-
-#view-menu .thumb-icon-app.tritue {
-    background-position: -186px -62px
-}
-
-#view-menu .thumb-icon-app.gametuongtac {
-    background-position: -217px -62px;
-}
-
-#view-menu .thumb-icon-app.gameviet100 {
-    background-position: 0px -93px
-}
-
-#view-menu .thumb-icon-app.xaydung {
-    background-position: -31px -93px
-}
-
-#view-menu .thumb-icon-app.photovideo {
-    background-position: -186px -35px
-}
-
 #view-menu .artwork {
     width: 32px;
     height: 32px;
@@ -1428,7 +1312,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-menu .artwork .mask {
-    background: url(../images/bg/mask_odd.png) no-repeat;
+    background: url(../images/mobile/mask_odd.png) no-repeat;
     display: block;
     width: 32px;
     height: 32px;
@@ -1440,7 +1324,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-menu .artwork  .even .mask {
-    background: url(../images/bg/mask_even.png) no-repeat;
+    background: url(../images/mobile/mask_even.png) no-repeat;
     display: block;
     width: 32px;
     height: 32px;
@@ -1452,7 +1336,7 @@ div.app_container .dropshadow .stars {
 }
 
 .items .artwork .mask, #view-home .artwork .mask {
-    background: url(../images/bg/mask_odd.png) no-repeat;
+    background: url(../images/mobile/mask_odd.png) no-repeat;
     display: block;
     width: 52px;
     height: 52px;
@@ -1469,7 +1353,7 @@ div.app_container .dropshadow .stars {
 }
 
 #view-detail .artwork .mask {
-    background: url(../images/bg/mask_odd.png) no-repeat;
+    background: url(../images/mobile/mask_odd.png) no-repeat;
     display: block;
     width: 64px;
     height: 64px;
@@ -1502,7 +1386,7 @@ div.artwork::after {
     padding: 5px 0;
 }
 
-.breadcrums i {;
+.breadcrums i {
                margin: 0 5px;
                padding-top: 2px;
                width: 3px;
@@ -1549,7 +1433,7 @@ div.artwork::after {
 }
 
 #home .box_title i.bar {
-    background: url("../images/bg/top_bar_home.png");
+    background: url("../images/mobile/top_bar_home.png");
     background-size: 324px 10px;
     display: block;
     height: 10px;
@@ -1598,152 +1482,6 @@ div.artwork::after {
 
 .header-autotoggler-hide-slide {
     top: -75px !important
-}
-
-#facebox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 102;
-    text-align: left;
-    width: 90%;
-}
-
-#facebox .popup {
-    position: relative;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
-    /* overflow: hidden; */
-    min-height: 200px;
-    min-width: 300px;
-    background-color: #EBEBEB;
-}
-
-#facebox .faceboxContent {
-    display: table;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin-left: 0;
-    width: 100%;
-    background: #F3F3F3;
-}
-
-#facebox .loading {
-    position: absolute;
-    left: 125px;
-    top: 110px;
-}
-
-#facebox .content > p:first-child {
-    margin-top: 0;
-}
-
-#facebox .content > p:last-child {
-    margin-bottom: 0;
-}
-
-#facebox .close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    opacity: 1;
-}
-
-#facebox .close img {
-    opacity: 1;
-}
-
-#facebox .loading {
-    text-align: center;
-}
-
-#facebox .image {
-    text-align: center;
-}
-
-#facebox img {
-    border: 0;
-    margin: 0;
-}
-
-#facebox_overlay {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-}
-
-.facebox_hide {
-    z-index: -100;
-}
-
-.facebox_overlayBG {
-    background-color: #000;
-    z-index: 101;
-}
-
-#facebox .button {
-    margin-top: 15px;
-    font-weight: bold;
-    border: 1px solid #885300;
-    padding: 7px 40px;
-    margin: 15px auto 0;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 14px;
-    text-shadow: 1px 1px 1px #ba6200;
-    background: #ffbb00; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffbb00 0%, #ffbb00 3%, #ff9000 34%, #ff9000 63%, #ff9a00 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffbb00), color-stop(3%, #ffbb00), color-stop(34%, #ff9000), color-stop(63%, #ff9000), color-stop(100%, #ff9a00)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #ffbb00 0%, #ffbb00 3%, #ff9000 34%, #ff9000 63%, #ff9a00 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #ffbb00 0%, #ffbb00 3%, #ff9000 34%, #ff9000 63%, #ff9a00 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #ffbb00 0%, #ffbb00 3%, #ff9000 34%, #ff9000 63%, #ff9a00 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #ffbb00 0%, #ffbb00 3%, #ff9000 34%, #ff9000 63%, #ff9a00 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffbb00', endColorstr = '#ff9a00', GradientType = 0); /* IE6-9 */
-}
-
-#facebox .button a {
-    color: #FFF;
-    font-size: 14px;
-}
-
-#facebox .iconConfirm {
-    background: url("../images/facebox/confirm.png") no-repeat;
-    margin: 0 auto 15px;
-    width: 99px;
-    height: 99px;
-}
-
-#facebox .iconError {
-    background: url("../images/facebox/error.png") no-repeat;
-    margin: 0 auto 15px;
-    width: 99px;
-    height: 99px;
-}
-
-#facebox #confirm_paid {
-    color: #FFF;
-    font-size: 14px;
-    text-shadow: 1px 1px 1px #008525;
-    border: 1px solid #219d48;
-    background: #00d751; /* Old browsers */
-    background: -moz-linear-gradient(top, #00d751 1%, #00b833 36%, #00b833 67%, #00c13c 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #00d751), color-stop(36%, #00b833), color-stop(67%, #00b833), color-stop(100%, #00c13c)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #00d751 1%, #00b833 36%, #00b833 67%, #00c13c 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #00d751 1%, #00b833 36%, #00b833 67%, #00c13c 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #00d751 1%, #00b833 36%, #00b833 67%, #00c13c 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #00d751 1%, #00b833 36%, #00b833 67%, #00c13c 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00d751', endColorstr = '#00c13c', GradientType = 0); /* IE6-9 */
-}
-
-#facebox span {
-    font-size: 14px;
 }
 
 #help p {
@@ -1857,7 +1595,7 @@ div.rateit div.rateit-range {
     position: relative;
     display: -moz-inline-box;
     display: inline-block;
-    background: url(../images/icon/star.gif);
+    background: url(../images/mobile/star.gif);
     height: 16px;
 }
 
@@ -1882,7 +1620,7 @@ div.rateit div.rateit-hover-rtl, div.rateit div.rateit-selected-rtl {
 }
 
 div.rateit div.rateit-hover {
-    background: url(../images/icon/star.gif) left -32px;
+    background: url(../images/mobile/star.gif) left -32px;
 }
 
 div.rateit div.rateit-hover-rtl {
@@ -1890,7 +1628,7 @@ div.rateit div.rateit-hover-rtl {
 }
 
 div.rateit div.rateit-selected {
-    background: url(../images/icon/star.gif) left -32px;
+    background: url(../images/mobile/star.gif) left -32px;
 }
 
 div.rateit div.rateit-selected-rtl {
@@ -1898,11 +1636,11 @@ div.rateit div.rateit-selected-rtl {
 }
 
 div.rateit div.rateit-preset {
-    background: url(../images/icon/star.gif) left -48px;
+    background: url(../images/mobile/star.gif) left -48px;
 }
 
 div.rateit div.rateit-preset-rtl {
-    background: url(../images/icon/star.gif) left -48px;
+    background: url(../images/mobile/star.gif) left -48px;
 }
 
 div.rateit div.rateit-reset:hover {
@@ -2000,7 +1738,7 @@ div.rateit div.rateit-reset:hover {
 }
 
 .icon-next {
-    background: url(../images/sprite.png) -282px -26px no-repeat;
+    background: url(../images/mobile/sprite.png) -282px -26px no-repeat;
     display: inline-block;
     width: 8px;
     height: 12px;
@@ -2012,7 +1750,7 @@ div.rateit div.rateit-reset:hover {
 }
 
 .icon-prev {
-    background: url(../images/icon/icon-prev.png) 0 1px no-repeat;
+    background: url(../images/mobile/icon-prev.png) 0 1px no-repeat;
     display: inline-block;
     width: 8px;
     height: 12px;

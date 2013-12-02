@@ -9,7 +9,150 @@
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
-    <spring:url var="images" value="/resources/images/" />
-    
-    Tablet
+    <spring:url var="images" value="/resources/images" />
+    <div class="contentContainer">
+        <div class="app-container">
+            <div class="app-wrapper">
+                <div class="heading">
+                    <div class="border-heading">
+                        <span class="icon-new"><!----></span>
+                        <span>Ứng dụng mới</span>
+                        <a href="http://sohastore.vn/chuyen-muc/moi-nhat-p1.html">Xem tất cả<i class="icon-right-arrow"><!----></i></a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="list-apps">
+                        <div class="app-detail pull-left">
+                            <div class="wrapper">
+                                <div class="thumb pull-left">
+                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                        <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
+                                        <span class="mask"><!----></span>
+                                    </a>
+                                </div>
+                                <div class="infos-app pull-left">
+                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                        <h3 class="name-app">
+                                            Thời Đại Hắc Ám
+                                        </h3>
+                                    </a>
+
+                                    <div class="cat-name">
+                                        Hành động
+                                    </div>
+                                    <div class="stars">
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                    </div>
+                                    <div class="view">
+                                        <i class="icon-view"><!----></i>
+                                        29
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-detail pull-left">
+                            <div class="wrapper">
+                                <div class="thumb pull-left">
+                                    <a href="http://sohastore.vn/ionline-536.html">
+                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <span class="mask"><!----></span>
+                                    </a>
+                                </div>
+                                <div class="infos-app pull-left">
+                                    <a href="http://sohastore.vn/ionline-536.html">
+                                        <h3 class="name-app">
+                                            iOnline
+                                        </h3>
+                                    </a>
+
+                                    <div class="cat-name">
+                                        Dân gian
+                                    </div>
+                                    <div class="stars">
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                    </div>
+                                    <div class="view">
+                                        <i class="icon-view"><!----></i>
+                                        25.829
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-detail pull-left">
+                            <div class="wrapper">
+                                <div class="thumb pull-left">
+                                    <a href="http://sohastore.vn/soi-cau-xo-so-720.html">
+                                        <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
+                                        <span class="mask"><!----></span>
+                                    </a>
+                                </div>
+                                <div class="infos-app pull-left">
+                                    <a href="http://sohastore.vn/soi-cau-xo-so-720.html">
+                                        <h3 class="name-app">
+                                            SOI CẦU XỔ SỐ
+                                        </h3>
+                                    </a>
+
+                                    <div class="cat-name">
+                                        Giải trí
+                                    </div>
+                                    <div class="stars">
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                    </div>
+                                    <div class="view">
+                                        <i class="icon-view"><!----></i>
+                                        132
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-detail pull-left">
+                            <div class="wrapper">
+                                <div class="thumb pull-left">
+                                    <a href="http://sohastore.vn/truyen-audio-719.html">
+                                        <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
+                                        <span class="mask"><!----></span>
+                                    </a>
+                                </div>
+                                <div class="infos-app pull-left">
+                                    <a href="http://sohastore.vn/truyen-audio-719.html">
+                                        <h3 class="name-app">
+                                            Truyện Audio
+                                        </h3>
+                                    </a>
+
+                                    <div class="cat-name">
+                                        Giải trí
+                                    </div>
+                                    <div class="stars">
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                        <span class="gold-star"><!----></span>
+                                    </div>
+                                    <div class="view">
+                                        <i class="icon-view"><!----></i>
+                                        136
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

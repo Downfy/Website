@@ -1,0 +1,47 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <spring:url var="banner" value="/resources/images/logo.png" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="register_url" value="/create-account.html" />
+    <spring:url var="login_url" value="/login/html" />
+    <spring:url var="js_url" value="/resources/js" />
+
+    <div id="header">
+        <div id="pageNav" class="pull-left">
+            <div class="pageNavWrapper">
+                <div id="search_box" class="pull-left">
+                    <form action="http://sohastore.vn/search/index.html" method="get" class="form-search">
+                        <div class="search-wrapper">
+                            <i class="icon-search"><!----></i>
+                            <input type="text" id="inputSearch" name="keyword" class="input-medium search-query ac_input" placeholder="Tìm kiếm ứng dụng" autocomplete="off"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="userNav" class="pull-right">
+                    <div class="btn-group">
+                        <a href="${login_url}" rel="nofollow">
+                            <button class="btn btn-inverse">
+                                Đăng nhập
+                            </button>
+                        </a>
+                        <a href="${register_url}" rel="nofollow">
+                            <button class="btn btn-inverse mleft10">
+                                Đăng ký
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pageLogo" class="pull-left">
+            <a href="http://downfy.com">
+                <h1 class="logo">DownfyStore</h1>
+                <span class="store"><!----></span>
+            </a>
+        </div>
+    </div>
+</div>

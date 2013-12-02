@@ -49,7 +49,7 @@
         <div class="row">
             <tiles:insertAttribute name="header" ignore="true"/>
         </div>
-        <div class="container" style="padding-top: 60px;">
+        <div class="container-fluid" style="padding-top: 60px;">
             <div class="row">
                 <tiles:insertAttribute name="body"/> 
             </div>

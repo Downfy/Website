@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" 
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
+     xmlns:jsp="http://java.sun.com/JSP/Page" 
+     xmlns:spring="http://www.springframework.org/tags" 
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" id="footer" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:url value="/resources/images" var="images"/>
+    <c:set value="http://mangtuyendung.vn" var="home_ad_url"/>
+    <spring:url value="/login" var="login"/>
+    <spring:url value="/dang-tin-tuyen-dung-mien-phi.html" var="create_job"/>
+    <spring:url value="/dang-ky-thanh-vien.html" var="register_url" />
+    <spring:url value="/tim-viec-lam" var="search_url" />
+    <div class="clearfix">
+        <div class="col-md-4">
+            <p class="tit">Tìm việc làm</p>
+            <ul class="clearfix">
+                <li><a href="#">Tìm kiếm nâng cao</a></li>
+                <li><a href="${login}" title="Đăng ký thành viên">Đăng ký thành viên</a></li>
+                <li><a href="${register_url}" title="Đăng nhập">Đăng nhập</a></li>
+            </ul>
+        </div>
+        <spring:url value="/dang-tin-tuyen-dung.html" var="create_job_url" />
+        <div class="col-md-4">
+            <p class="tit">Tuyển dụng</p>
+            <ul class="clearfix">
+                <li><a href="${create_job_url}">Đăng tin tuyển dụng miễn phí</a></li>
+                <li><a href="${create_job_url}">Đăng tin tuyển dụng tính phí</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 pull-right">
+            <p class="tit">Kết nối với chúng tôi</p>
+            <ul class="clearfix">
+                <li class="pull-left">
+                    <a href="https://www.facebook.com/pages/MangTuyenDung/385302581541370" title="Tìm chúng tôi trên Facebook">
+                        <img src="${images}/facebook-ft.jpg" alt="Tìm chúng tôi trên Facebook"/>
+                    </a>
+                </li>
+                <li class="pull-left"><a href="#"><img src="${images}/twitter-ft.jpg"/></a></li>
+                <li class="pull-left">
+                    <a href="https://plus.google.com/110923179806139892621" rel="publisher" title="Tìm chúng tôi trên Google+">
+                        <img src="${images}/googleplus-ft.jpg" alt="Tìm chúng tôi trên Google+"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <span class="text-danger" style="padding-left: 15px;">
+        Sponsored by <a href="https://plus.google.com/110923179806139892621?rel=author" title="Mạng tuyển dụng và việc làm"> Mạng tuyển dụng</a> và <a href="${home_ad_url}" title="Tìm việc làm">Việc làm</a> 
+    </span>
+</div>
