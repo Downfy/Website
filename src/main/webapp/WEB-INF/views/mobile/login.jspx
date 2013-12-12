@@ -42,6 +42,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <spring:message code="login_form_login" var="login_form_login"/>
                     <button type="submit" class="btn btn-primary">${login_form_login}</button>
                     <c:out value=" "/>
