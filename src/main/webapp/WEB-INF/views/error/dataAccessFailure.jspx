@@ -22,13 +22,5 @@
             </c:forEach>
         </div>
     </c:if>
-    <spring:url var="home_url" value="/"/>
-    <script type="text/javascript">
-        <!--//--><![CDATA[//><!--
-                $(document).ready(function() {
-            setTimeout("location.href='${home_url}'", 3000);
-        });
-        //--><!]]>
-    </script>
 </div>
 

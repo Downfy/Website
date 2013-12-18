@@ -1,3 +1,99 @@
+.reviews-top {
+    margin-right: 338px;
+    height: 280px;
+    border-right: 1px solid #CBCBCB;
+    box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 1px;
+    padding-left: 2px;
+}
+
+.review-top-item {
+    /*width: 33.3331%;*/
+    padding: 1px;
+    height: 140px;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    box-shadow: inset 0 1px 1px #FFF;
+    -o-box-shadow: inset 0 1px 1px #FFF;
+    -moz-box-shadow: inset 0 1px 1px #FFF;
+    -webkit-box-shadow: inset 0 1px 1px #FFF;
+}
+
+.review-top-item:hover {
+    background-color: #ececec;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-top-item .name-app {
+    font-size: 14px;
+    padding-left: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 150px;
+}
+
+.review-top-item a .name-app {
+    margin-top: 15px;
+    color: #000;
+    line-height: 16px;
+    margin-bottom: 0px;
+}
+
+.review-top-item .view {
+    color: #a0a0a0;
+    font-size: 14px;
+    padding-left: 15px;
+    margin-top: 16px;
+}
+
+.review-top-item .stars {
+    padding-left: 14px;
+    margin-top: 1px;
+}
+
+.review-top-item .stars .gold-star, .app-info .stars .gold-star {
+    background: url(../images/tablet/gold-star.png) no-repeat left center;
+    width: 15px;
+    height: 12px;
+    float: left;
+}
+
+.review-top-item .stars .gray-star, .app-info .stars .gray-star {
+    background: url(../images/tablet/gray-star.png) no-repeat left center;
+    width: 15px;
+    height: 12px;
+    float: left;
+}
+
+.review-top-item .cat-name {
+    color: #a0a0a0;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+
+.advertising-top {
+    float: right;
+    height: 100%;
+    width: 336px;
+    height: 280px;
+    position: absolute;
+    right: 0px;
+    top: 60px;
+}
+
+.advertising-center {
+    margin-top: 1px;
+    background-color: #f4f4f4;
+}
+
 gray-star.pngbody {
     background-color: #f4f4f4;
     font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -982,7 +1078,7 @@ h1 {
     margin-right: 0;;
 }
 .app-container .container .wrapper {
-.app-container .banners {
+    .app-container .banners {
     padding: 32px 0;
     border-width: 0 1px 0 0;
     border-color: #d2d2d2;
@@ -2624,8 +2720,8 @@ h1 {
     left: -1px;
 }
 .regDistributor {
-	width: 174px; 
-	margin-top: 10px;
+    width: 174px; 
+    margin-top: 10px;
 }
 .daterangepicker.dropdown-menu {
     max-width: none;
