@@ -19,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <spring:url value="/resources/styles" var="js_path"/>
-        <script src="${js_path}/jquery/jquery-1.8.1.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/bootstrap/js/bootstrap.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
 
         <link rel="stylesheet" href="${js_path}/bootstrap/css/bootstrap.min.css" type="text/css" title="ui-theme" />

@@ -6,38 +6,245 @@
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
-    <spring:url var="images" value="/resources/images" />
+    <spring:url var="images_url" value="/resources/images" />
     <div class="main-item">
-        <div class="col-md-8">
+        <div class="col-md-8 col-xs-9">
             <div class="app-item">
-                aaaaaaaaaaaa
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="suggest-item">
-                <h2>Suggest App</h2>
-                <div class="container-fluid">
-                    <div class="col-md-6">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
-                            <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
-                            <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
-                            <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
-                        </a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
-                            <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
-                        </a>
+                <div class="advertising">
+                    <img src="${images_url}/300x250.jpg" alt="Quang cao"/>
+                </div>
+                <div class="row-fluid app-detail">
+                    <div class="wrapper">
+                        <div class="thumb pull-left">
+                            <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                <img width="84px" alt="" src="/hadoopvietnam/resources/images/1a4ddb1d.jpg"/>
+                                <span class="mask"><!----></span>
+                            </a>
+                        </div>
+                        <div class="infos-app pull-left">
+                            <a href="http://sohastore.vn/thoi-dai-hac-am-721.html"><h3 class="name-app">
+                                    Thời Đại Hắc Ám
+                                </h3>
+                            </a>
+                            <div class="cat-name">
+                                Hành động
+                            </div>
+                            <div class="stars">
+                                <span class="gold-star"><!----></span>
+                                <span class="gold-star"><!----></span>
+                                <span class="gold-star"><!----></span>
+                                <span class="gold-star"><!----></span>
+                                <span class="gold-star"><!----></span>
+                            </div>
+                            <div class="view">
+                                29
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="app-info">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#android" data-toggle="tab"><i class="android"><!----></i></a></li>
+                        <li><a href="#apple" data-toggle="tab"><i class="apple"><!----></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="android">
+                            <div class="row-fluid">
+                                <div class="col-md-6">
+                                    <b>Current Version</b>
+                                    <br/>
+                                    1.1
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Requires Android</b>
+                                    <br/>
+                                    2.3
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Size</b>
+                                    <br/>
+                                    17M
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Updated</b>
+                                    <br/>
+                                    December 16, 2013
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="apple">
+                            <div class="col-md-6">
+                                <b>Current Version</b>
+                                <br/>
+                                1.2
+                            </div>
+                            <div class="col-md-6">
+                                <b>Requires IOS</b>
+                                <br/>
+                                5.0
+                            </div>
+                            <div class="col-md-6">
+                                <b>Size</b>
+                                <br/>
+                                18M
+                            </div>
+                            <div class="col-md-6">
+                                <b>Updated</b>
+                                <br/>
+                                November 11, 2013
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        <!--//--><![CDATA[//><!--
+                        $(function() {
+                            $('#myTab a:last').tab('show')
+                        })
+                        //--><!]]>
+                    </script>
+                </div>
+            </div>
+            <div class="app-description">
+                <p>
+                    SohaPhim là ứng dụng xem phim hàng đầu tại Việt Nam với lượng phim khổng lồ được biên tập và cập nhật nhanh nhất.
+                </p>
+                <p>
+                    Ứng dụng SohaPhim là một phiên bản đầy đủ của dịch vụ xem phim Soha trên cả 2 nền tảng iOs và Android. Vì vậy các chức năng và trải nghiệm xem phim độ nét cao như chúng tôi đã và đang phục vụ trên máy tính vẫn giữ nguyên.
+                    Tại sao bạn nên cài đặt ứng dụng SohaPhim?- Xem phim ổn định với chất lượng cao.- Chức năng tìm kiếm và duyệt phim tiện lợi, dễ dàng để tìm phim bạn muốn xem 1 cách nhanh chóng.- SohaPhim giới thiệu cho bạn những bộ phim hay hàng ngày.- Bình luận, đánh giá về phim mà bạn đã xem.- Chia sẻ lên Facebook về phim mà bạn yêu thích.- Thấy phim hay nhưng chưa có thời gian để xem, bạn có thể đánh dấu để xem sau.
+                </p>
+                <p>
+                    Và còn nhiều tính năng thú vị khác.
+                </p>
+            </div>
+            <div class="app-screenshoot">
+                <div id="makeMeScrollable">
+                    <img src="${images_url}/demo/field.jpg" alt="Field" id="field" />
+                    <img src="${images_url}/demo/gnome.jpg" alt="Gnome" id="gnome" />
+                    <img src="${images_url}/demo/pencils.jpg" alt="Pencils" id="pencils" />
+                    <img src="${images_url}/demo/golf.jpg" alt="Golf" id="golf" />
+                    <img src="${images_url}/demo/river.jpg" alt="River" id="river" />
+                    <img src="${images_url}/demo/train.jpg" alt="Train" id="train" />
+                    <img src="${images_url}/demo/leaf.jpg" alt="Leaf" id="leaf" />
+                    <img src="${images_url}/demo/dog.jpg" alt="Dog" id="dog" />
+                </div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    // Initialize the plugin with no custom options
+                    $(document).ready(function() {
+                        // None of the options are set
+                        $("div#makeMeScrollable").smoothDivScroll({
+                            // autoScrollingMode: "onStart"
+                        });
+                    });
+                    //--><!]]>
+                </script>
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-3">
+            <div class="suggest suggest-item">
+                <h2>Suggested apps</h2>
+                <div class="container">
+                    <div class="app-detail col-md-12">
+                        <div class="wrapper">
+                            <div class="thumb pull-left">
+                                <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                    <img width="84px" alt="" src="${images_url}/1a4ddb1d.jpg"/>
+                                    <span class="mask"><!----></span>
+                                </a>
+                            </div>
+                            <div class="infos-app pull-left">
+                                <a href="http://sohastore.vn/thoi-dai-hac-am-721.html"><h3 class="name-app">
+                                        Thời Đại Hắc Ám
+                                    </h3>
+                                </a>
+                                <div class="cat-name">
+                                    Hành động
+                                </div>
+                                <div class="stars">
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                </div>
+                                <div class="view">
+                                    <i class="icon-view"><!----></i>
+                                    29
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-detail col-md-12">
+                        <div class="wrapper">
+                            <div class="thumb pull-left">
+                                <a href="http://sohastore.vn/ionline-536.html">
+                                    <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
+                                    <span class="mask"><!----></span>
+                                </a>
+                            </div>
+                            <div class="infos-app pull-left">
+                                <a href="http://sohastore.vn/ionline-536.html">
+                                    <h3 class="name-app">
+                                        iOnline
+                                    </h3>
+                                </a>
+
+                                <div class="cat-name">
+                                    Dân gian
+                                </div>
+                                <div class="stars">
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                </div>
+                                <div class="view">
+                                    <i class="icon-view"><!----></i>
+                                    25.829
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-detail col-md-12">
+                        <div class="wrapper">
+                            <div class="thumb pull-left">
+                                <a href="http://sohastore.vn/ionline-536.html">
+                                    <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
+                                    <span class="mask"><!----></span>
+                                </a>
+                            </div>
+                            <div class="infos-app pull-left">
+                                <a href="http://sohastore.vn/ionline-536.html">
+                                    <h3 class="name-app">
+                                        iOnline
+                                    </h3>
+                                </a>
+
+                                <div class="cat-name">
+                                    Dân gian
+                                </div>
+                                <div class="stars">
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                    <span class="gold-star"><!----></span>
+                                </div>
+                                <div class="view">
+                                    <i class="icon-view"><!----></i>
+                                    25.829
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="suggest suggest-review">
+                <img src="${images_url}/300x600.png" alt="Suggest Review" id="item" />
+            </div>
+            <div class="suggest suggest-advertising">
+                <img src="${images_url}/300x600.png" alt="Suggest Review" id="item" />
             </div>
         </div>
     </div>
