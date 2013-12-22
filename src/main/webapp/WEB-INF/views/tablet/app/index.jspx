@@ -7,6 +7,12 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <ol class="breadcrumb">
+        <li><a href="#">Downfy.com</a></li>
+        <li><a href="#">Android Apps</a></li>
+        <li><a href="#">Social</a></li>
+        <li class="active">Facebook</li>
+    </ol>
     <div class="main-item">
         <div class="col-md-8 col-xs-9">
             <div class="app-item">
@@ -95,16 +101,32 @@
                             </div>
                         </div>
                     </div>
-                    <script type="text/javascript">
-                        <!--//--><![CDATA[//><!--
-                        $(function() {
-                            $('#myTab a:last').tab('show')
-                        })
-                        //--><!]]>
-                    </script>
                 </div>
             </div>
             <div class="app-description">
+                <div class="review-widget">
+                    <div class="cms-title"><span class="review-ico"><!----></span>Expert's Review</div>
+                    <div class="wrap clearfix">
+                        <div class="reviewer-rating fright">
+                            <div class="rating9">
+                                <div class="number" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="0"/>
+                                    <meta itemprop="bestRating" content="10"/>
+                                    <span itemprop="ratingValue">9.0</span>
+                                </div>
+                                <div class="text">Awesome</div>
+                            </div>
+                        </div>
+                        <div class="fleft">
+                            <a class="" href="http://www.appszoom.com/user/801299843120/community/me" title="All reviews by Emmanuel Lund"> 
+                                <img src="http://cdn3.staztic.com/f/images_reviewers_emman_2_20130307125232.png" class="reviewer-avatar" alt="Emmanuel Lund"/> </a> 
+                        </div>
+                        <h2 class="review-title">"Discovering the Best Android Apps"</h2>
+                        <p>Reviewed by: <a rel="author" href="http://www.appszoom.com/user/801299843120" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                                <span itemprop="name">Emmanuel Lund</span></a> / Jun 21, 2013
+                        </p>
+                    </div>
+                </div>
                 <p>
                     SohaPhim là ứng dụng xem phim hàng đầu tại Việt Nam với lượng phim khổng lồ được biên tập và cập nhật nhanh nhất.
                 </p>
@@ -117,6 +139,7 @@
                 </p>
             </div>
             <div class="app-screenshoot">
+                <div class="cms-title">Screenshoots</div>
                 <div id="makeMeScrollable">
                     <img src="${images_url}/demo/field.jpg" alt="Field" id="field" />
                     <img src="${images_url}/demo/gnome.jpg" alt="Gnome" id="gnome" />
@@ -142,7 +165,7 @@
         </div>
         <div class="col-md-4 col-xs-3">
             <div class="suggest suggest-item">
-                <h2>Suggested apps</h2>
+                <div class="cms-title">Suggested apps</div>
                 <div class="container">
                     <div class="app-detail col-md-12">
                         <div class="wrapper">

@@ -11,37 +11,47 @@
     <spring:url var="js_url" value="/resources/js" />
 
     <div id="header">
-        <div id="pageNav" class="pull-left">
-            <div class="pageNavWrapper">
-                <div id="search_box" class="pull-left">
-                    <form action="http://sohastore.vn/search/index.html" method="get" class="form-search">
-                        <div class="search-wrapper">
-                            <i class="icon-search"><!----></i>
-                            <input type="text" id="inputSearch" name="keyword" class="input-medium search-query ac_input" placeholder="Tìm kiếm ứng dụng" autocomplete="off"/>
-                        </div>
-                    </form>
-                </div>
-                <div id="userNav" class="pull-right">
-                    <div class="btn-group">
-                        <a href="${login_url}" rel="nofollow">
-                            <button class="btn btn-inverse">
-                                Đăng nhập
-                            </button>
+        <div class="top">
+            <div class="wrap-content clearfix">
+                <a href="http://downfy.com" id="logo" title="Android apps">Android apps</a>
+                <ul class="platform-tabs android">
+                    <li class="android active">
+                        <a class="android" href="http://www.appszoom.com/android" title="Android apps">
+                            <span class="ico"><!----></span>ANDROID
                         </a>
-                        <a href="${register_url}" rel="nofollow">
-                            <button class="btn btn-inverse mleft10">
-                                Đăng ký
-                            </button>
+                    </li>
+                    <li class="iphone ">
+                        <a class="iphone" href="#" title="iphone apps">
+                            <span class="ico"><!----></span>IPHONE
                         </a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div id="pageLogo" class="pull-left">
-            <a href="http://downfy.com">
-                <h1 class="logo">DownfyStore</h1>
-                <span class="store"><!----></span>
-            </a>
+        <div class="navigation-bar clearfix">
+            <div class="wrap-content"> 
+                <ul class="navigation">
+                    <li>
+                        <a id="browse-cats" class="show categories" title=" Categories" href="javascript:void(0)">
+                            <span class="ico"><!----></span>
+                            <span class="arrow"><!----></span>Categories 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" title="Best Apps">Best Apps</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Apps Downloaded">+ Downloaded</a>
+                    </li>
+                    <li>
+                        <a class="community" href="#" title="Apps Community">Community</a>
+                    </li>
+                </ul>
+                <ul class="meta-nav" id="login_info">
+                    <li class="fright button"><a title="Log in" href="http://www.appszoom.com/user/login">Log in</a></li>
+                    <li class="fright button"><a title="Sign in" href="http://www.appszoom.com/user/login">Sign in</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

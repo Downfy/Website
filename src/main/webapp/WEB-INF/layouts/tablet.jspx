@@ -23,13 +23,12 @@
         <spring:url value="/resources/styles" var="js_path"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/bootstrap/js/bootstrap.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
-        <!--<script src="${js_path}/bootstrap-modal.js" type="text/javascript"> required for FF3 and Opera </script>-->
-        <!--<script src="${js_path}/bootstrap-modalmanager.js" type="text/javascript"> required for FF3 and Opera </script>-->
 
         <link rel="stylesheet" href="${js_path}/bootstrap/css/bootstrap.min.css" type="text/css" title="ui-theme" />
-        <!--<link rel="stylesheet" href="${js_path}/bootstrap-modal.css" type="text/css" title="ui-theme" />-->
-        <link rel="stylesheet" href="${js_path}/tablet.css" type="text/css" title="ui-theme" />
-
+        <link rel="stylesheet" href="${js_path}/computer/header.css" type="text/css" title="ui-theme" />
+        <link rel="stylesheet" href="${js_path}/computer/main.css" type="text/css" title="ui-theme" />
+        <link rel="stylesheet" href="${js_path}/computer/apps-review.css" type="text/css" title="ui-theme" />
+        
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

@@ -21,6 +21,7 @@
     
     <definition name="view" template="/WEB-INF/layouts/view.jspx">
         <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jspx" />
+        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/home/center-advertising.jspx" />
         <put-attribute name="menu" value="/WEB-INF/views/tablet/home/menu.jspx" />
         <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
     </definition>

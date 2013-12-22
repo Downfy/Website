@@ -1,0 +1,261 @@
+
+/*** APP VIEW **********************************/
+.main-item .col-md-4 {
+    padding: 0;
+}
+
+.main-item .col-md-8 {
+    padding: 0;
+}
+
+.main-item {
+    overflow: hidden;
+    margin-right: 2px;
+    margin-left: 3px;
+}
+
+.main-item .app-item {
+    margin-top: 3px;
+    border: 1px solid #b5bdc7;
+}
+
+.main-item .app-item .app-detail .wrapper{
+    border-right: none;
+    border-bottom: none;
+}
+
+.main-item .app-item .advertising {
+    float: left;
+    width: 300px;
+    margin-right: 3px;
+}
+
+.main-item .app-item .app-info {
+    margin-top: 5px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 1px #FFF;
+    -o-box-shadow: inset 0 1px 1px #FFF;
+    -moz-box-shadow: inset 0 1px 1px #FFF;
+    -webkit-box-shadow: inset 0 1px 1px #FFF;
+}
+
+.main-item .app-item .app-info .tab-content {
+    padding: 10px;
+    height: auto;
+    border: 1px solid #d6d6d6;
+    min-height: 100px;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    _height: 100px;
+}
+
+.main-item .app-item .app-info .android{
+    background: url("../../images/android.png") no-repeat;
+    width: 145px;
+    height: 17px;
+    display: block;
+}
+
+.main-item .app-item .app-info .apple{
+    background: url("../../images/apple.png") no-repeat;
+    width: 145px;
+    height: 17px;
+    display: block;
+}
+
+.main-item .app-description{
+    margin-top: 10px;
+    height: auto;
+    border: 1px solid #d6d6d6;
+}
+
+.main-item .cms-title {
+    height: 34px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #3c3c3c;
+    border-radius: 2px;
+    background: #d5d7dc;
+    background: -moz-linear-gradient(top, #d5d7dc 0%, #cccfd3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5d7dc), color-stop(100%,#cccfd3));
+    background: -webkit-linear-gradient(top, #d5d7dc 0%,#cccfd3 100%);
+    background: -o-linear-gradient(top, #d5d7dc 0%,#cccfd3 100%);
+    background: -ms-linear-gradient(top, #d5d7dc 0%,#cccfd3 100%);
+    background: linear-gradient(to bottom, #d5d7dc 0%,#cccfd3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5d7dc', endColorstr='#cccfd3',GradientType=0 );
+    padding-left: 10px;
+}
+
+.main-item .app-description .cms-title .review-ico {
+    background: url('http://cdn2.staztic.com/f/images_sprite-cms_2_20130903124331.png') -119px -152px no-repeat;
+    width: 18px;
+    height: 18px;
+    display: block;
+    float: left;
+    margin: 8px 8px 8px 0px;
+}
+
+.main-item .app-description .review-widget .wrap {
+    padding: 10px 10px 10px 70px;
+    background: url('http://cdn3.staztic.com/f/images_texture1_2_20130903124331.png') 0 0 repeat;
+}
+
+.main-item .app-description .review-widget .reviewer-rating {
+    float: right;
+}
+
+.main-item .app-description .reviewer-rating {
+    float: left;
+    text-align: center;
+    width: 66px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.main-item .app-description .reviewer-rating .rating9 .number {
+    background: #73b84b;
+}
+
+.main-item .app-description .reviewer-rating .number span {
+    margin-left: -0.08em;
+}
+
+
+.main-item .app-description .reviewer-rating .number {
+    border-radius: 4px 4px 0 0;
+    font-size: 38px;
+    width: 64px;
+    height: 46px;
+    line-height: 49px;
+    font-weight: bold;
+    letter-spacing: -0.1em;
+}
+
+.main-item .app-description .reviewer-rating .rating9 .text {
+    background: #50a61e;
+}
+
+.main-item .app-description .reviewer-rating .text {
+    border-radius: 0 0 4px 4px;
+    width: 64px;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.main-item .app-description .fleft {
+    float: left;
+}
+
+.main-item .app-description .review-widget h2, #app .review-widget p {
+    line-height: 1.4em;
+}
+
+.main-item .app-description .review-widget .review-title {
+    font-size: 16px;
+    color: #323232;
+    font-weight: bold;
+    padding-top: 0;
+}
+
+.main-item .app-description .review-widget p {
+    line-height: 1.4em;
+    padding: 0px;
+}
+
+.main-item .app-description .review-widget h2 {
+    margin: 0px;
+}
+
+.main-item .app-description .review-widget a {
+    color: #0089CC;
+    font-size: 14px;
+}
+
+.main-item .app-description .review-widget a:hover {
+    color: #333;
+}
+
+.main-item .app-description .review-widget .follow, .review-widget .unfollow {
+    margin-top: 3px;
+    font-size: 10px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 15px;
+}
+
+.main-item .app-description .review-widget .follow a {
+    color: #fff;
+}
+
+.main-item .app-description .follow {
+    background: #40a5d8;
+    background: -moz-linear-gradient(top, #40a5d8 0%, #40a5d8 49%, #2d93c7 50%, #2d93c7 100%, #2d93c7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#40a5d8), color-stop(49%,#40a5d8), color-stop(50%,#2d93c7), color-stop(100%,#2d93c7), color-stop(100%,#2d93c7));
+    background: -webkit-linear-gradient(top, #40a5d8 0%,#40a5d8 49%,#2d93c7 50%,#2d93c7 100%,#2d93c7 100%);
+    background: -o-linear-gradient(top, #40a5d8 0%,#40a5d8 49%,#2d93c7 50%,#2d93c7 100%,#2d93c7 100%);
+    background: -ms-linear-gradient(top, #40a5d8 0%,#40a5d8 49%,#2d93c7 50%,#2d93c7 100%,#2d93c7 100%);
+    background: linear-gradient(to bottom, #40a5d8 0%,#40a5d8 49%,#2d93c7 50%,#2d93c7 100%,#2d93c7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40a5d8', endColorstr='#2d93c7',GradientType=0 );
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.main-item .app-description .review-widget .reviewer-avatar {
+    float: left;
+    margin-right: 15px;
+    margin-left: -60px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 2px #A5A5A5;
+    padding: 4px;
+}
+
+a img, iframe {
+    border: none;
+}
+
+.main-item .app-screenshoot{
+    margin-top: 10px;
+}
+
+#makeMeScrollable
+{
+    width:100%;
+    height: 330px;
+    position: relative;
+}
+
+/* Replace the last selector for the type of element you have in
+   your scroller. If you have div's use #makeMeScrollable div.scrollableArea div,
+   if you have links use #makeMeScrollable div.scrollableArea a and so on. */
+#makeMeScrollable div.scrollableArea img
+{
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    /* If you don't want the images in the scroller to be selectable, try the following
+       block of code. It's just a nice feature that prevent the images from
+       accidentally becoming selected/inverted when the user interacts with the scroller. */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.main-item .suggest {
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.main-item .suggest-item {
+    border: 1px solid #b5bdc7;
+    margin-bottom: 0;
+}
