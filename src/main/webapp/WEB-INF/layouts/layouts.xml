@@ -26,8 +26,15 @@
         <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
     </definition>
     
+    <definition name="member" template="/WEB-INF/layouts/member.jspx">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/member/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+    </definition>
+    
     <definition name="error" template="/WEB-INF/layouts/error.jspx">
         <put-attribute name="header" value="/WEB-INF/views/error/header.jspx" />
+        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/home/center-advertising.jspx" />
+        <put-attribute name="bottom-advertising" value="/WEB-INF/views/error/bottom-advertising.jspx" />
         <put-attribute name="footer" value="/WEB-INF/views/error/footer.jspx" />
     </definition>
 

@@ -11,7 +11,7 @@
     <!-- HTTP security configurations -->
     <http auto-config="true" use-expressions="true">
         <form-login login-processing-url="/resources/j_spring_security_check"
-                    default-target-url="/thanh-vien.html"
+                    default-target-url="/member.html"
                     login-page="/login" authentication-failure-url="/login/failure?login_error=t" />
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
@@ -42,6 +42,11 @@
     <!-- Configure Authentication mechanism -->
     <authentication-manager alias="authenticationManager">
         <authentication-provider ref="daoAuthenticationProvider" />
+        <authentication-provider>
+            <user-service>
+                <user name="tuanta" password="tuanta" authorities="ROLE_USER, ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
     </authentication-manager>
 
     <beans:bean id="userDetailsService" class="com.downfy.security.MyUserDetailsService" />

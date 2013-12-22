@@ -7,16 +7,16 @@
     <spring:url var="banner" value="/resources/images/logo.png" />
     <spring:url var="home_url" value="/" />
     <spring:url var="register_url" value="/create-account.html" />
-    <spring:url var="login_url" value="/login.html" />
+    <spring:url var="login_url" value="/login/html" />
     <spring:url var="js_url" value="/resources/js" />
 
     <div id="header">
         <div class="top">
             <div class="wrap-content clearfix">
-                <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
+                <a href="http://downfy.com" id="logo" title="Android apps">Android apps</a>
                 <ul class="platform-tabs android">
                     <li class="android active">
-                        <a class="android" href="${home_url}" title="Android apps">
+                        <a class="android" href="http://www.appszoom.com/android" title="Android apps">
                             <span class="ico"><!----></span>ANDROID
                         </a>
                     </li>
@@ -32,24 +32,18 @@
             <div class="wrap-content"> 
                 <ul class="navigation">
                     <li>
-                        <a id="browse-cats" class="show categories" title=" Categories" href="#">
-                            <span class="ico"><!----></span>
-                            <span class="arrow"><!----></span>Categories 
-                        </a>
+                        <a href="#" title="Review Apps">Review Apps</a>
                     </li>
                     <li>
-                        <a href="#" title="Best Apps">Best Apps</a>
-                    </li>
-                    <li>
-                        <a href="#" title="Apps Downloaded">+ Downloaded</a>
+                        <a href="#" title="My Apps">My Apps</a>
                     </li>
                     <li>
                         <a class="community" href="#" title="Apps Community">Community</a>
                     </li>
                 </ul>
                 <ul class="meta-nav" id="login_info">
-                    <li class="fright button"><a title="Log in" href="${login_url}">Log in</a></li>
-                    <li class="fright button"><a title="Sign in" href="${register_url}">Sign in</a></li>
+                    <li class="fright button"><a title="Log in" href="http://www.appszoom.com/user/login">Log in</a></li>
+                    <li class="fright button"><a title="Sign in" href="http://www.appszoom.com/user/login">Sign in</a></li>
                 </ul>
             </div>
         </div>
