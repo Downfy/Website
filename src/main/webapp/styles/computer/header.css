@@ -12,25 +12,6 @@
     width:199px;
 }
 
-#header .meta-nav .button {
-    margin-left:7px;
-    margin-top:6px;
-}
-
-#header .meta-nav .button a {
-    background-color:#2a2a32;
-    border-radius:2px;
-    color:#fff;
-    display:block;
-    height:33px;
-    line-height:32px;
-    padding:0 10px;
-}
-
-#header .meta-nav,#header .fright {
-    float:right;
-}
-
 #header .navigation {
     float:left;
 }
