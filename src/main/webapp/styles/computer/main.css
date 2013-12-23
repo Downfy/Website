@@ -15,7 +15,6 @@
     margin:0;
     width:100%;
     padding-bottom:2px;
-    border-left: none;
 }
 
 .app-container .container .list-apps {
@@ -24,14 +23,6 @@
     overflow:hidden;
     position:relative;
     width:100%;
-}
-
-.app-container .infos-app .icon-view {
-    background:url(../../images/tablet/total_view.png);
-    height:12px;
-    margin-right:0;
-    margin-top:5px;
-    width:15px;
 }
 
 .app-detail {
@@ -55,12 +46,12 @@
 }
 
 .app-detail .free {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: bold;
+    font-size:14px;
+    line-height:20px;
+    font-weight:bold;
     color: #00A222;
     padding-left:15px;
-    clear: left;
+    clear:left;
 }
 
 .app-detail .name-app {
