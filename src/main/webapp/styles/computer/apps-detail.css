@@ -45,7 +45,7 @@
 }
 
 .main-item .app-description .follow {
-    background:linear-gradient(tobottom,#40a5d80%,#40a5d849%,#2d93c750%,#2d93c7100%,#2d93c7100%);
+    background: linear-gradient(to bottom, #40a5d8 0%,#40a5d8 49%,#2d93c7 50%,#2d93c7 100%,#2d93c7 100%);
     border-radius:2px;
     color:#fff;
     display:inline-block;
@@ -208,7 +208,7 @@
 }
 
 .main-item .cms-title {
-    background:linear-gradient(tobottom,#d5d7dc0%,#cccfd3100%);
+    background: linear-gradient(to bottom, #d5d7dc 0%,#cccfd3 100%);
     border-radius:2px;
     color:#3c3c3c;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5d7dc',endColorstr='#cccfd3',GradientType=0);
