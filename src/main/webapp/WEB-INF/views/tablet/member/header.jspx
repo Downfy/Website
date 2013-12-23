@@ -4,25 +4,22 @@
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
-    <spring:url var="banner" value="/resources/images/logo.png" />
     <spring:url var="home_url" value="/" />
-    <spring:url var="register_url" value="/create-account.html" />
-    <spring:url var="login_url" value="/login/html" />
-    <spring:url var="js_url" value="/resources/js" />
+    <spring:url var="logout_url" value="/login.html" />
 
     <div id="header">
         <div class="top">
             <div class="wrap-content clearfix">
-                <a href="http://downfy.com" id="logo" title="Android apps">Android apps</a>
+                <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
                 <ul class="platform-tabs android">
                     <li class="android active">
-                        <a class="android" href="http://www.appszoom.com/android" title="Android apps">
-                            <span class="ico"><!----></span>ANDROID
+                        <a class="android" href="${home_url}" title="Android apps">
+                            <span class="ico"><!----></span> ANDROID
                         </a>
                     </li>
                     <li class="iphone ">
-                        <a class="iphone" href="#" title="iphone apps">
-                            <span class="ico"><!----></span>IPHONE
+                        <a class="iphone" href="#" title="Iphone apps">
+                            <span class="ico"><!----></span> IPHONE
                         </a>
                     </li>
                 </ul>
@@ -32,18 +29,16 @@
             <div class="wrap-content"> 
                 <ul class="navigation">
                     <li>
-                        <a href="#" title="Review Apps">Review Apps</a>
+                        <a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a>
                     </li>
                     <li>
-                        <a href="#" title="My Apps">My Apps</a>
-                    </li>
-                    <li>
-                        <a class="community" href="#" title="Apps Community">Community</a>
+                        <a href="#" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
                     </li>
                 </ul>
-                <ul class="meta-nav" id="login_info">
-                    <li class="fright button"><a title="Log in" href="http://www.appszoom.com/user/login">Log in</a></li>
-                    <li class="fright button"><a title="Sign in" href="http://www.appszoom.com/user/login">Sign in</a></li>
+                <ul class="navigation pull-right">
+                    <li>
+                        <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
+                    </li>
                 </ul>
             </div>
         </div>

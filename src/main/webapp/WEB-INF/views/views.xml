@@ -20,4 +20,14 @@
     <definition extends="error" name="accessDenied">
         <put-attribute name="body" value="/WEB-INF/views/error/accessDenied.jspx" />
     </definition>
+    
+    <definition extends="error" name="home/maintenance">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/home/maintenance.jspx" />
+    </definition>
+    
+    <definition extends="error" name="mobile/maintenance">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/mobile/maintenance.jspx" />
+    </definition>
 </tiles-definitions>

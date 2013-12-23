@@ -4,12 +4,12 @@
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
-    <spring:url var="banner" value="/resources/images/logo.png" />
     <spring:url var="home_url" value="/" />
     <spring:url var="register_url" value="/create-account.html" />
     <spring:url var="login_url" value="/login.html" />
-    <spring:url var="js_url" value="/resources/js" />
-
+    <spring:url var="member_url" value="/member.html" />
+    <spring:url var="logout_url" value="/login.html" />
+    
     <div id="header">
         <div class="top">
             <div class="wrap-content clearfix">
@@ -17,12 +17,12 @@
                 <ul class="platform-tabs android">
                     <li class="android active">
                         <a class="android" href="${home_url}" title="Android apps">
-                            <span class="ico"><!----></span>ANDROID
+                            <span class="ico"><!----></span> ANDROID
                         </a>
                     </li>
                     <li class="iphone ">
-                        <a class="iphone" href="#" title="iphone apps">
-                            <span class="ico"><!----></span>IPHONE
+                        <a class="iphone" href="#" title="Iphone apps">
+                            <span class="ico"><!----></span> IPHONE
                         </a>
                     </li>
                 </ul>
@@ -32,24 +32,31 @@
             <div class="wrap-content"> 
                 <ul class="navigation">
                     <li>
-                        <a id="browse-cats" class="show categories" title=" Categories" href="#">
-                            <span class="ico"><!----></span>
-                            <span class="arrow"><!----></span>Categories 
-                        </a>
+                        <a href="#" title="Categories"><span class="glyphicon glyphicon-th"><!----></span> Categories</a>
                     </li>
                     <li>
-                        <a href="#" title="Best Apps">Best Apps</a>
+                        <a href="#" title="Best Apps"><span class="glyphicon glyphicon-thumbs-up"><!----></span> Best Apps</a>
                     </li>
                     <li>
-                        <a href="#" title="Apps Downloaded">+ Downloaded</a>
+                        <a href="#" title="Top Downloaded"><span class="glyphicon glyphicon-download-alt"><!----></span> Top Downloaded</a>
                     </li>
                     <li>
-                        <a class="community" href="#" title="Apps Community">Community</a>
+                        <a href="#" title="Community"><span class="glyphicon glyphicon-globe"><!----></span> Community</a>
                     </li>
                 </ul>
-                <ul class="meta-nav" id="login_info">
-                    <li class="fright button"><a title="Log in" href="${login_url}">Log in</a></li>
-                    <li class="fright button"><a title="Sign in" href="${register_url}">Sign in</a></li>
+                <ul class="navigation pull-right">
+                    <li>
+                        <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>    
+                    </li>
+                    <li>
+                        <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
+                    </li>
+                    <li>
+                        <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
+                    </li>
+                    <li>
+                        <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
+                    </li>
                 </ul>
             </div>
         </div>
