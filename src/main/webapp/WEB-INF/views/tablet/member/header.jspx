@@ -12,7 +12,7 @@
             <div class="wrap-content clearfix">
                 <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
                 <ul class="platform-tabs android">
-                    <li class="android active">
+                    <li class="android">
                         <a class="android" href="${home_url}" title="Android apps">
                             <span class="ico"><!----></span> ANDROID
                         </a>

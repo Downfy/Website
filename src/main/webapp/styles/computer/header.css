@@ -1,1 +1,184 @@
-ul{list-style:none}.advertising-center{margin-top:1px}#header .top{background:#2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;height:58px}#header .wrap-content{margin:0 auto;padding:0;position:relative;width:990px}#header #logo{background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) 0 0 no-repeat;display:block;float:left;height:27px;left:2px;margin:18px 0 0;outline:0;padding:0;position:relative;text-indent:-9000px;width:199px}#header .top ul.platform-tabs{background-color:#1c1c20;float:left;margin-left:24px;padding:0;position:relative;z-index:1}#header .top ul.platform-tabs li{border:none;display:block;float:left;margin-top:0;width:138px}#header .top ul.platform-tabs li a.android{border-top:3px solid #83b813}#header .top ul.platform-tabs li a:active,#header .top ul.platform-tabs li.active a{background-color:#35353e}#header .top ul.platform-tabs li a{color:#bfbfc8;display:block;font-size:13px;line-height:55px;text-decoration:none;text-transform:uppercase}#header .top ul.iphone li a.android:hover span.ico,#header .top ul.android li a.android span.ico{background-position:-179px -187px}#header .top ul.platform-tabs li a.iphone span.ico,#header .top ul.platform-tabs li a.android span.ico{background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -130px -187px no-repeat;display:inline-block;float:left;height:26px;margin:12px 11px 0 21px;text-indent:-999em;width:22px}#header .top ul.platform-tabs a.iphone{border-top:3px solid #ff811f}#header .top ul.platform-tabs li a.iphone span.ico{background-position:-154px -187px}#header .navigation-bar{background:#35353e;border-bottom:7px solid #71a00e;color:#fff;font-size:13px}#header .navigation{float:left}#header .wrap-content ul{margin:0;padding:0}#header .navigation li{float:left;margin-right:20px}#header .navigation a{color:#bfbfc8;display:block;float:left;font-size:13px;line-height:45px;text-transform:uppercase}#header .navigation-bar a{text-decoration:none}#header .navigation a.categories span.ico{background-position:-130px -274px;height:13px;margin-top:16px;width:16px}#header .navigation a span.ico{background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -130px -215px no-repeat;display:inline-block;float:left;height:18px;margin-right:8px;margin-top:12px;width:18px}#header .navigation a.categories.show span.arrow{background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -174px -176px no-repeat;display:inline-block;float:right;height:9px;margin-left:5px;margin-top:18px;width:15px}#header .navigation a.categories span.arrow{background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -190px -176px no-repeat;background-position:-190px -176px;display:inline-block;float:right;height:9px;margin-left:5px;margin-top:18px;width:15px}#header .meta-nav .button{margin-left:7px;margin-top:6px}#header .meta-nav .button a{background-color:#2a2a32;border-radius:2px;color:#fff;display:block;height:33px;line-height:32px;padding:0 10px}#header .top ul.android li a.android,#header .top ul.platform-tabs li a.android:hover,#header .navigation-bar a:hover{color:#83b813}#header .meta-nav,#header .fright{float:right}
+#header #logo {
+    background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) 0 0 no-repeat;
+    display:block;
+    float:left;
+    height:27px;
+    left:2px;
+    margin:18px 0 0;
+    outline:0;
+    padding:0;
+    position:relative;
+    text-indent:-9000px;
+    width:199px;
+}
+
+#header .meta-nav .button {
+    margin-left:7px;
+    margin-top:6px;
+}
+
+#header .meta-nav .button a {
+    background-color:#2a2a32;
+    border-radius:2px;
+    color:#fff;
+    display:block;
+    height:33px;
+    line-height:32px;
+    padding:0 10px;
+}
+
+#header .meta-nav,#header .fright {
+    float:right;
+}
+
+#header .navigation {
+    float:left;
+}
+
+#header .navigation a {
+    color:#bfbfc8;
+    display:block;
+    float:left;
+    font-size:13px;
+    line-height:45px;
+    text-transform:uppercase;
+}
+
+#header .navigation a span.ico {
+    background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -130px -215px no-repeat;
+    display:inline-block;
+    float:left;
+    height:18px;
+    margin-right:8px;
+    margin-top:12px;
+    width:18px;
+}
+
+#header .navigation a.categories span.arrow {
+    background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -190px -176px no-repeat;
+    background-position:-190px -176px;
+    display:inline-block;
+    float:right;
+    height:9px;
+    margin-left:5px;
+    margin-top:18px;
+    width:15px;
+}
+
+#header .navigation a.categories span.ico {
+    background-position:-130px -274px;
+    height:13px;
+    margin-top:16px;
+    width:16px;
+}
+
+#header .navigation a.categories.show span.arrow {
+    background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -174px -176px no-repeat;
+    display:inline-block;
+    float:right;
+    height:9px;
+    margin-left:5px;
+    margin-top:18px;
+    width:15px;
+}
+
+#header .navigation li {
+    float:left;
+    margin-right:20px;
+}
+
+#header .navigation-bar {
+    background:#35353e;
+    border-bottom:7px solid #71a00e;
+    color:#fff;
+    font-size:13px;
+}
+
+#header .navigation-bar a {
+    text-decoration:none;
+}
+
+#header .top {
+    background:#2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
+    height:58px;
+}
+
+#header .top ul.android li a.android,#header .top ul.platform-tabs li a.android:hover,#header .navigation-bar a:hover {
+    color:#83b813;
+}
+
+#header .top ul.iphone li a.android:hover span.ico,#header .top ul.android li a.android span.ico {
+    background-position:-179px -187px;
+}
+
+#header .top ul.platform-tabs {
+    background-color:#1c1c20;
+    float:left;
+    margin-left:24px;
+    padding:0;
+    position:relative;
+    z-index:1;
+}
+
+#header .top ul.platform-tabs a.iphone {
+    border-top:3px solid #ff811f;
+}
+
+#header .top ul.platform-tabs li {
+    border:none;
+    display:block;
+    float:left;
+    margin-top:0;
+    width:138px;
+}
+
+#header .top ul.platform-tabs li a {
+    color:#bfbfc8;
+    display:block;
+    font-size:13px;
+    line-height:55px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+#header .top ul.platform-tabs li a.android {
+    border-top:3px solid #83b813;
+}
+
+#header .top ul.platform-tabs li a.iphone span.ico {
+    background-position:-154px -187px;
+}
+
+#header .top ul.platform-tabs li a.iphone span.ico,#header .top ul.platform-tabs li a.android span.ico {
+    background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) -130px -187px no-repeat;
+    display:inline-block;
+    float:left;
+    height:26px;
+    margin:12px 11px 0 21px;
+    text-indent:-999em;
+    width:22px;
+}
+
+#header .top ul.platform-tabs li a:active,#header .top ul.platform-tabs li.active a {
+    background-color:#35353e;
+}
+
+#header .wrap-content {
+    margin:0 auto;
+    padding:0;
+    position:relative;
+    width:990px;
+}
+
+#header .wrap-content ul {
+    margin:0;
+    padding:0;
+}
+
+.advertising-center {
+    margin-top:1px;
+}
+
+ul {
+    list-style:none;
+}

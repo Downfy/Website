@@ -1,78 +1,77 @@
-/***** APP REVIEW **********************************/
 .reviews-top {
-    overflow: hidden;
-    margin-top: 1px;
-    margin-right: 340px;
-    padding-left: 2px;
-    height: 280px;
-    -webkit-box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 2px 0 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
+    box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
+    height:280px;
+    margin-right:340px;
+    margin-top:1px;
+    overflow:hidden;
+    padding-left:2px;
 }
 
 .reviews-top .review-top-item {
-    overflow: hidden;
-    padding: 1px;
-    height: 140px;
-    border: 1px solid #CBCBCB;
-    -webkit-box-shadow: inset 0 1px 1px #FFF;
-    -moz-box-shadow: inset 0 1px 1px #FFF;
-    box-shadow: inset 0 1px 1px #FFF;
-    -o-box-shadow: inset 0 1px 1px #FFF;
-}
-
-.reviews-top .review-top-item:hover {
-    background-color: #f4f4f4;
-    -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.reviews-top .review-top-item .name-app {
-    overflow: hidden;
-    padding-left: 15px;
-    width: 150px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 14px;
-}
-
-.reviews-top .review-top-item a .name-app {
-    margin-top: 15px;
-    margin-bottom: 0px;
-    color: #000;
-    line-height: 16px;
-}
-
-.reviews-top .review-top-item .view {
-    margin-top: 16px;
-    padding-left: 15px;
-    color: #a0a0a0;
-    font-size: 14px;
-}
-
-.reviews-top .review-top-item .stars {
-    margin-top: 1px;
-    padding-left: 14px;
-}
-
-.reviews-top .review-top-item .stars .gold-star, .app-info .stars .gold-star {
-    float: left;
-    width: 15px;
-    height: 12px;
-    background: url(../../images/tablet/gold-star.png) no-repeat left center;
-}
-
-.reviews-top .review-top-item .stars .gray-star, .app-info .stars .gray-star {
-    float: left;
-    width: 15px;
-    height: 12px;
-    background: url(../../images/tablet/gray-star.png) no-repeat left center;
+    -moz-box-shadow:inset 0 1px 1px #FFF;
+    -o-box-shadow:inset 0 1px 1px #FFF;
+    -webkit-box-shadow:inset 0 1px 1px #FFF;
+    border:1px solid #CBCBCB;
+    box-shadow:inset 0 1px 1px #FFF;
+    height:140px;
+    overflow:hidden;
+    padding:1px;
 }
 
 .reviews-top .review-top-item .cat-name {
-    padding-left: 15px;
-    color: #a0a0a0;
-    font-size: 14px;
+    color:#a0a0a0;
+    font-size:14px;
+    padding-left:15px;
+}
+
+.reviews-top .review-top-item .name-app {
+    font-size:14px;
+    overflow:hidden;
+    padding-left:15px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:150px;
+}
+
+.reviews-top .review-top-item .stars {
+    margin-top:1px;
+    padding-left:14px;
+}
+
+.reviews-top .review-top-item .stars .gold-star,.app-info .stars .gold-star {
+    background:url(../../images/tablet/gold-star.png) no-repeat left center;
+    float:left;
+    height:12px;
+    width:15px;
+}
+
+.reviews-top .review-top-item .stars .gray-star,.app-info .stars .gray-star {
+    background:url(../../images/tablet/gray-star.png) no-repeat left center;
+    float:left;
+    height:12px;
+    width:15px;
+}
+
+.reviews-top .review-top-item .view {
+    color:#a0a0a0;
+    font-size:14px;
+    margin-top:16px;
+    padding-left:15px;
+}
+
+.reviews-top .review-top-item a .name-app {
+    color:#000;
+    line-height:16px;
+    margin-bottom:0;
+    margin-top:15px;
+}
+
+.reviews-top .review-top-item:hover {
+    -moz-box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+    -o-box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
+    background-color:#f4f4f4;
+    box-shadow:inset 0 1px 5px rgba(0,0,0,0.1);
 }
