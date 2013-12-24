@@ -5,4 +5,12 @@
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/cat/index.jspx" />
     </definition>
+    <definition extends="view" name="home/android-group">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/cat/group.jspx" />
+    </definition>
+    <definition extends="view" name="home/android-category">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/cat/category.jspx" />
+    </definition>
 </tiles-definitions>

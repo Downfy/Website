@@ -115,6 +115,10 @@
     padding:0;
 }
 
+.main-item .app-description .review-description h2{
+    
+}
+
 .main-item .app-description .reviewer-rating {
     color:#fff;
     float:left;
