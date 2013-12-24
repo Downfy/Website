@@ -5,7 +5,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
     <spring:message code="security_login_title" var="title" htmlEscape="false" />
-    <div id="login">
+    <div id="login" class="container">
         <c:if test="${not empty param.login_error}">
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">×</button>

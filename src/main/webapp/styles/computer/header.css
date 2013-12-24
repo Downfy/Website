@@ -1,3 +1,8 @@
+#header {
+    background:#ededed;
+    padding-bottom:15px;
+}
+
 #header #logo {
     background:url(http://cdn1.staztic.com/f/images_sprite_14_20131118123836.png) 0 0 no-repeat;
     display:block;
@@ -154,6 +159,44 @@
 #header .wrap-content ul {
     margin:0;
     padding:0;
+}
+
+#header .categories-list {
+    display:none;
+    background:#fff;
+    font-size:13px;
+    position:relative;
+    display:none;
+    margin:20px auto 0 auto;
+    position:relative;
+}
+
+#header .categories-list .sub-title {
+    border-bottom:1px solid #fff;
+    margin-bottom:3px;
+    margin-top:10px;
+    padding:0;
+    padding-bottom:3px;
+    line-height:25px;
+    background:none;
+    color:#4a4a55;
+    font-size:19px;
+    font-weight:normal;
+    font-family:'Open Sans',sans-serif,arial;
+    border-radius:2px 2px 2px 2px;
+    text-transform:uppercase;
+}
+
+#header .categories-list h3 a, .categories-list h3 a:hover {
+    display:block;
+    padding-bottom:3px;
+    text-decoration:none;
+    color:#4a4a55;
+    border-bottom:1px solid #d1d1d1;
+}
+
+#header .categories-list ul {
+    padding-left:10px;
 }
 
 .advertising-center {

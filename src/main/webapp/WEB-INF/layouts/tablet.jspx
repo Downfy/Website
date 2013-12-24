@@ -54,7 +54,7 @@
 
     <body>
         <tiles:insertAttribute name="header"/> 
-        <div class="container-fluid">
+        <div style="position: relative;">
             <div class="reviews-top">
                 <tiles:insertAttribute name="top-reviews"/>
             </div>
