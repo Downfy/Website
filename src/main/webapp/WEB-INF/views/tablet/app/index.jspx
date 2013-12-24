@@ -6,14 +6,19 @@
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
+
     <spring:url var="images_url" value="/resources/images" />
-    <ol class="breadcrumb">
+    <ol class="breadcrumb" >
         <li><a href="#">Downfy.com</a></li>
         <li><a href="#">Android Apps</a></li>
-        <li><a href="#">Social</a></li>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="${home_url}">
+                <span itemprop="title">Social</span>
+            </a>
+        </li>
         <li class="active">Facebook</li>
     </ol>
-    <div class="main-item">
+    <div class="main-item" itemscope="" itemtype="http://schema.org/SoftwareApplication">
         <div class="col-md-8 col-xs-9">
             <div class="app-item">
                 <div class="advertising">
@@ -21,15 +26,21 @@
                 </div>
                 <div class="app-detail no-padding">
                     <div class="pull-left">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
-                            <img width="84px" alt="" src="${images_url}/60c938c4.png" class="img-rounded"/>
+                        <a itemprop="url" href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                            <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${images_url}/60c938c4.png" class="img-rounded"/>
                         </a>
                     </div>
                     <div class="pull-left">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html"><h3 class="name-app">
-                                Thời Đại Hắc Ám
-                            </h3>
+                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                            <h1 class="name-app" itemprop="name">
+                                Dolphin Browser
+                            </h1>
                         </a>
+                        <div class="cat-name" itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="#" title="See more apps by Dolphin Browser">
+                                <span itemprop="name">Dolphin Browser</span>
+                            </a>
+                        </div>
                         <div class="stars">
                             <span class="gold-star"><!----></span>
                             <span class="gold-star"><!----></span>
@@ -37,12 +48,19 @@
                             <span class="gold-star"><!----></span>
                             <span class="gold-star"><!----></span>
                         </div>
-                        <div class="view">
+                        <div class="view" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
                             <span class="glyphicon glyphicon-thumbs-up"><!----></span>
-                            29
+                            <span itemprop="ratingcount">29</span>
+                            <meta itemprop="worstRating" content="0"/>
+                            <meta itemprop="bestRating" content="5"/>
+                            <span class="hidden" itemprop="ratingValue">5</span>
                         </div>
-                        <div class="free">
+                        <div class="free" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                             FREE
+                            <meta itemprop="price" content="0"/>
+                            <span itemprop="seller" itemscope="" itemtype="http://schema.org/Organization">
+                                <span itemprop="name" content="Android"/>
+                            </span>
                         </div>
                     </div>    
                 </div>
@@ -101,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="app-description">
+            <div class="app-description" itemprop="reviews" itemscope="" itemtype="http://schema.org/Review">
                 <div class="review-widget">
                     <div class="cms-title"><span class="review-ico"><!----></span>Expert's Review</div>
                     <div class="wrap clearfix">
@@ -121,20 +139,24 @@
                         </div>
                         <h2 class="review-title">"Discovering the Best Android Apps"</h2>
                         <p>Reviewed by: <a rel="author" href="http://www.appszoom.com/user/801299843120" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-                                <span itemprop="name">Emmanuel Lund</span></a> / Jun 21, 2013
+                                <span itemprop="name">Emmanuel Lund</span></a> / 
+                                <meta itemprop="datePublished" content="2011-03-25"/>Jun 21, 2013
                         </p>
                     </div>
                 </div>
-                <p>
-                    SohaPhim là ứng dụng xem phim hàng đầu tại Việt Nam với lượng phim khổng lồ được biên tập và cập nhật nhanh nhất.
-                </p>
-                <p>
-                    Ứng dụng SohaPhim là một phiên bản đầy đủ của dịch vụ xem phim Soha trên cả 2 nền tảng iOs và Android. Vì vậy các chức năng và trải nghiệm xem phim độ nét cao như chúng tôi đã và đang phục vụ trên máy tính vẫn giữ nguyên.
-                    Tại sao bạn nên cài đặt ứng dụng SohaPhim?- Xem phim ổn định với chất lượng cao.- Chức năng tìm kiếm và duyệt phim tiện lợi, dễ dàng để tìm phim bạn muốn xem 1 cách nhanh chóng.- SohaPhim giới thiệu cho bạn những bộ phim hay hàng ngày.- Bình luận, đánh giá về phim mà bạn đã xem.- Chia sẻ lên Facebook về phim mà bạn yêu thích.- Thấy phim hay nhưng chưa có thời gian để xem, bạn có thể đánh dấu để xem sau.
-                </p>
-                <p>
-                    Và còn nhiều tính năng thú vị khác.
-                </p>
+                <span>
+                    <h2 itemprop="description">Browse through your favorites websites using Dolphin</h2>
+                    <p>
+                        SohaPhim là ứng dụng xem phim hàng đầu tại Việt Nam với lượng phim khổng lồ được biên tập và cập nhật nhanh nhất.
+                    </p>
+                    <p>
+                        Ứng dụng SohaPhim là một phiên bản đầy đủ của dịch vụ xem phim Soha trên cả 2 nền tảng iOs và Android. Vì vậy các chức năng và trải nghiệm xem phim độ nét cao như chúng tôi đã và đang phục vụ trên máy tính vẫn giữ nguyên.
+                        Tại sao bạn nên cài đặt ứng dụng SohaPhim?- Xem phim ổn định với chất lượng cao.- Chức năng tìm kiếm và duyệt phim tiện lợi, dễ dàng để tìm phim bạn muốn xem 1 cách nhanh chóng.- SohaPhim giới thiệu cho bạn những bộ phim hay hàng ngày.- Bình luận, đánh giá về phim mà bạn đã xem.- Chia sẻ lên Facebook về phim mà bạn yêu thích.- Thấy phim hay nhưng chưa có thời gian để xem, bạn có thể đánh dấu để xem sau.
+                    </p>
+                    <p>
+                        Và còn nhiều tính năng thú vị khác.
+                    </p>
+                </span>
             </div>
             <div class="app-screenshoot">
                 <div class="cms-title">Screenshoots</div>
@@ -176,6 +198,11 @@
                                     Thời Đại Hắc Ám
                                 </h3>
                             </a>
+                            <div class="cat-name">
+                                <a href="#" title="See more apps by Dolphin Browser">
+                                    Dolphin Browser
+                                </a>
+                            </div>
                             <div class="stars">
                                 <span class="gold-star"><!----></span>
                                 <span class="gold-star"><!----></span>
@@ -204,6 +231,11 @@
                                     iOnline
                                 </h3>
                             </a>
+                            <div class="cat-name">
+                                <a href="#" title="See more apps by Dolphin Browser">
+                                    Dolphin Browser
+                                </a>
+                            </div>
                             <div class="stars">
                                 <span class="gold-star"><!----></span>
                                 <span class="gold-star"><!----></span>
@@ -232,6 +264,11 @@
                                     iOnline
                                 </h3>
                             </a>
+                            <div class="cat-name">
+                                <a href="#" title="See more apps by Dolphin Browser">
+                                    Dolphin Browser
+                                </a>
+                            </div>
                             <div class="stars">
                                 <span class="gold-star"><!----></span>
                                 <span class="gold-star"><!----></span>
@@ -243,7 +280,6 @@
                                 <span class="glyphicon glyphicon-thumbs-up"><!----></span>
                                 25.829
                             </div>
-                            
                             <div class="free">
                                 FREE
                             </div>

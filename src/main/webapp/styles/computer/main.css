@@ -45,6 +45,10 @@
     padding-left:15px;
 }
 
+.app-detail .cat-name a {
+    color:#a0a0a0;
+}
+
 .app-detail .free {
     font-size:14px;
     line-height:20px;
