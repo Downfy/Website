@@ -116,7 +116,7 @@
 }
 
 .main-item .app-description .review-description h2{
-    
+
 }
 
 .main-item .app-description .reviewer-rating {
@@ -207,6 +207,10 @@
     margin-top:10px;
 }
 
+.main-item .app-comments {
+    margin-top:10px;
+}
+
 .main-item .cms-title {
     background: linear-gradient(to bottom, #d5d7dc 0%,#cccfd3 100%);
     border-radius:2px;
@@ -235,3 +239,5 @@
 a img,iframe {
     border:none;
 }
+
+.fb-comments, .fb-comments span, .fb-comments iframe { width: 100% !important; }

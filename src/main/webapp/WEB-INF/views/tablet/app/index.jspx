@@ -182,6 +182,24 @@
                     //--><!]]>
                 </script>
             </div>
+            <div class="app-comments">
+                <div class="cms-title">Screenshoots</div>
+                <div id="fb-root"><!----></div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=483721638415122";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    //--><!]]>
+                </script>
+                <div class="fb-comments col-md-8 col-xs-9" data-href="http://downfy.com" data-numposts="5" data-colorscheme="light"><!----></div>
+            </div>
         </div>
         <div class="col-md-4 col-xs-3">
             <div class="suggest suggest-item">
