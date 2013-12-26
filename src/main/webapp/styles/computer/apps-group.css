@@ -7,7 +7,7 @@
 .group-sidebar {
     float: right;
     position: absolute;
-    right: 0;
+    right: 5px;
     top: 0;
     width: 300px;
 }
@@ -26,7 +26,7 @@
 }
 
 .group-content .app-result-large {
-    margin: 5px 0;
+    margin:0;
 }
 
 .group-content .app-result {
@@ -41,11 +41,11 @@
 }
 
 .group-content .app-result-large-top {
-    border-bottom: 1px solid #e6e6e6;
+    margin-top:3px;
     width: 100%;
 }
 
-.group-content .browse-emph h2{
+.group-content .browse-emph h2 {
     font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
@@ -82,7 +82,7 @@
     border-left: 1px solid #e6e6e6;
 }
 
-.group-content .app-result-desc-mid h3{
+.group-content .app-result-desc-mid h3 {
     color: #5f6060;
     font-size: 12px;
     margin:0;
@@ -90,8 +90,8 @@
 
 .group-content .app-result-desc-low {
     font-size: 12px;
-    padding: 5px; 
-    height: 73px; 
+    padding: 5px;
+    height: 73px;
     overflow: hidden;
     text-align: justify;
     margin-left: 5px;
@@ -127,6 +127,12 @@
     border-color: #068ec6;
     background-color: #2ca9d6;
     color: white;
+}
+
+.group-content .app-member {
+    height: 152px;
+    border: 1px solid #e6e6e6;
+    margin-right: 5px;
 }
 
 .group-sidebar .browseside {
@@ -188,16 +194,31 @@
     top: 0px;
 }
 
-.group-sidebar .browseside a.filterlink {
+.browseside .filter-group {
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #c6c6c8;
+    margin:3px 0 3px 0;
+    padding:10px;
+}
+
+.browseside .filter-group a.filterlink {
+    display: inline;
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.browseside a.filterlink {
     display: block;
-    cursor: pointer;
     margin-bottom: 4px;
     margin-top: 4px;
     color: black;
     text-decoration: none;
 }
 
-.group-sidebar .browseside .filterbox {
+.browseside .filterbox {
     width: 18px;
     height: 18px;
     -moz-border-radius: 3px;
@@ -209,7 +230,7 @@
     vertical-align: bottom;
 }
 
-.group-sidebar .browseside .filterbox-chosen {
+.browseside .filterbox-chosen {
     background-color: #2ca9d6;
     border-color: #008ac4;
 }

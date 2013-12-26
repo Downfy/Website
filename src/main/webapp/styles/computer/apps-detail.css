@@ -13,7 +13,6 @@
     margin:0;
     padding:0;
     position:relative;
-    user-select:none;
 }
 
 .main-item {
@@ -116,7 +115,11 @@
 }
 
 .main-item .app-description .review-description h2{
-
+    color: #323232;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 0;
+    padding-left: 20px;
 }
 
 .main-item .app-description .reviewer-rating {
