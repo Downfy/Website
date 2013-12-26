@@ -34,6 +34,12 @@
                     <li>
                         <a href="#" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
                     </li>
+                    <li>
+                        <a href="#" title="My Apps">
+                            <span class="glyphicon glyphicon-file"><!----></span> 
+                            Administrator <span class="caret"><!----></span>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navigation pull-right">
                     <li>

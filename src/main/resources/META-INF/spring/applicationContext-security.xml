@@ -15,17 +15,12 @@
                     login-page="/login" authentication-failure-url="/login/failure?login_error=t" />
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
-        <intercept-url pattern="/thanh-vien/nop-ho-so-tuyen-dung/**" access="permitAll" />
-        <intercept-url pattern="/thanh-vien/**" access="isAuthenticated()" />
-        <intercept-url pattern="/thanh-vien**" access="isAuthenticated()" />
-        <intercept-url pattern="/dang-tin-tuyen-dung/**" access="isAuthenticated()" />
-        <intercept-url pattern="/dang-tin-tuyen-dung**" access="permitAll" />
+        <intercept-url pattern="/member/**" access="isAuthenticated()" />
+        <intercept-url pattern="/member**" access="isAuthenticated()" />
         <intercept-url pattern="/admin/**" access="isAuthenticated()" />
         <intercept-url pattern="/admin**" access="isAuthenticated()" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/login**" access="permitAll" />
-        <intercept-url pattern="/image**" access="permitAll" />
-        <intercept-url pattern="/crawl**" access="permitAll" />
         <intercept-url pattern="/accessDenied" access="permitAll" />
         <intercept-url pattern="/**" access="permitAll" />
         <access-denied-handler error-page="/accessDenied" />

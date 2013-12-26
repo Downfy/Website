@@ -5,4 +5,12 @@
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/member/index.jspx" />
     </definition>
+    <definition extends="member" name="home/member/create-app">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/create-app.jspx" />
+    </definition>
+    <definition extends="member" name="home/member/create-cat">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/create-cat.jspx" />
+    </definition>
 </tiles-definitions>

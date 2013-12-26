@@ -13,12 +13,8 @@
     <div class="contentContainer">
         <div class="app-container">
             <div class="app-wrapper">
-                <div class="heading">
-                    <div class="new-header">
-                        <a href="/apps/hot/">
-                            <h2 class="new-header-text">Hot Apps</h2>
-                        </a>
-                    </div>
+                <div class="panel panel-success" style="margin-bottom:0">
+                    <div class="panel-heading"><strong>Hot Apps</strong></div>
                 </div>
                 <div class="container">
                     <div class="list-apps">
@@ -336,12 +332,8 @@
                 </div>
             </div>
             <div class="app-wrapper">
-                <div class="heading">
-                    <div class="new-header">
-                        <a href="/apps/hot/">
-                            <h2 class="new-header-text">New Apps</h2>
-                        </a>
-                    </div>
+                <div class="panel panel-success" style="margin-bottom:0">
+                    <div class="panel-heading"><strong>New Apps</strong></div>
                 </div>
                 <div class="container">
                     <div class="list-apps">

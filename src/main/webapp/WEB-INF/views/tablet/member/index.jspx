@@ -7,12 +7,10 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <div class="panel panel-success" style="margin-bottom:0">
+        <div class="panel-heading"><strong>Dashboard Apps</strong></div>
+    </div>
     <div class="group-content" style="margin-right:2px !important;">
-        <div class="heading">
-            <div class="new-header">
-                <h2 class="new-header-text">Dashboard Apps</h2>
-            </div>
-        </div>
         <div class="browseside">
             <div class="filter-group">
                 <span class="browse-emph">Filter by</span>

@@ -53,7 +53,13 @@
                     <div class="app-result-score" title="AppBrain Score (0-100)" style="display:inline-block; margin-right: 15px; background-color: #f8a43e">73</div>
                     <div style="display: inline-block; margin-right: 5px;">5,000+ downloads</div>
                     <div style="display: inline-block; margin-right: 5px;">|</div>
-                    <div style="display: inline-block;">Social</div>
+                    <div style="display: inline-block; margin-right: 5px;">Social</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block; margin-right: 5px;">
+                        <div class="browse-price price-free">
+                            <span class="glyphicon glyphicon-download-alt"><!----></span> Downloaded
+                        </div>
+                    </div>
                 </div>
             </div>
             <div>
