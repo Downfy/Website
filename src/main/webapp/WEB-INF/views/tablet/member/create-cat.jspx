@@ -1,54 +1,167 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:sec="http://www.springframework.org/security/tags"
-     xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:form="http://www.springframework.org/tags/form"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <spring:url value="/member/category" var="category_url" />
+    <spring:url value="/member/category/json" var="category_json_url" />
 
-    <div class="col-md-4 col-lg-4" style="padding-left:3px; padding-right: 5px;">
+    <div class="col-md-4 col-lg-4 cat-create-form">
         <div class="panel panel-success">
-            <div class="panel-heading"><strong>Add new category</strong></div>
+            <div class="panel-heading"><strong>New category</strong></div>
             <div class="panel-body">
-                <form role="form">
-                    <div class="form-group">
-                        <label>Category Parent</label>
-                        <select class="form-control" name="parent">
-                            <option value="0">ROOT</option>
+                <form:form id="add-category-form" role="form" modelAttribute="categoryForm" action="${category_url}" method="POST">
+                    <div class="form-group" id="name">
+                        Name
+                        <form:input path="name" class="form-control" placeholder="Category name"/>
+                        <span class="help-inline text-danger"><form:errors path="name" /></span>
+                    </div>
+                    <div class="form-group" id="url">
+                        Slug
+                        <form:input path="url" class="form-control" placeholder="URL-Friendly name"/>
+                        <span class="help-inline text-danger"><form:errors path="url" /></span>
+                    </div>
+                    <div class="form-group" id="parent">
+                        Parent
+                        <select class="form-control input-lg" name="parent">
                             <option value="1">Android Games</option>
                             <option value="2">Android Apps</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>Category Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Category Name"/>
-                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                </form:form>
             </div>
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                function collectFormData(fields) {
+                    var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    return data;
+                }
+
+                $(document).ready(function() {
+                    var $form = $('#add-category-form');
+                    $form.bind('submit', function(e) {
+                        // Ajax validation
+                        var $inputs = $form.find('input');
+                        var data = collectFormData($inputs);
+
+                        $.post('${category_json_url}', data, function(response) {
+                            $form.find('.form-group').removeClass('has-error');
+                            $form.find('.help-inline').empty();
+
+                            if (response.status == 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $form.unbind('submit');
+                                $form.submit();
+                            }
+                        }, 'json');
+
+                        e.preventDefault();
+                        return false;
+                    });
+
+                });
+                //--><!]]>
+            </script>
         </div>
     </div>
-    <div class="col-md-8 col-lg-8" style="padding-left:5px; padding-right: 3px;">
+    <div class="col-md-8 col-lg-8 cat-create-detail">
         <div class="container-fluid">
             <div class="panel panel-success">
                 <div class="panel-heading"><strong>Categories</strong></div>
                 <div class="panel-body">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-danger">Action</button>
-                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            <span class="caret"><!----></span>
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </div>
+                    <!-- Table -->
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Category Parent <span class="sign arrow"><!----></span>
+                            </th>
+                            <th>
+                                Category Name <span class="sign arrow"><!----></span>
+                            </th>
+                            <th>
+                                URL-Friendly
+                            </th>
+                            <th>
+                                Published
+                            </th>
+                        </tr>
+                        <c:forEach items="${cats}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    ${rowCounter.count}
+                                </td>
+                                <c:if test="${item.parent eq 1}">
+                                    <td>
+                                        Android Games
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 2}">
+                                    <td>
+                                        Android Apps
+                                    </td>
+                                </c:if>
+                                <td>
+                                    ${item.name}
+                                </td>
+                                <td>
+                                    <a href="#${item.url}" title="${item.name}">${item.url}</a>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="enabled" checked="${item.enabled}"/>
+                                    <input type="hidden" name="id" value="${item.id}"/>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+
+                    <script>
+                        (function() {
+                            var $table = $('table');
+                            $table.append(newTableRow());
+                            $table.append(newTableRow());
+
+                            $table.on('sorted', function() {
+                                alert("Table was sorted.");
+                            });
+
+                            $('#event').on('change', function() {
+                                var $this = $(this);
+                                if ($this.is(':checked')) {
+                                    $table.on('sorted', function() {
+                                        alert("Table was sorted.");
+                                    });
+                                }
+                                else {
+                                    $table.off('sorted');
+                                }
+                            });
+
+                            $("input[name=sign]:radio").change(function() {
+                                $.bootstrapSortable(true, $(this).val());
+                            });
+
+                        }());
+                    </script>
                 </div>
             </div>
         </div>
