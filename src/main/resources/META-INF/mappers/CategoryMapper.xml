@@ -7,19 +7,19 @@
     <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
 
     <select id="findAll" resultType="CategoryDomain" flushCache="false" useCache="true">
-        SELECT ID, NAME, URL, ENABLED, SORT 
+        SELECT ID, PARENT, NAME, URL, ENABLED, SORT 
         FROM categories
         ORDER BY PARENT, URL
     </select>
     
     <select id="findById" resultType="CategoryDomain" flushCache="false" useCache="true">
-        SELECT ID, NAME, URL, ENABLED, SORT 
+        SELECT ID, PARENT, NAME, URL, ENABLED, SORT 
         FROM categories
         WHERE ID = #{id}
     </select>
     
     <select id="findByUrl" resultType="CategoryDomain" flushCache="false" useCache="true">
-        SELECT ID, NAME, URL, ENABLED, SORT 
+        SELECT ID, PARENT, NAME, URL, ENABLED, SORT 
         FROM categories
         WHERE URL = #{url}
     </select>
@@ -34,6 +34,7 @@
     <update id="update" flushCache="true">
         UPDATE categories
         SET 
+        PARENT = #{parent},
         NAME = #{name},
         URL = #{url},
         SORT = #{sort},
