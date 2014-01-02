@@ -27,18 +27,13 @@
     </definition>
     
     <definition name="member" template="/WEB-INF/layouts/member.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/frontend/member/header.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/frontend/member/footer.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/tablet/member/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/member/footer.jspx" />
     </definition>
     
     <definition name="backend" template="/WEB-INF/layouts/backend.jspx">
         <put-attribute name="header" value="/WEB-INF/views/tablet/backend/header.jspx" />
         <put-attribute name="footer" value="/WEB-INF/views/tablet/backend/footer.jspx" />
-    </definition>
-    
-    <definition name="admin" template="/WEB-INF/layouts/admin.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/admin/header.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/admin/footer.jspx" />
     </definition>
     
     <definition name="error" template="/WEB-INF/layouts/error.jspx">

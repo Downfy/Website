@@ -16,7 +16,7 @@
         <div class="panel panel-success">
             <div class="panel-heading"><strong>New category</strong></div>
             <div class="panel-body">
-                <form:form id="add-developer-form" role="form" modelAttribute="accountDeveloperForm" action="${developer_url}" method="POST">
+                <form:form id="add-developer-form" role="form" modelAttribute="developerForm" action="${developer_url}" method="POST">
                     <div class="form-group" id="developerId">
                         Name
                         <form:input path="developerId" class="form-control" placeholder="Developer Id"/>
