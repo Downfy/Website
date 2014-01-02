@@ -8,4 +8,9 @@
     <definition extends="mobile" name="mobile/login">
         <put-attribute name="body" value="/WEB-INF/views/mobile/login.jspx" />
     </definition>
+    
+    <definition extends="error" name="mobile/maintenance">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/mobile/maintenance.jspx" />
+    </definition>
 </tiles-definitions>

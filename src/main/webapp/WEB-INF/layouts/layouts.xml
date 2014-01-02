@@ -10,37 +10,42 @@
         <put-attribute name="footer" value="/WEB-INF/views/mobile/footer.jspx" />
     </definition>
     
-    <definition name="tablet" template="/WEB-INF/layouts/tablet.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jspx" />
-        <put-attribute name="top-reviews" value="/WEB-INF/views/tablet/home/top-reviews.jspx" />
-        <put-attribute name="top-advertising" value="/WEB-INF/views/tablet/home/top-advertising.jspx" />
-        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/home/center-advertising.jspx" />
-        <put-attribute name="menu" value="/WEB-INF/views/tablet/home/menu.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+    <definition name="tablet-home" template="/WEB-INF/layouts/tablet.jspx">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/frontend/home/header.jspx" />
+        <put-attribute name="top-reviews" value="/WEB-INF/views/tablet/frontend/home/top-reviews.jspx" />
+        <put-attribute name="top-advertising" value="/WEB-INF/views/tablet/frontend/home/top-advertising.jspx" />
+        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/frontend/home/center-advertising.jspx" />
+        <put-attribute name="menu" value="/WEB-INF/views/tablet/frontend/home/menu.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/frontend/home/footer.jspx" />
     </definition>
     
-    <definition name="view" template="/WEB-INF/layouts/view.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jspx" />
-        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/home/center-advertising.jspx" />
-        <put-attribute name="menu" value="/WEB-INF/views/tablet/home/menu.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+    <definition name="tablet-view" template="/WEB-INF/layouts/tablet-view.jspx">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/frontend/home/header.jspx" />
+        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/frontend/home/center-advertising.jspx" />
+        <put-attribute name="menu" value="/WEB-INF/views/tablet/frontend/home/menu.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/frontend/home/footer.jspx" />
     </definition>
     
     <definition name="member" template="/WEB-INF/layouts/member.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/member/header.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/tablet/frontend/member/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/frontend/member/footer.jspx" />
     </definition>
     
     <definition name="backend" template="/WEB-INF/layouts/backend.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/member/header.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/tablet/backend/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/backend/footer.jspx" />
+    </definition>
+    
+    <definition name="admin" template="/WEB-INF/layouts/admin.jspx">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/admin/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/admin/footer.jspx" />
     </definition>
     
     <definition name="error" template="/WEB-INF/layouts/error.jspx">
-        <put-attribute name="header" value="/WEB-INF/views/tablet/home/header.jspx" />
-        <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/home/center-advertising.jspx" />
+        <put-attribute name="header" value="/WEB-INF/views/error/header.jspx" />
+        <put-attribute name="center-advertising" value="/WEB-INF/views/error/center-advertising.jspx" />
         <put-attribute name="bottom-advertising" value="/WEB-INF/views/error/bottom-advertising.jspx" />
-        <put-attribute name="footer" value="/WEB-INF/views/tablet/home/footer.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/error/footer.jspx" />
     </definition>
 
 </tiles-definitions>

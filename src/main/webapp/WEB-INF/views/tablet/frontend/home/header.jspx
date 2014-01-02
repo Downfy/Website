@@ -1,0 +1,151 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="register_url" value="/create-account.html" />
+    <spring:url var="login_url" value="/login.html" />
+    <spring:url var="member_url" value="/member.html" />
+    <spring:url var="logout_url" value="/login.html" />
+
+    <div id="header">
+        <div class="top">
+            <div class="wrap-content clearfix">
+                <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
+                <ul class="platform-tabs android">
+                    <li class="android active">
+                        <a class="android" href="${home_url}" title="Android apps">
+                            <span class="ico"><!----></span> ANDROID
+                        </a>
+                    </li>
+                    <li class="iphone ">
+                        <a class="iphone" href="#" title="Iphone apps">
+                            <span class="ico"><!----></span> IPHONE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navigation-bar clearfix">
+            <div class="wrap-content"> 
+                <ul class="navigation">
+                    <li>
+                        <a id="browse-cats" class="show" href="javascript:void(0)" title="Categories"><span class="glyphicon glyphicon-th"><!----></span> Categories</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Best Apps"><span class="glyphicon glyphicon-thumbs-up"><!----></span> Best Apps</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Top Downloaded"><span class="glyphicon glyphicon-download-alt"><!----></span> Top Downloaded</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Community"><span class="glyphicon glyphicon-globe"><!----></span> Community</a>
+                    </li>
+                </ul>
+                <ul class="navigation pull-right">
+                    <li>
+                        <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>    
+                    </li>
+                    <li>
+                        <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
+                    </li>
+                    <li>
+                        <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
+                    </li>
+                    <li>
+                        <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">$(document).ready(function() {
+                $('#browse-cats').click(function() {
+                    if ($(this).hasClass('show')) {
+                        $(this).toggleClass('show');
+                        $('#cat-list').slideDown();
+                    }
+                    else {
+                        $(this).toggleClass('show');
+                        $('#cat-list').slideUp();
+                    }
+                });
+            });</script>
+        <div id="cat-list" class="container categories-list">
+            <div class="col-md-3">
+                <h3 class="sub-title">
+                    <a href="http://www.appszoom.com/android_games" title="Android Games">Android Games</a></h3>
+                <ul>
+                    <li><a href="http://www.appszoom.com/android_games/arcade_and_action">Arcade &amp; Action</a></li>
+                    <li><a href="http://www.appszoom.com/android_games/brain_puzzle">Brain &amp; Puzzle</a></li>
+                    <li><a href="http://www.appszoom.com/android_games/cards_and_casino">Cards &amp; Casino</a></li>
+                    <li><a href="http://www.appszoom.com/android_games/casual">Casual</a></li>
+                    <li><a href="http://www.appszoom.com/android_games/racing">Racing</a></li>
+                    <li><a href="http://www.appszoom.com/android_games/sports_games">Sports</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="sub-title"><a href="http://www.appszoom.com/android_applications" title="Android Applications">Android Applications</a></h3>
+                <ul class="col-md-4">
+                    <li><a href="http://www.appszoom.com/android_applications/babies">Babies</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/biking">Biking</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/reference">Books &amp; Reference</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/business">Business</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/cars">Cars</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/cinema">Cinema</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/college">College</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/comics">Comics</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/communication">Communication</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/couples">Couples</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/dating">Dating</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/diabetes">Diabetes</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/education">Education</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/entertainment">Entertainment</a></li>
+                </ul>
+                <ul class="col-md-4">
+                    <li><a href="http://www.appszoom.com/android_applications/finance">Finance</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/health">Health &amp; Fitness</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/hiking">Hiking</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/job_search">Job search</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/kids">Kids</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/language">Language</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/software_libraries">Libraries &amp; Demo</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/lifestyle">Lifestyle</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/multimedia">Media &amp; Video</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/medical">Medical</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/music_and_audio">Music &amp; Audio</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/news_and_weather">News &amp; Magazines</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/parents">Parents</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/photography">Photography</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.appszoom.com/android_applications/productivity">Productivity</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/running">Running</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/seniors">Seniors</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/shopping">Shopping</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/small_business">Small Business</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/social">Social</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/sports">Sports</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/tools">Tools</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/transportation">Transportation</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/travel">Travel &amp; Local</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/weather">Weather</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/writing">Writing</a></li>
+                    <li><a href="http://www.appszoom.com/android_applications/adult">Adult</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h3 class="sub-title"><a href="http://www.appszoom.com/android_themes" title="Android Themes">Android Themes</a></h3>
+                <ul>
+                    <li><a href="http://www.appszoom.com/android_themes/ringtones">Ringtones</a></li>
+                    <li><a href="http://www.appszoom.com/android_themes/soundboards">Soundboards</a></li>
+                    <li><a href="http://www.appszoom.com/android_themes/themes">Themes</a></li>
+                    <li><a href="http://www.appszoom.com/android_themes/wallpapers">Wallpapers</a></li>
+                </ul>
+            </div>
+            <span class="border-bottom"><!----></span>
+        </div>
+    </div>
+</div>

@@ -9,30 +9,27 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
-    <spring:url value="/member/category" var="category_url" />
-    <spring:url value="/member/category/json" var="category_json_url" />
+    <spring:url value="/admin/developer" var="developer_url" />
+    <spring:url value="/admin/developer/json" var="developer_json_url" />
 
     <div class="col-md-4 col-lg-4 cat-create-form">
         <div class="panel panel-success">
             <div class="panel-heading"><strong>New category</strong></div>
             <div class="panel-body">
-                <form:form id="add-category-form" role="form" modelAttribute="categoryForm" action="${category_url}" method="POST">
-                    <div class="form-group" id="name">
+                <form:form id="add-developer-form" role="form" modelAttribute="accountDeveloperForm" action="${developer_url}" method="POST">
+                    <div class="form-group" id="developerId">
                         Name
-                        <form:input path="name" class="form-control" placeholder="Category name"/>
-                        <span class="help-inline text-danger"><form:errors path="name" /></span>
+                        <form:input path="developerId" class="form-control" placeholder="Developer Id"/>
+                        <span class="help-inline text-danger"><form:errors path="developerId" /></span>
                     </div>
-                    <div class="form-group" id="url">
-                        Slug
-                        <form:input path="url" class="form-control" placeholder="URL-Friendly name"/>
-                        <span class="help-inline text-danger"><form:errors path="url" /></span>
+                    <div class="form-group" id="developerName">
+                        Name
+                        <form:input path="developerName" class="form-control" placeholder="Developer name"/>
+                        <span class="help-inline text-danger"><form:errors path="developerName" /></span>
                     </div>
-                    <div class="form-group" id="parent">
-                        Parent
-                        <select class="form-control input-lg" name="parent">
-                            <option value="1">Android Games</option>
-                            <option value="2">Android Apps</option>
-                        </select>
+                    <div class="form-group">
+                        Info
+                        <textarea name="developerInfo" class="form-control" rows="5"><!----></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form:form>
@@ -49,13 +46,13 @@
                 }
 
                 $(document).ready(function() {
-                    var $form = $('#add-category-form');
+                    var $form = $('#add-developer-form');
                     $form.bind('submit', function(e) {
                         // Ajax validation
                         var $inputs = $form.find('input');
                         var data = collectFormData($inputs);
 
-                        $.post('${category_json_url}', data, function(response) {
+                        $.post('${developer_json_url}', data, function(response) {
                             $form.find('.form-group').removeClass('has-error');
                             $form.find('.help-inline').empty();
 
@@ -133,35 +130,6 @@
                             </tr>
                         </c:forEach>
                     </table>
-
-                    <script>
-                        (function() {
-                            var $table = $('table');
-                            $table.append(newTableRow());
-                            $table.append(newTableRow());
-
-                            $table.on('sorted', function() {
-                                alert("Table was sorted.");
-                            });
-
-                            $('#event').on('change', function() {
-                                var $this = $(this);
-                                if ($this.is(':checked')) {
-                                    $table.on('sorted', function() {
-                                        alert("Table was sorted.");
-                                    });
-                                }
-                                else {
-                                    $table.off('sorted');
-                                }
-                            });
-
-                            $("input[name=sign]:radio").change(function() {
-                                $.bootstrapSortable(true, $(this).val());
-                            });
-
-                        }());
-                    </script>
                 </div>
             </div>
         </div>

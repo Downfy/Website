@@ -19,8 +19,8 @@
         <intercept-url pattern="/member**" access="isAuthenticated()" />
         <intercept-url pattern="/admin/**" access="isAuthenticated()" />
         <intercept-url pattern="/admin**" access="isAuthenticated()" />
-        <intercept-url pattern="/backed/**" access="isAuthenticated()" />
-        <intercept-url pattern="/backed**" access="isAuthenticated()" />
+        <intercept-url pattern="/backend/**" access="isAuthenticated()" />
+        <intercept-url pattern="/backend" access="isAuthenticated()" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/login**" access="permitAll" />
         <intercept-url pattern="/accessDenied" access="permitAll" />
@@ -41,7 +41,7 @@
         <authentication-provider ref="daoAuthenticationProvider" />
         <authentication-provider>
             <user-service>
-                <user name="tuanta" password="tuanta" authorities="ROLE_USER, ROLE_ADMIN" />
+                <user name="tuanta" password="tuanta" authorities="ROLE_MANAGER" />
             </user-service>
         </authentication-provider>
     </authentication-manager>
