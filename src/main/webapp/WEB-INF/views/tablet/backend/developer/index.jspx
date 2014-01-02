@@ -1,0 +1,137 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:sec="http://www.springframework.org/security/tags"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:form="http://www.springframework.org/tags/form"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <jsp:useBean id="date" class="java.util.Date" />
+    <spring:url value="/" var="home_url" />
+    <spring:url var="images_url" value="/resources/images" />
+    <spring:url value="/backend/developer" var="developer_url" />
+    <spring:url value="/backend/developer/json" var="developer_json_url" />
+
+    <div class="col-md-4 col-lg-4 cat-create-form">
+        <div class="panel panel-success">
+            <div class="panel-heading"><strong>New category</strong></div>
+            <div class="panel-body">
+                <form:form id="add-developer-form" role="form" modelAttribute="accountDeveloperForm" action="${developer_url}" method="POST">
+                    <div class="form-group" id="developerId">
+                        Name
+                        <form:input path="developerId" class="form-control" placeholder="Developer Id"/>
+                        <span class="help-inline text-danger"><form:errors path="developerId" /></span>
+                    </div>
+                    <div class="form-group" id="developerName">
+                        Name
+                        <form:input path="developerName" class="form-control" placeholder="Developer name"/>
+                        <span class="help-inline text-danger"><form:errors path="developerName" /></span>
+                    </div>
+                    <div class="form-group">
+                        Info
+                        <textarea name="developerInfo" class="form-control" rows="5"><!----></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form:form>
+            </div>
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                function collectFormData(fields) {
+                    var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    return data;
+                }
+
+                $(document).ready(function() {
+                    var $form = $('#add-developer-form');
+                    $form.bind('submit', function(e) {
+                        // Ajax validation
+                        var $inputs = $form.find('input');
+                        var data = collectFormData($inputs);
+
+                        $.post('${developer_json_url}', data, function(response) {
+                            $form.find('.form-group').removeClass('has-error');
+                            $form.find('.help-inline').empty();
+
+                            if (response.status == 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $form.unbind('submit');
+                                $form.submit();
+                            }
+                        }, 'json');
+
+                        e.preventDefault();
+                        return false;
+                    });
+
+                });
+                //--><!]]>
+            </script>
+        </div>
+    </div>
+    <div class="col-md-8 col-lg-8 cat-create-detail">
+        <div class="container-fluid">
+            <div class="panel panel-success">
+                <div class="panel-heading"><strong>Categories</strong></div>
+                <div class="panel-body">
+                    <!-- Table -->
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Category Parent <span class="sign arrow"><!----></span>
+                            </th>
+                            <th>
+                                Category Name <span class="sign arrow"><!----></span>
+                            </th>
+                            <th>
+                                URL-Friendly
+                            </th>
+                            <th>
+                                Published
+                            </th>
+                        </tr>
+                        <c:forEach items="${cats}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    ${rowCounter.count}
+                                </td>
+                                <c:if test="${item.parent eq 1}">
+                                    <td>
+                                        Android Games
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 2}">
+                                    <td>
+                                        Android Apps
+                                    </td>
+                                </c:if>
+                                <td>
+                                    ${item.name}
+                                </td>
+                                <td>
+                                    <a href="#${item.url}" title="${item.name}">${item.url}</a>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="enabled" checked="${item.enabled}"/>
+                                    <input type="hidden" name="id" value="${item.id}"/>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
