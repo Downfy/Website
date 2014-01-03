@@ -9,8 +9,8 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
-    <spring:url value="/admin/category" var="category_url" />
-    <spring:url value="/admin/category/json" var="category_json_url" />
+    <spring:url value="/backend/category" var="category_url" />
+    <spring:url value="/backend/category/json" var="category_json_url" />
 
     <div class="col-md-4 col-lg-4 cat-create-form">
         <div class="panel panel-success">

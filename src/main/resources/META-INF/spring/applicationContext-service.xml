@@ -12,5 +12,8 @@
 
     <bean id="accountService" class="com.downfy.service.AccountService"/>
     
-    <bean id="categoryService" class="com.downfy.service.CategoryService"/>
+    <bean id="categoryService" class="com.downfy.service.category.CategoryService"/>
+    
+    <bean id="developerService" class="com.downfy.service.developer.DeveloperService"/>
+
 </beans>
