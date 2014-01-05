@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="backend" name="home/backend/application">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/backend/application/index.jspx" />
+    </definition>
+    <definition extends="backend" name="home/backend/application/create">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/backend/application/create.jspx" />
+    </definition>
+    <definition extends="backend" name="home/backend/application/upload">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/backend/application/upload.jspx" />
+    </definition>
+    <definition extends="backend" name="home/backend/application/detail">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/backend/application/detail.jspx" />
+    </definition>
+    <definition extends="backend" name="home/backend/application/screenshoots">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/backend/application/screenshoots.jspx" />
+    </definition>
+</tiles-definitions>

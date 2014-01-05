@@ -12,24 +12,25 @@
     <spring:url value="/backend/category" var="category_url" />
     <spring:url value="/backend/category/json" var="category_json_url" />
 
-    <div class="col-md-4 col-lg-4 cat-create-form">
+    <div class="col-md-4 backend-create-form">
         <div class="panel panel-success">
             <div class="panel-heading"><strong>New category</strong></div>
             <div class="panel-body">
                 <form:form id="add-category-form" role="form" modelAttribute="categoryForm" action="${category_url}" method="POST">
                     <div class="form-group" id="name">
-                        Name
+                        <label>Category Name</label>
                         <form:input path="name" class="form-control" placeholder="Category name"/>
                         <span class="help-inline text-danger"><form:errors path="name" /></span>
                     </div>
                     <div class="form-group" id="url">
-                        Slug
+                        <label>Slug</label>
                         <form:input path="url" class="form-control" placeholder="URL-Friendly name"/>
                         <span class="help-inline text-danger"><form:errors path="url" /></span>
                     </div>
                     <div class="form-group" id="parent">
-                        Parent
+                        <label>Category Parent</label>
                         <select class="form-control input-lg" name="parent">
+                            <option value="0">Select a category</option>
                             <option value="1">Android Games</option>
                             <option value="2">Android Apps</option>
                         </select>
@@ -81,7 +82,7 @@
             </script>
         </div>
     </div>
-    <div class="col-md-8 col-lg-8 cat-create-detail">
+    <div class="col-md-8 backend-create-detail">
         <div class="container-fluid">
             <div class="panel panel-success">
                 <div class="panel-heading"><strong>Categories</strong></div>
@@ -93,10 +94,10 @@
                                 #
                             </th>
                             <th>
-                                Category Parent <span class="sign arrow"><!----></span>
+                                Category Parent
                             </th>
                             <th>
-                                Category Name <span class="sign arrow"><!----></span>
+                                Category Name
                             </th>
                             <th>
                                 URL-Friendly
@@ -133,35 +134,6 @@
                             </tr>
                         </c:forEach>
                     </table>
-
-                    <script>
-                        (function() {
-                            var $table = $('table');
-                            $table.append(newTableRow());
-                            $table.append(newTableRow());
-
-                            $table.on('sorted', function() {
-                                alert("Table was sorted.");
-                            });
-
-                            $('#event').on('change', function() {
-                                var $this = $(this);
-                                if ($this.is(':checked')) {
-                                    $table.on('sorted', function() {
-                                        alert("Table was sorted.");
-                                    });
-                                }
-                                else {
-                                    $table.off('sorted');
-                                }
-                            });
-
-                            $("input[name=sign]:radio").change(function() {
-                                $.bootstrapSortable(true, $(this).val());
-                            });
-
-                        }());
-                    </script>
                 </div>
             </div>
         </div>

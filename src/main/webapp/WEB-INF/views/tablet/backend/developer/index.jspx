@@ -12,23 +12,23 @@
     <spring:url value="/backend/developer" var="developer_url" />
     <spring:url value="/backend/developer/json" var="developer_json_url" />
 
-    <div class="col-md-4 col-lg-4 cat-create-form">
+    <div class="col-md-4 backend-create-form">
         <div class="panel panel-success">
             <div class="panel-heading"><strong>New developer</strong></div>
             <div class="panel-body">
                 <form:form id="add-developer-form" role="form" modelAttribute="developerForm" action="${developer_url}" method="POST">
                     <div class="form-group" id="developerId">
-                        Name
+                        <label>Developer Id</label>
                         <form:input path="developerId" class="form-control" placeholder="Developer Id"/>
                         <span class="help-inline text-danger"><form:errors path="developerId" /></span>
                     </div>
                     <div class="form-group" id="developerName">
-                        Name
+                        <label>Developer Name</label>
                         <form:input path="developerName" class="form-control" placeholder="Developer name"/>
                         <span class="help-inline text-danger"><form:errors path="developerName" /></span>
                     </div>
                     <div class="form-group">
-                        Info
+                        <label>Developer Info</label>
                         <textarea name="developerInfo" class="form-control" rows="5"><!----></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -78,7 +78,7 @@
             </script>
         </div>
     </div>
-    <div class="col-md-8 col-lg-8 cat-create-detail">
+    <div class="col-md-8 backend-create-detail">
         <div class="container-fluid">
             <div class="panel panel-success">
                 <div class="panel-heading"><strong>Developers</strong></div>

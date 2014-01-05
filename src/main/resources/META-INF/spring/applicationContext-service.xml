@@ -15,5 +15,6 @@
     <bean id="categoryService" class="com.downfy.service.category.CategoryService"/>
     
     <bean id="developerService" class="com.downfy.service.developer.DeveloperService"/>
-
+    
+    <bean id="appService" class="com.downfy.service.AppService"/>
 </beans>

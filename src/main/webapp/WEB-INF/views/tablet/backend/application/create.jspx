@@ -1,0 +1,112 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:sec="http://www.springframework.org/security/tags"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:form="http://www.springframework.org/tags/form"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <jsp:useBean id="date" class="java.util.Date" />
+    <spring:url value="/" var="home_url" />
+    <spring:url var="images_url" value="/resources/images" />
+    <spring:url value="/backend/application" var="application_url" />
+    <spring:url value="/backend/application/create/json" var="application_json_url" />
+
+    <div class="col-md-3 backend-create-form">
+        <ul class="nav nav-pills nav-stacked">
+            <li>
+                <a href="${application_url}.html">
+                    All applications
+                </a>
+            </li>
+            <li class="active">
+                <a href="${application_url}/create.html">
+                    Add new application
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 backend-create-detail">
+        <div class="panel panel-success">
+            <div class="panel-heading"><strong>New application</strong></div>
+            <div class="panel-body">
+                <form:form id="add-application-form" role="form" modelAttribute="applicationForm" action="${application_url}" method="POST">
+                    <div class="form-group" id="name">
+                        <label>Application Name</label>
+                        <form:input path="appName" class="form-control" placeholder="Application name"/>
+                        <span class="help-inline text-danger"><form:errors path="appName" /></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Application Description</label>
+                        <textarea name="appDescription" class="form-control" rows="5"><!----></textarea>
+                    </div>
+                    <div class="form-group" >
+                        <label>Application Type</label>
+                        <select id="parentCategory" class="form-control input-lg" name="appCategoryParent">
+                            <option value='0'>Select an application type</option>
+                            <option value='1'>Android Games</option>
+                            <option value='2'>Android Apps</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="category">
+                        <label>Category</label>
+                        <select id="category" class="form-control input-lg" disabled="" name="appCategory">
+                            <option value='0'>Select a category</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create App</button>
+                </form:form>
+            </div>
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                function collectFormData(fields) {
+                    var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    return data;
+                }
+
+                $(document).ready(function() {
+                    $('#parentCategory').change(function() {
+                        console.log($(this).val());
+                        if ($(this).val() === '2') {
+                            // Do something for option "b"
+                            console.log("AAAAAAAAAAAAAAAAAA");
+                        }
+                    });
+
+                    var $form = $('#add-application-form');
+                    $form.bind('submit', function(e) {
+                        // Ajax validation
+                        var $inputs = $form.find('input');
+                        var data = collectFormData($inputs);
+
+                        $.post('${application_json_url}', data, function(response) {
+                            $form.find('.form-group').removeClass('has-error');
+                            $form.find('.help-inline').empty();
+
+                            if (response.status == 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $form.unbind('submit');
+                                $form.submit();
+                            }
+                        }, 'json');
+
+                        e.preventDefault();
+                        return false;
+                    });
+
+                });
+                //--><!]]>
+            </script>
+        </div>
+    </div>
+</div>
