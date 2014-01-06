@@ -75,74 +75,74 @@
         <div id="cat-list" class="container categories-list">
             <div class="col-md-3">
                 <h3 class="sub-title">
-                    <a href="http://www.appszoom.com/android_games" title="Android Games">Android Games</a></h3>
+                    <a href="http://downfy.com/android-games" title="Android Games">Android Games</a></h3>
                 <ul>
-                    <li><a href="http://www.appszoom.com/android_games/arcade_and_action">Arcade &amp; Action</a></li>
-                    <li><a href="http://www.appszoom.com/android_games/brain_puzzle">Brain &amp; Puzzle</a></li>
-                    <li><a href="http://www.appszoom.com/android_games/cards_and_casino">Cards &amp; Casino</a></li>
-                    <li><a href="http://www.appszoom.com/android_games/casual">Casual</a></li>
-                    <li><a href="http://www.appszoom.com/android_games/racing">Racing</a></li>
-                    <li><a href="http://www.appszoom.com/android_games/sports_games">Sports</a>
+                    <li><a href="http://downfy.com/android-games/arcade_and_action">Arcade &amp; Action</a></li>
+                    <li><a href="http://downfy.com/android-games/brain_puzzle">Brain &amp; Puzzle</a></li>
+                    <li><a href="http://downfy.com/android-games/cards_and_casino">Cards &amp; Casino</a></li>
+                    <li><a href="http://downfy.com/android-games/casual">Casual</a></li>
+                    <li><a href="http://downfy.com/android-games/racing">Racing</a></li>
+                    <li><a href="http://downfy.com/android-games/sports_games">Sports</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <h3 class="sub-title"><a href="http://www.appszoom.com/android_applications" title="Android Applications">Android Applications</a></h3>
+                <h3 class="sub-title"><a href="http://dpwnfy.com/android-applications" title="Android Applications">Android Applications</a></h3>
                 <ul class="col-md-4">
-                    <li><a href="http://www.appszoom.com/android_applications/babies">Babies</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/biking">Biking</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/reference">Books &amp; Reference</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/business">Business</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/cars">Cars</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/cinema">Cinema</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/college">College</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/comics">Comics</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/communication">Communication</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/couples">Couples</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/dating">Dating</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/diabetes">Diabetes</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/education">Education</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/entertainment">Entertainment</a></li>
+                    <li><a href="http://downfy.com/android-applications/babies">Babies</a></li>
+                    <li><a href="http://downfy.com/android-applications/biking">Biking</a></li>
+                    <li><a href="http://downfy.com/android-applications/reference">Books &amp; Reference</a></li>
+                    <li><a href="http://downfy.com/android-applications/business">Business</a></li>
+                    <li><a href="http://downfy.com/android-applications/cars">Cars</a></li>
+                    <li><a href="http://downfy.com/android-applications/cinema">Cinema</a></li>
+                    <li><a href="http://downfy.com/android-applications/college">College</a></li>
+                    <li><a href="http://downfy.com/android-applications/comics">Comics</a></li>
+                    <li><a href="http://downfy.com/android-applications/communication">Communication</a></li>
+                    <li><a href="http://downfy.com/android-applications/couples">Couples</a></li>
+                    <li><a href="http://downfy.com/android-applications/dating">Dating</a></li>
+                    <li><a href="http://downfy.com/android-applications/diabetes">Diabetes</a></li>
+                    <li><a href="http://downfy.com/android-applications/education">Education</a></li>
+                    <li><a href="http://downfy.com/android-applications/entertainment">Entertainment</a></li>
                 </ul>
                 <ul class="col-md-4">
-                    <li><a href="http://www.appszoom.com/android_applications/finance">Finance</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/health">Health &amp; Fitness</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/hiking">Hiking</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/job_search">Job search</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/kids">Kids</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/language">Language</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/software_libraries">Libraries &amp; Demo</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/lifestyle">Lifestyle</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/multimedia">Media &amp; Video</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/medical">Medical</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/music_and_audio">Music &amp; Audio</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/news_and_weather">News &amp; Magazines</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/parents">Parents</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/photography">Photography</a></li>
+                    <li><a href="http://downfy.com/android-applications/finance">Finance</a></li>
+                    <li><a href="http://downfy.com/android-applications/health">Health &amp; Fitness</a></li>
+                    <li><a href="http://downfy.com/android-applications/hiking">Hiking</a></li>
+                    <li><a href="http://downfy.com/android-applications/job_search">Job search</a></li>
+                    <li><a href="http://downfy.com/android-applications/kids">Kids</a></li>
+                    <li><a href="http://downfy.com/android-applications/language">Language</a></li>
+                    <li><a href="http://downfy.com/android-applications/software_libraries">Libraries &amp; Demo</a></li>
+                    <li><a href="http://downfy.com/android-applications/lifestyle">Lifestyle</a></li>
+                    <li><a href="http://downfy.com/android-applications/multimedia">Media &amp; Video</a></li>
+                    <li><a href="http://downfy.com/android-applications/medical">Medical</a></li>
+                    <li><a href="http://downfy.com/android-applications/music_and_audio">Music &amp; Audio</a></li>
+                    <li><a href="http://downfy.com/android-applications/news_and_weather">News &amp; Magazines</a></li>
+                    <li><a href="http://downfy.com/android-applications/parents">Parents</a></li>
+                    <li><a href="http://downfy.com/android-applications/photography">Photography</a></li>
                 </ul>
                 <ul>
-                    <li><a href="http://www.appszoom.com/android_applications/productivity">Productivity</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/running">Running</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/seniors">Seniors</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/shopping">Shopping</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/small_business">Small Business</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/social">Social</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/sports">Sports</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/tools">Tools</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/transportation">Transportation</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/travel">Travel &amp; Local</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/weather">Weather</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/writing">Writing</a></li>
-                    <li><a href="http://www.appszoom.com/android_applications/adult">Adult</a></li>
+                    <li><a href="http://downfy.com/android-applications/productivity">Productivity</a></li>
+                    <li><a href="http://downfy.com/android-applications/running">Running</a></li>
+                    <li><a href="http://downfy.com/android-applications/seniors">Seniors</a></li>
+                    <li><a href="http://downfy.com/android-applications/shopping">Shopping</a></li>
+                    <li><a href="http://downfy.com/android-applications/small_business">Small Business</a></li>
+                    <li><a href="http://downfy.com/android-applications/social">Social</a></li>
+                    <li><a href="http://downfy.com/android-applications/sports">Sports</a></li>
+                    <li><a href="http://downfy.com/android-applications/tools">Tools</a></li>
+                    <li><a href="http://downfy.com/android-applications/transportation">Transportation</a></li>
+                    <li><a href="http://downfy.com/android-applications/travel">Travel &amp; Local</a></li>
+                    <li><a href="http://downfy.com/android-applications/weather">Weather</a></li>
+                    <li><a href="http://downfy.com/android-applications/writing">Writing</a></li>
+                    <li><a href="http://downfy.com/android-applications/adult">Adult</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
-                <h3 class="sub-title"><a href="http://www.appszoom.com/android_themes" title="Android Themes">Android Themes</a></h3>
+                <h3 class="sub-title"><a href="http://downfy.com/android-themes" title="Android Themes">Android Themes</a></h3>
                 <ul>
-                    <li><a href="http://www.appszoom.com/android_themes/ringtones">Ringtones</a></li>
-                    <li><a href="http://www.appszoom.com/android_themes/soundboards">Soundboards</a></li>
-                    <li><a href="http://www.appszoom.com/android_themes/themes">Themes</a></li>
-                    <li><a href="http://www.appszoom.com/android_themes/wallpapers">Wallpapers</a></li>
+                    <li><a href="http://downfy.com/android-themes/ringtones">Ringtones</a></li>
+                    <li><a href="http://downfy.com/android-themes/soundboards">Soundboards</a></li>
+                    <li><a href="http://downfy.com/android-themes/themes">Themes</a></li>
+                    <li><a href="http://downfy.com/android-themes/wallpapers">Wallpapers</a></li>
                 </ul>
             </div>
             <span class="border-bottom"><!----></span>
