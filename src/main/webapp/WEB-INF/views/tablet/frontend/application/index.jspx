@@ -1,4 +1,6 @@
-<div xmlns:jsp="http://java.sun.com/JSP/Page"
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:sec="http://www.springframework.org/security/tags"
      xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" 
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
@@ -183,7 +185,7 @@
                 </script>
             </div>
             <div class="app-comments">
-                <div class="cms-title">Screenshoots</div>
+                <div class="cms-title">Comments</div>
                 <div id="fb-root"><!----></div>
                 <script type="text/javascript">
                     <!--//--><![CDATA[//><!--
@@ -198,7 +200,10 @@
                     }(document, 'script', 'facebook-jssdk'));
                     //--><!]]>
                 </script>
-                <div class="fb-comments col-md-8 col-xs-9" data-href="http://downfy.com" data-numposts="5" data-colorscheme="light"><!----></div>
+                <c:set var="req" value="${pageContext.request}" />
+                <c:set var="baseURL" value="${fn:replace(req.requestURL, fn:substring(req.requestURI, 1, fn:length(req.requestURI)), req.contextPath)}" />
+                <c:url var="myUrl" value="${fn:replace(baseURL, req.contextPath, '')}/${req.getAttribute('javax.servlet.forward.request_uri')}"/>
+                <div class="fb-comments col-md-8 col-xs-9" data-href="${fn:replace(myUrl, '///', '/')}" data-numposts="5" data-colorscheme="light"><!----></div>
             </div>
         </div>
         <div class="col-md-4 col-xs-3">
