@@ -28,7 +28,6 @@
         <access-denied-handler error-page="/accessDenied" />
         <csrf />
         <headers>
-            <cache-control />
             <content-type-options />
             <hsts />
             <frame-options />
