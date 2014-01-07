@@ -11,6 +11,7 @@
     <spring:url var="images_url" value="/resources/images" />
     <spring:url value="/backend/application" var="application_url" />
     <spring:url value="/backend/application/create/json" var="application_json_url" />
+    <spring:url value="/backend/category" var="category_url" />
 
     <div class="col-md-3 backend-create-form">
         <ul class="nav nav-pills nav-stacked">
@@ -30,37 +31,46 @@
         <div class="panel panel-success">
             <div class="panel-heading"><strong>New application</strong></div>
             <div class="panel-body">
-                <form:form id="add-application-form" role="form" modelAttribute="applicationForm" action="${application_url}" method="POST">
-                    <div class="form-group" id="name">
+                <form:form id="add-application-form" role="form" modelAttribute="applicationForm" action="${application_url}/create" method="POST">
+                    <div class="form-group" id="appName">
                         <label>Application Name</label>
                         <form:input path="appName" class="form-control" placeholder="Application name"/>
                         <span class="help-inline text-danger"><form:errors path="appName" /></span>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" id="appDescription">
                         <label>Application Description</label>
                         <textarea name="appDescription" class="form-control" rows="5"><!----></textarea>
+                        <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
                     </div>
-                    <div class="form-group" >
+                    <div class="form-group" id="appCategoryParent">
                         <label>Application Type</label>
                         <select id="parentCategory" class="form-control input-lg" name="appCategoryParent">
                             <option value='0'>Select an application type</option>
                             <option value='1'>Android Games</option>
                             <option value='2'>Android Apps</option>
                         </select>
+                        <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
                     </div>
-                    <div class="form-group" id="category">
+                    <div class="form-group" id="appCategory">
                         <label>Category</label>
                         <select id="category" class="form-control input-lg" disabled="" name="appCategory">
                             <option value='0'>Select a category</option>
                         </select>
+                        <span class="help-inline text-danger"><form:errors path="appCategory" /></span>
                     </div>
                     <button type="submit" class="btn btn-primary">Create App</button>
                 </form:form>
             </div>
             <script type="text/javascript">
                 <!--//--><![CDATA[//><!--
-                function collectFormData(fields) {
+                function collectFormData($form) {
+                    var fields = $form.find('input');
                     var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    fields = $form.find('select');
                     for (var i = 0; i < fields.length; i++) {
                         var $item = $(fields[i]);
                         data[$item.attr('name')] = $item.val();
@@ -69,19 +79,25 @@
                 }
 
                 $(document).ready(function() {
-                    $('#parentCategory').change(function() {
-                        console.log($(this).val());
-                        if ($(this).val() === '2') {
-                            // Do something for option "b"
-                            console.log("AAAAAAAAAAAAAAAAAA");
-                        }
+                    $('#parentCategory').change(function(event) {
+                        event.preventDefault();
+                        $("#category").prop("disabled", false);
+                        $('#category').html('<option value="0">Select a category</option>');
+                        $.get('${category_url}/' + $(this).val(), function(response) {
+                            for (var i = 0; i < response.length; i++) {
+                                var item = response[i];
+                                $('#category')
+                                        .append($("<option></option>")
+                                        .attr("value", item.key)
+                                        .text(item.value));
+                            }
+                        }, 'json');
                     });
 
                     var $form = $('#add-application-form');
                     $form.bind('submit', function(e) {
                         // Ajax validation
-                        var $inputs = $form.find('input');
-                        var data = collectFormData($inputs);
+                        var data = collectFormData($form);
 
                         $.post('${application_json_url}', data, function(response) {
                             $form.find('.form-group').removeClass('has-error');

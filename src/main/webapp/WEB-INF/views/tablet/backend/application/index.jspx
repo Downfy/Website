@@ -2,6 +2,7 @@
      xmlns:sec="http://www.springframework.org/security/tags"
      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
      xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
      xmlns:form="http://www.springframework.org/tags/form"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
@@ -52,6 +53,30 @@
                                 Status
                             </th>
                         </tr>
+                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    ${rowCounter.count}
+                                </td>
+                                <td>
+                                    <a href="${application_url}/${item.appId}.html" title="${item.appName}">${item.appName}</a>
+                                </td>
+                                <td>
+                                    ${item.appDownload}
+                                </td>
+                                <td>
+                                    ${item.appCurrentVersion}
+                                </td>
+                                <td>
+                            <fmt:formatDate type="both" 
+                                            dateStyle="short" timeStyle="short" 
+                                            value="${item.updated}" />
+                            </td>
+                            <td>
+                                <input type="checkbox" name="enabled" checked="${item.published}"/>
+                            </td>
+                            </tr>
+                        </c:forEach>
                     </table>
                 </div>
             </div>
