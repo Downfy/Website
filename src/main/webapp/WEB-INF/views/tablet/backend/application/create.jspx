@@ -40,7 +40,7 @@
                     <div class="form-group" id="appDescription">
                         <label>Application Description</label>
                         <textarea name="appDescription" class="form-control" rows="5"><!----></textarea>
-                        <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
+                        <span class="help-inline text-danger"><form:errors path="appDescription" /></span>
                     </div>
                     <div class="form-group" id="appCategoryParent">
                         <label>Application Type</label>

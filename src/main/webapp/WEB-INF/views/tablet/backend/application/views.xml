@@ -9,9 +9,9 @@
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/backend/application/create.jspx" />
     </definition>
-    <definition extends="backend" name="home/backend/application/upload">
+    <definition extends="backend" name="home/backend/application/apk">
         <put-attribute name="body"
-                       value="/WEB-INF/views/tablet/backend/application/upload.jspx" />
+                       value="/WEB-INF/views/tablet/backend/application/apk.jspx" />
     </definition>
     <definition extends="backend" name="home/backend/application/detail">
         <put-attribute name="body"
