@@ -43,7 +43,10 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="mapperLocations" value="classpath:META-INF/mappers/*.xml" />
-        <property name="typeAliasesPackage" value="com.downfy.persistence.domain, com.downfy.persistence.domain" />
+        <property name="transactionFactory">
+            <bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
+        </property>  
+        <property name="typeAliasesPackage" value="com.downfy.persistence.domain" />
     </bean>
     
     <!-- scan for mappers and let them be autowired -->

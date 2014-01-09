@@ -30,9 +30,9 @@
                     <div class="form-group" id="parent">
                         <label>Category Parent</label>
                         <select class="form-control input-lg" name="parent">
-                            <option value="0">Select a category</option>
-                            <option value="1">Android Games</option>
-                            <option value="2">Android Apps</option>
+                            <option value="">Select a category</option>
+                            <option value="GAMES">Android Games</option>
+                            <option value="APPLICATIONS">Android Apps</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -111,12 +111,12 @@
                                 <td>
                                     ${rowCounter.count}
                                 </td>
-                                <c:if test="${item.parent eq 1}">
+                                <c:if test="${item.parent eq 'GAMES'}">
                                     <td>
                                         Android Games
                                     </td>
                                 </c:if>
-                                <c:if test="${item.parent eq 2}">
+                                <c:if test="${item.parent eq 'APPLICATIONS'}">
                                     <td>
                                         Android Apps
                                     </td>

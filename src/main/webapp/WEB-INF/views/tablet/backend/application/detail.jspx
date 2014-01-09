@@ -57,16 +57,16 @@
                     <div class="form-group" id="appCategoryParent">
                         <label>Application Type</label>
                         <form:select path="appCategoryParent" id="parentCategory" class="form-control input-lg">
-                            <form:option value="0">Select an application type</form:option>
-                            <form:option value="1">Android Games</form:option>
-                            <form:option value="2">Android Apps</form:option>
+                            <form:option value="">Select an application type</form:option>
+                            <form:option value="GAMES">Android Games</form:option>
+                            <form:option value="APPLICATIONS">Android Apps</form:option>
                         </form:select>
                         <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
                     </div>
                     <div class="form-group" id="appCategory">
                         <label>Category</label>
                         <form:select path="appCategory" id="category" class="form-control input-lg">
-                            <option value='0'>Select a category</option>
+                            <option value=''>Select a category</option>
                             <c:forEach items="${app.appCategories}" var="item" varStatus="rowCounter">
                                 <form:option value='${item.key}'>${item.value}</form:option>
                             </c:forEach>
@@ -80,7 +80,7 @@
                             <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 140px; height: 140px;" src="${images_url}/app-icon-detail.png"/> 
                             <input id="appIconInput" name="appIcon" type="hidden" />
                             <!-- The file input field used as target for the file upload widget -->
-                            <input id="appFileUpload" type="file" name="files[]" data-url="${application_url}/upload/icon"/>
+                            <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/icon"/>
                             <br/>
                             <br/>
                             <div id="progress" class="progress progress-striped active" style="width: 140px;">

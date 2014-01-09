@@ -45,16 +45,16 @@
                     <div class="form-group" id="appCategoryParent">
                         <label>Application Type</label>
                         <select id="parentCategory" class="form-control input-lg" name="appCategoryParent">
-                            <option value='0'>Select an application type</option>
-                            <option value='1'>Android Games</option>
-                            <option value='2'>Android Apps</option>
+                            <option value=''>Select an application type</option>
+                            <option value='GAMES'>Android Games</option>
+                            <option value='APPLICATIONS'>Android Apps</option>
                         </select>
                         <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
                     </div>
                     <div class="form-group" id="appCategory">
                         <label>Category</label>
                         <select id="category" class="form-control input-lg" disabled="" name="appCategory">
-                            <option value='0'>Select a category</option>
+                            <option value=''>Select a category</option>
                         </select>
                         <span class="help-inline text-danger"><form:errors path="appCategory" /></span>
                     </div>
