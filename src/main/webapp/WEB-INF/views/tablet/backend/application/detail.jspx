@@ -77,13 +77,13 @@
                         <label>Applicatiom Icon</label>
                         <br/>
                         <span id="appIconButton" class="btn fileinput-button">
-                            <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 140px; height: 140px;" src="${images_url}/app-icon-detail.png"/> 
+                            <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/> 
                             <input id="appIconInput" name="appIcon" type="hidden" />
                             <!-- The file input field used as target for the file upload widget -->
                             <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/icon"/>
                             <br/>
                             <br/>
-                            <div id="progress" class="progress progress-striped active" style="width: 140px;">
+                            <div id="progress" class="progress progress-striped active" style="width: 84px;">
                                 <div class="progress-bar progress-bar-success"><!----></div>
                             </div>
                         </span>
