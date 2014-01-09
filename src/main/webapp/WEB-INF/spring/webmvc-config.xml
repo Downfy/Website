@@ -31,7 +31,7 @@
     <!-- Handles HTTP GET requests for /resources/** by efficiently serving 
     up static resources -->
     <mvc:resources
-        location="/,classpath:/META-INF/web-resources/"
+        location="/,/8d777f385d3dfec8815d20f7496026dc/,classpath:/META-INF/web-resources/"
         mapping="/resources/**" 
         cache-period="86400"/>
 
