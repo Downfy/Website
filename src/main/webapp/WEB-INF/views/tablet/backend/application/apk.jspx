@@ -49,22 +49,49 @@
                                 #
                             </th>
                             <th>
-                                Application Name
+                                Version
                             </th>
                             <th>
-                                Total Downloaded
+                                Link
                             </th>
                             <th>
-                                Current Version
-                            </th>
-                            <th>
-                                Last Updated
+                                Uploaded
                             </th>
                             <th>
                                 Status
                             </th>
                         </tr>
+                        <tr>
+                            <td>
+                                #
+                            </td>
+                            <td>
+                                Application Name
+                            </td>
+                            <td>
+                                Total Downloaded
+                            </td>
+                            <td>
+                                Current Version
+                            </td>
+                            <td>
+                                Status
+                            </td>
+                        </tr>
                     </table>
+                    <label>Applicatiom APK</label>
+                    <br/>
+                    <span id="appAPKButton" class="btn fileinput-button">
+                        <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/> 
+                        <input id="appAPKInput" name="appAPK" type="hidden" />
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="appAPKFileUpload" type="file" name="appAPKFile" data-url="${application_url}/upload/${app.appId}/apk"/>
+                        <br/>
+                        <br/>
+                        <div id="progress" class="progress progress-striped active" style="width: 84px;">
+                            <div class="progress-bar progress-bar-success"><!----></div>
+                        </div>
+                    </span>
                 </div>
             </div>
         </div>
