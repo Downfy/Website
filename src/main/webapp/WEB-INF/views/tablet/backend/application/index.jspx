@@ -68,13 +68,13 @@
                                     ${item.appCurrentVersion}
                                 </td>
                                 <td>
-                            <fmt:formatDate type="both" 
-                                            dateStyle="short" timeStyle="short" 
-                                            value="${item.updated}" />
-                            </td>
-                            <td>
-                                <input type="checkbox" name="enabled" checked="${item.published}"/>
-                            </td>
+                                    <fmt:formatDate type="both" 
+                                                    dateStyle="short" timeStyle="short" 
+                                                    value="${item.updated}" />
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="enabled" checked="${item.status}"/>
+                                </td>
                             </tr>
                         </c:forEach>
                     </table>

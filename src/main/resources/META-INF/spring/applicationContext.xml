@@ -17,7 +17,7 @@
 
     <context:spring-configured />
 
-    <context:component-scan base-package="com.downfy.form.validator, com.downfy.persistence.domain, com.downfy.persistence.repositories, com.downfy.service"/>
+    <context:component-scan base-package="com.downfy.form.validator, com.downfy.service"/>
 
     <!-- To translate any MongoExceptions thrown in @Repository annotated classes -->
     <context:annotation-config />
