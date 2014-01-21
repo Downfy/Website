@@ -77,7 +77,7 @@
                         <label>Applicatiom Icon</label>
                         <br/>
                         <span id="appIconButton" class="btn fileinput-button">
-                            <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/> 
+                            <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/>
                             <input id="appIconInput" name="appIcon" type="hidden" />
                             <!-- The file input field used as target for the file upload widget -->
                             <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/${app.appId}/icon"/>
@@ -108,14 +108,6 @@
                     }
                     return data;
                 }
-
-                $(function() {
-                    var token = $("meta[name='_csrf']").attr("content");
-                    var header = $("meta[name='_csrf_header']").attr("content");
-                    $(document).ajaxSend(function(e, xhr, options) {
-                        xhr.setRequestHeader(header, token);
-                    });
-                });
 
                 $(document).ready(function() {
                     $('#parentCategory').change(function(event) {
