@@ -80,6 +80,35 @@
     font-size:13px;
 }
 
+#header .navbar {
+    background:#35353e;
+    border-bottom:7px solid #71a00e;
+    color:#fff;
+    font-size:13px;
+}
+
+#header .navbar a {
+    background:#35353e;
+    color: #bfbfc8;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+#header .navbar a:hover {
+    background:#35353e;
+    color:#83b813;
+}
+
+#header .navbar .dropdown-menu {
+    background:#35353e;
+    color: #bfbfc8;
+}
+
+#header .navbar .dropdown-menu a:hover {
+    background:#35353e;
+    color: #83b813;
+}
+
 #header .navigation-bar a {
     text-decoration:none;
 }
@@ -89,7 +118,9 @@
     height:58px;
 }
 
-#header .top ul.android li a.android,#header .top ul.platform-tabs li a.android:hover,#header .navigation-bar a:hover {
+#header .top ul.android li a.android,
+#header .top ul.platform-tabs li a.android:hover,
+#header .navigation-bar a:hover {
     color:#83b813;
 }
 
