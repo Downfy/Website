@@ -49,6 +49,9 @@
                                 #
                             </th>
                             <th>
+                                Name
+                            </th>
+                            <th>
                                 Version
                             </th>
                             <th>
@@ -61,37 +64,61 @@
                                 Status
                             </th>
                         </tr>
-                        <tr>
-                            <td>
-                                #
-                            </td>
-                            <td>
-                                Application Name
-                            </td>
-                            <td>
-                                Total Downloaded
-                            </td>
-                            <td>
-                                Current Version
-                            </td>
-                            <td>
-                                Status
-                            </td>
-                        </tr>
+                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    #
+                                </td>
+                                <td>
+                                    ${item.appName}
+                                </td>
+                                <td>
+                                    ${item.appVersion}
+                                </td>
+                                <td>
+                                    ${item.appPath}
+                                </td>
+                                <td>
+                                    Total Downloaded
+                                </td>
+                                <td>
+                                    <c:choose>
+                                        <c:when test="${item.status == 3}">
+                                            Published
+                                        </c:when>
+                                        <c:when test="${item.status == 2}">
+                                            Pending
+                                        </c:when>
+                                        <c:when test="${item.status == 1}">
+                                            Blocked
+                                        </c:when>
+                                        <c:when test="${item.status == 0}">
+                                            Deleted
+                                        </c:when>
+                                    </c:choose>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </table>
-                    <label>Applicatiom APK</label>
+                    <label>Application APK</label>
                     <br/>
-                    <span id="appAPKButton" class="btn fileinput-button">
-                        <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/>
-                        <input id="appAPKInput" name="appAPK" type="hidden" />
-                        <!-- The file input field used as target for the file upload widget -->
-                        <input id="appAPKFileUpload" type="file" name="appAPKFile" data-url="${application_url}/upload/${app.appId}/apk"/>
-                        <br/>
-                        <br/>
-                        <div id="progress" class="progress progress-striped active" style="width: 84px;">
-                            <div class="progress-bar progress-bar-success"><!----></div>
-                        </div>
-                    </span>
+                    <form:form id="add-application-form" role="form" modelAttribute="appApkForm" action="${application_url}/apk" method="POST">
+                        <span id="appAPKButton" class="btn fileinput-button">
+
+                            <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/>
+                            <input id="appAPKInput" name="appPath" type="hidden" />
+                            <!-- The file input field used as target for the file upload widget -->
+                            <input id="appAPKFileUpload" type="file" name="appAPKFile" data-url="${application_url}/upload/${app.appId}/apk"/>
+                            <br/>
+                            <br/>
+                            <div id="progress" class="progress progress-striped active" style="width: 84px;">
+                                <div class="progress-bar progress-bar-success"><!----></div>
+                            </div>
+                        </span>
+                        <input type="hidden" name="appId" value="${app.appId}"/>
+                        <input id="appAPKSizeInput" type="hidden" name="appSize"/>
+                        <span class="help-inline text-danger"><form:errors path="*" /></span>
+                    </form:form>
                 </div>
             </div>
         </div>
