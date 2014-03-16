@@ -10,6 +10,7 @@
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
     <spring:url value="/resources/images" var="images_url" />
+    <spring:url value="/resources" var="resources_url" />
     <spring:url value="/backend/application" var="application_url" />
     <spring:url value="/backend/application/create/json" var="application_json_url" />
     <spring:url value="/backend/category" var="category_url" />
@@ -74,22 +75,29 @@
                         <span class="help-inline text-danger"><form:errors path="appCategory" /></span>
                     </div>
                     <div class="form-group" id="appCategory">
-                        <label>Applicatiom Icon</label>
+                        <label>Application Icon</label>
                         <br/>
                         <span id="appIconButton" class="btn fileinput-button">
-                            <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/>
-                            <input id="appIconInput" name="appIcon" type="hidden" />
+                            <c:choose>
+                                <c:when test="${not empty app.appIcon}">
+                                    <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${home_url}resources${app.appIcon}"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/>
+                                </c:otherwise> 
+                            </c:choose>
+                            <input id="appIconInput" name="appIcon" type="hidden" value="${app.appIcon}" />
                             <!-- The file input field used as target for the file upload widget -->
                             <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/${app.appId}/icon"/>
                             <br/>
-                            <br/>
+                            <br/> 
                             <div id="progress" class="progress progress-striped active" style="width: 84px;">
                                 <div class="progress-bar progress-bar-success"><!----></div>
                             </div>
                         </span>
                     </div>
                     <input type="hidden" name="appId" value="${app.appId}"/>
-                    <button type="submit" class="btn btn-primary">Create App</button>
+                    <button type="submit" class="btn btn-primary">Update App</button>
                 </form:form>
             </div>
             <script type="text/javascript">
@@ -119,8 +127,8 @@
                                 var item = response[i];
                                 $('#category')
                                         .append($("<option></option>")
-                                        .attr("value", item.key)
-                                        .text(item.value));
+                                                .attr("value", item.key)
+                                                .text(item.value));
                             }
                         }, 'json');
                     });
@@ -134,7 +142,7 @@
                             $form.find('.form-group').removeClass('has-error');
                             $form.find('.help-inline').empty();
 
-                            if (response.status == 'FAIL') {
+                            if (response.status === 'FAIL') {
                                 for (var i = 0; i < response.errorMessageList.length; i++) {
                                     var item = response.errorMessageList[i];
                                     var $controlGroup = $('#' + item.fieldName);

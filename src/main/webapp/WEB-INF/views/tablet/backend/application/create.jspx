@@ -103,7 +103,7 @@
                             $form.find('.form-group').removeClass('has-error');
                             $form.find('.help-inline').empty();
 
-                            if (response.status == 'FAIL') {
+                            if (response.status === 'FAIL') {
                                 for (var i = 0; i < response.errorMessageList.length; i++) {
                                     var item = response.errorMessageList[i];
                                     var $controlGroup = $('#' + item.fieldName);

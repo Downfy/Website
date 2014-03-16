@@ -69,7 +69,7 @@
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
         id="messageSource" p:basenames="WEB-INF/i18n/messages,WEB-INF/i18n/application"
         p:fallbackToSystemLocale="false"
-        p:cacheSeconds="300"
+        p:cacheSeconds="10"
     />
 
     <!-- store preferred language configuration in a cookie -->

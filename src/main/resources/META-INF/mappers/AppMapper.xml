@@ -95,7 +95,6 @@
         APP_DESCRIPTION = #{appDescription},
         APP_CATEGORY = #{appCategory},
         APP_ICON = #{appIcon},
-        APP_SCREEN_SHOOT = #{appScreenShoot},
         APP_CURRENT_VERSION = #{appCurrentVersion},
         APP_PATH = #{appPath},
         APP_SIZE = #{appSize},
