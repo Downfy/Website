@@ -44,6 +44,11 @@
     </filter>
 
     <filter>
+        <filter-name>GeoRedirectFilter</filter-name>
+        <filter-class>com.downfy.common.filter.GeoRedirectFilter</filter-class>
+    </filter>
+    
+    <filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
@@ -65,6 +70,11 @@
 
     <filter-mapping>
         <filter-name>DisableUrlSessionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>GeoRedirectFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     

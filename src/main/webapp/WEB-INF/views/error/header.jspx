@@ -8,7 +8,6 @@
     <spring:url var="register_url" value="/create-account.html" />
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
-    <spring:url var="logout_url" value="/login.html" />
 
     <div id="header">
         <div class="top">
@@ -45,18 +44,23 @@
                     </li>
                 </ul>
                 <ul class="navigation pull-right">
-                    <li>
-                        <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>    
-                    </li>
-                    <li>
-                        <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
-                    </li>
-                    <li>
-                        <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
-                    </li>
-                    <li>
-                        <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
-                    </li>
+                    <c:if test="${pageContext['request'].userPrincipal == null}">
+                        <li>
+                            <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>    
+                        </li>
+                        <li>
+                            <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
+                        </li>
+                    </c:if>
+                    <c:if test="${pageContext['request'].userPrincipal != null}">
+                        <li>
+                            <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
+                        </li>
+                        <spring:url value="/resources/j_spring_security_logout" var="logout_url"/>
+                        <li>
+                            <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
+                        </li>
+                    </c:if>
                 </ul>
             </div>
         </div>
