@@ -9,8 +9,10 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <spring:url var="resources_url" value="/resources" />
     <spring:url value="/backend/application" var="application_url" />
-    <spring:url value="/backend/application/json" var="application_json_url" />
+    <spring:url value="/backend/application/apk" var="application_apk_url" />
+    <spring:url value="/backend/application/apk/json" var="application_apk_json_url" />
 
     <div class="col-md-3 backend-create-form">
         <ul class="nav nav-pills nav-stacked">
@@ -76,10 +78,10 @@
                                     ${item.appVersion}
                                 </td>
                                 <td>
-                                    ${item.appPath}
+                                    <a href="${resources_url}${item.appPath}">Download</a>
                                 </td>
                                 <td>
-                                    Total Downloaded
+                                    0
                                 </td>
                                 <td>
                                     <c:choose>
@@ -102,9 +104,8 @@
                     </table>
                     <label>Application APK</label>
                     <br/>
-                    <form:form id="add-application-form" role="form" modelAttribute="appApkForm" action="${application_url}/apk" method="POST">
+                    <form:form id="add-application-form" role="form" modelAttribute="appApkForm" action="${application_apk_url}" method="POST">
                         <span id="appAPKButton" class="btn fileinput-button">
-
                             <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/>
                             <input id="appAPKInput" name="appPath" type="hidden" />
                             <!-- The file input field used as target for the file upload widget -->
@@ -117,10 +118,66 @@
                         </span>
                         <input type="hidden" name="appId" value="${app.appId}"/>
                         <input id="appAPKSizeInput" type="hidden" name="appSize"/>
-                        <span class="help-inline text-danger"><form:errors path="*" /></span>
+                        <br/>
+                        <span id="appVersion">
+                            <span class="help-inline text-danger"><form:errors path="appVersion" /></span>
+                        </span>
+                        <span id="appSize">
+                            <span class="help-inline text-danger"><form:errors path="appSize" /></span>
+                        </span>
+                        <span id="appPath">
+                            <span class="help-inline text-danger"><form:errors path="appPath" /></span>
+                        </span>
                     </form:form>
                 </div>
             </div>
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                function collectFormData($form) {
+                    var fields = $form.find('input');
+                    var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    fields = $form.find('select');
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    return data;
+                }
+
+                $(document).ready(function() {
+                    var $form = $('#add-application-form');
+                    $form.bind('submit', function(e) {
+                        // Ajax validation
+                        var data = collectFormData($form);
+
+                        $.post('${application_apk_json_url}', data, function(response) {
+                            $form.find('.form-group').removeClass('has-error');
+                            $form.find('.help-inline').empty();
+
+                            if (response.status === 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $form.unbind('submit');
+                                $form.submit();
+                            }
+                        }, 'json');
+
+                        e.preventDefault();
+                        return false;
+                    });
+
+                });
+                //--><!]]>
+            </script>
         </div>
     </div>
 </div>
