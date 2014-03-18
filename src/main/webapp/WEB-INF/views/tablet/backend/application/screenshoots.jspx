@@ -40,31 +40,22 @@
     <div class="col-md-9 backend-create-detail">
         <div class="container-fluid">
             <div class="panel panel-success">
-                <div class="panel-heading"><strong>Applications</strong></div>
+                <div class="panel-heading"><strong>Screen shoots</strong></div>
                 <div class="panel-body">
-                    <!-- Table -->
-                    <table class="table table-hover">
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                Application Name
-                            </th>
-                            <th>
-                                Total Downloaded
-                            </th>
-                            <th>
-                                Current Version
-                            </th>
-                            <th>
-                                Last Updated
-                            </th>
-                            <th>
-                                Status
-                            </th>
-                        </tr>
-                    </table>
+                    <div style="padding: 20px">
+                        <span class="btn btn-success fileinput-button">
+                            <i class="glyphicon glyphicon-plus"><!----></i>
+                            <span>Select files...</span>
+                            <!-- The file input field used as target for the file upload widget -->
+                            <input id="appScreenShootFileUpload" type="file" multiple="" name="files" data-url="${application_url}/upload/${app.appId}/screenshoots"/>
+                        </span>
+                        <br/>
+                        <br/>
+                        <div id="progress" class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-success"><!----></div>
+                        </div>
+                    </div>
+                    <div id="idScreenShoots"><!----></div>
                 </div>
             </div>
         </div>

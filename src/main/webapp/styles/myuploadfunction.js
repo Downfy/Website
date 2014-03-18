@@ -27,11 +27,30 @@ $(function() {
     $('#appAPKFileUpload').fileupload({
         dataType: 'json',
         done: function(e, data) {
-            if (data.result.fileName !== ""){
+            if (data.result.fileName !== "") {
                 $('#appAPKInput').val(data.result.fileName);
                 $('#appAPKSizeInput').val(data.result.fileSize);
                 $('#add-application-form').append("Version (format x.x.x): <input type=\"text\" class=\"form-control\" style=\"width: 100px\" name=\"appVersion\" value=\"1.0.0\" />");
                 $('#add-application-form').append("<br/><button type=\"submit\" class=\"btn btn-primary\">Upload App</button>");
+            }
+        },
+        progressall: function(e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress .progress-bar').css(
+                    'width',
+                    progress + '%'
+                    );
+        }
+    });
+
+    $('#appScreenShootFileUpload').fileupload({
+        dataType: 'json',
+        done: function(e, data) {
+            console.log(data.result.fileName);
+            console.log(data.result);
+            for (var i = 0; i < data.result.length; i++) {
+                var item = data.result[i];
+                $('#idScreenShoots').append("<div class=\"col-md-12 col-lg-12\"><div class=\"col-md-3 col-lg-3\"><img class=\"img-thumbnail\" src='" + '/mystore/resources' + item.fileName + "'></div><div class=\"col-md-5 col-lg-5\">File size: " + (parseInt(item.fileSize) / 1024).toFixed(2) + " KB</div><div class=\"col-md-4 col-lg-4\"><button class=\"btn btn-primary start\"><i class=\"glyphicon glyphicon-upload\"><!----></i><span> Start</span></button>&nbsp<button class=\"btn btn-warning cancel\"><i class=\"glyphicon glyphicon-ban-circle\"><!----></i><span> Cancel</span></button></div></div>");
             }
         },
         progressall: function(e, data) {
