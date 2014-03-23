@@ -47,8 +47,6 @@ $(function() {
     $('#appScreenShootFileUpload').fileupload({
         dataType: 'json',
         done: function(e, data) {
-            console.log(data.result.fileName);
-            console.log(data.result);
             for (var i = 0; i < data.result.length; i++) {
                 var item = data.result[i];
                 $('#idScreenShoots').append("<div class=\"col-md-12 col-lg-12\"><div class=\"col-md-3 col-lg-3\"><img class=\"img-thumbnail\" src='" + '/mystore/resources' + item.fileName + "'></div><div class=\"col-md-5 col-lg-5\">File size: " + (parseInt(item.fileSize) / 1024).toFixed(2) + " KB</div><div class=\"col-md-4 col-lg-4\"><button class=\"btn btn-primary start\"><i class=\"glyphicon glyphicon-upload\"><!----></i><span> Start</span></button>&nbsp<button class=\"btn btn-warning cancel\"><i class=\"glyphicon glyphicon-ban-circle\"><!----></i><span> Cancel</span></button></div></div>");
