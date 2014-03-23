@@ -30,8 +30,9 @@ $(function() {
             if (data.result.fileName !== "") {
                 $('#appAPKInput').val(data.result.fileName);
                 $('#appAPKSizeInput').val(data.result.fileSize);
-                $('#add-application-form').append("Version (format x.x.x): <input type=\"text\" class=\"form-control\" style=\"width: 100px\" name=\"appVersion\" value=\"1.0.0\" />");
-                $('#add-application-form').append("<br/><button type=\"submit\" class=\"btn btn-primary\">Upload App</button>");
+                $('#formUploadApk').html("");
+                $('#formUploadApk').append("Version (format x.x.x): <input type=\"text\" class=\"form-control\" style=\"width: 100px\" name=\"appVersion\" value=\"1.0.0\" />");
+                $('#formUploadApk').append("<br/><button type=\"submit\" class=\"btn btn-primary\">Upload App</button>");
             }
         },
         progressall: function(e, data) {

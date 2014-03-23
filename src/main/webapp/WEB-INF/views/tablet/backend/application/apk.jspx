@@ -78,18 +78,21 @@
                                     ${item.appVersion}
                                 </td>
                                 <td>
-                                    <a href="${resources_url}${item.appPath}">Download</a>
+                                    <a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a>
                                 </td>
                                 <td>
                                     0
                                 </td>
                                 <td>
                                     <c:choose>
-                                        <c:when test="${item.status == 3}">
+                                        <c:when test="${item.status == 4}">
                                             Published
                                         </c:when>
-                                        <c:when test="${item.status == 2}">
+                                        <c:when test="${item.status == 3}">
                                             Pending
+                                        </c:when>
+                                        <c:when test="${item.status == 2}">
+                                            Created
                                         </c:when>
                                         <c:when test="${item.status == 1}">
                                             Blocked
@@ -128,6 +131,7 @@
                         <span id="appPath">
                             <span class="help-inline text-danger"><form:errors path="appPath" /></span>
                         </span>
+                        <div id="formUploadApk"><!----></div>
                     </form:form>
                 </div>
             </div>
