@@ -35,7 +35,7 @@
             </li>
             <li>
                 <a href="${application_url}/${app.appId}/screenshoots.html">
-                    Screen shoots
+                    Upload screen shoots
                 </a>
             </li>
         </ul>
@@ -84,13 +84,13 @@
                                 </c:when>
                                 <c:otherwise>
                                     <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/>
-                                </c:otherwise> 
+                                </c:otherwise>
                             </c:choose>
                             <input id="appIconInput" name="appIcon" type="hidden" value="${app.appIcon}" />
                             <!-- The file input field used as target for the file upload widget -->
                             <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/${app.appId}/icon"/>
                             <br/>
-                            <br/> 
+                            <br/>
                             <div id="progress" class="progress progress-striped active" style="width: 84px;">
                                 <div class="progress-bar progress-bar-success"><!----></div>
                             </div>
@@ -127,8 +127,8 @@
                                 var item = response[i];
                                 $('#category')
                                         .append($("<option></option>")
-                                                .attr("value", item.key)
-                                                .text(item.value));
+                                        .attr("value", item.key)
+                                        .text(item.value));
                             }
                         }, 'json');
                     });

@@ -34,7 +34,7 @@
             </li>
             <li>
                 <a href="${application_url}/${app.appId}/screenshoots.html">
-                    Screen shoots
+                    Upload screen shoots
                 </a>
             </li>
         </ul>
