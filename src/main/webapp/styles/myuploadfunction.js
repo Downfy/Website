@@ -47,7 +47,7 @@ $(function() {
     $('#appScreenShootFileUpload').fileupload({
         dataType: 'json',
         done: function(e, data) {
-
+            
         },
         progressall: function(e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -55,8 +55,8 @@ $(function() {
                     'width',
                     progress + '%'
                     );
-            if (progress === 100) {
-                location.reload();
+            if (progress === 100){
+                window.location.replace(location.href);
             }
         }
     });

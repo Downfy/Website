@@ -48,26 +48,23 @@
                 <div class="panel-heading"><strong>Screen shoots</strong></div>
                 <div class="panel-body">
                     <c:forEach items="${verifyscreenshoots}" var="item" varStatus="rowCounter">
-                        <div class="col-md-12 col-lg-12" style="padding-bottom: 5px">
-                            <div class="col-md-3 col-lg-3">
-                                <img class="img-thumbnail" src="${resource_url}${item.appScreenShoot}"/>
-                            </div>
-                            <div class="col-md-5 col-lg-5">File size: <fmt:formatNumber type="number" maxIntegerDigits="2" value="${item.size / 1024}" /> KB</div>
-                            <div class="col-md-4 col-lg-4">
-                                <div class="pull-left">
-                                    <form:form id="remove-screenshoot-form" role="form" modelAttribute="appScreenShootForm" action="${application_screenshoot_remove_url}" method="POST">
-                                        <input type="hidden" name="appId" value="${item.appId}"/>
-                                        <input type="hidden" name="screenShootId" value="${item.id}"/>
-                                        <button class="btn btn-warning cancel" type="submit">
-                                            <i class="glyphicon glyphicon-ban-circle"><!----></i>
-                                            <span> Remove</span>
-                                        </button>
-                                    </form:form>
-                                </div>
-                            </div>
+                        <div class="col-md-3 col-lg-3" style="padding-bottom: 5px">
+                            <img class="img-thumbnail" src="${resource_url}${item.appScreenShoot}"/>
+                            <br/>
+                            <center>
+                                <form:form id="remove-screenshoot-form" role="form" modelAttribute="appScreenShootForm" action="${application_screenshoot_remove_url}" method="POST">
+                                    <input type="hidden" name="appId" value="${item.appId}"/>
+                                    <input type="hidden" name="screenShootId" value="${item.id}"/>
+                                    <button class="btn btn-warning cancel" type="submit">
+                                        <i class="glyphicon glyphicon-ban-circle"><!----></i>
+                                        <span> Remove</span>
+                                    </button>
+                                </form:form>
+                            </center>
                         </div>
                     </c:forEach>
-                    <div style="padding: 50px">
+                    <div class="clearfix"><!----></div>
+                    <div style="padding: 20px">
                         <span class="btn btn-success fileinput-button">
                             <i class="glyphicon glyphicon-plus"><!----></i>
                             <span>Select files...</span>
