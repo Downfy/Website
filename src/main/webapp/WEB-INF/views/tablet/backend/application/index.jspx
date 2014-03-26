@@ -35,45 +35,75 @@
                     <table class="table table-hover">
                         <tr>
                             <th>
-                                #
+                                <span class="btn text-info">#</span>
                             </th>
                             <th>
-                                Application Name
+                                <span class="btn text-info">Application Name</span>
                             </th>
                             <th>
-                                Total Downloaded
+                                <span class="btn text-info">Total Downloaded</span>
                             </th>
                             <th>
-                                Current Version
+                                <span class="btn text-info">Current Version</span>
                             </th>
                             <th>
-                                Last Updated
+                                <span class="btn text-info">Last Updated</span>
                             </th>
                             <th>
-                                Status
+                                <span class="btn text-info">Status</span>
                             </th>
                         </tr>
                         <c:forEach items="${apps}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
-                                    ${rowCounter.count}
+                                    <span class="btn">${rowCounter.count}</span>
                                 </td>
                                 <td>
-                                    <a href="${application_url}/${item.appId}.html" title="${item.appName}">${item.appName}</a>
+                                    <span class="btn">
+                                        <a href="${application_url}/${item.appId}.html" title="${item.appName}">${item.appName}</a>
+                                    </span>
                                 </td>
                                 <td>
-                                    ${item.appDownload}
+                                    <span class="btn">${item.appDownload}</span>
                                 </td>
                                 <td>
-                                    ${item.appCurrentVersion}
+                                    <span class="btn">${item.appCurrentVersion}</span>
                                 </td>
                                 <td>
-                                    <fmt:formatDate type="both" 
-                                                    dateStyle="short" timeStyle="short" 
-                                                    value="${item.updated}" />
+                                    <span class="btn">
+                                        <fmt:formatDate type="both"
+                                                        dateStyle="short" timeStyle="short"
+                                                        value="${item.updated}" />
+                                    </span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="enabled" checked="${item.status}"/>
+                                    <c:choose>
+                                        <c:when test="${item.status == 4}">
+                                            <button class="btn btn-warning">
+                                                Published
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 3}">
+                                            <button class="btn btn-warning">
+                                                Pending
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 2}">
+                                            <button class="btn btn-primary">
+                                                <a style="color: white" href="${application_url}/${item.appId}/requestpublish.html" title="${item.appName}">Request Publish</a>
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 1}">
+                                            <button class="btn btn-danger">
+                                                Blocked
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 0}">
+                                            <button class="btn btn-danger">
+                                                Deleted
+                                            </button>
+                                        </c:when>
+                                    </c:choose>
                                 </td>
                             </tr>
                         </c:forEach>
