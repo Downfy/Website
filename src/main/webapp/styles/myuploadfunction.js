@@ -34,6 +34,8 @@ $(function() {
                 console.log(data.result.fileStatus);
                 if (data.result.fileStatus === 3) {
                     $('#formUploadApk').append("<span class=\"text-danger\">File uploaded not support</span>");
+                } else if (data.result.fileStatus === 4) {
+                    $('#formUploadApk').append("<span class=\"text-danger\">Application is available. If you is owner of application please contact us</span>");
                 } else if (data.result.fileStatus === 2) {
                     $('#formUploadApk').append("<span class=\"text-danger\">File upload is exist</span>");
                 } else if (data.result.fileStatus === 1) {

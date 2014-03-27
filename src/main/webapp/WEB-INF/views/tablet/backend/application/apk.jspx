@@ -52,59 +52,53 @@
                     <table class="table table-hover">
                         <tr>
                             <th>
-                                #
+                                <span class="btn">#</span>
                             </th>
                             <th>
-                                Package
+                                <span class="btn">Developer Id</span>
                             </th>
                             <th>
-                                Version
+                                <span class="btn">Version</span>
                             </th>
                             <th>
-                                Link
+                                <span class="btn">Link</span>
                             </th>
                             <th>
-                                Uploaded
+                                <span class="btn">Downloaded</span>
                             </th>
                             <th>
-                                Status
+                                <!---->
                             </th>
                         </tr>
-                        <c:forEach items="${apks}" var="item" varStatus="rowCounter">
+                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
-                                    #
+                                    <span class="btn">#</span>
                                 </td>
                                 <td>
-                                    ${item.packageName}
+                                    <span class="btn">${item.appPackage}</span>
                                 </td>
                                 <td>
-                                    ${item.versionName}
+                                    <span class="btn">${item.appVersion}</span>
                                 </td>
                                 <td>
-                                    <a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a>
+                                    <span class="btn"><a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a></span>
                                 </td>
                                 <td>
-                                    0
+                                    <span class="btn">0</span>
                                 </td>
                                 <td>
-                                    <c:choose>
-                                        <c:when test="${item.status == 4}">
-                                            Published
-                                        </c:when>
-                                        <c:when test="${item.status == 3}">
-                                            Pending
-                                        </c:when>
-                                        <c:when test="${item.status == 2}">
-                                            Created
-                                        </c:when>
-                                        <c:when test="${item.status == 1}">
-                                            Blocked
-                                        </c:when>
-                                        <c:when test="${item.status == 0}">
-                                            Deleted
-                                        </c:when>
-                                    </c:choose>
+                                    <div class="pull-left" style="padding-right: 5px">
+                                        <form:form id="verify-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_verify_url}" method="POST">
+                                            <input type="hidden" name="appId" value="${item.appId}"/>
+                                            <input type="hidden" name="appVersion" value="${item.appVersion}"/>
+                                            <input type="hidden" name="appPackage" value="${item.appPackage}"/>
+                                            <button class="btn btn-primary start" type="submit" onclick="">
+                                                <i class="glyphicon glyphicon-upload"><!----></i>
+                                                <span> Request publish</span>
+                                            </button>
+                                        </form:form>
+                                    </div>
                                 </td>
                             </tr>
                         </c:forEach>

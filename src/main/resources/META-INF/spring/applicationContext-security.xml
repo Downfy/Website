@@ -40,6 +40,7 @@
         <authentication-provider ref="daoAuthenticationProvider" />
         <authentication-provider>
             <user-service>
+                <user name="admin" password="admin" authorities="ROLE_MANAGER" />
                 <user name="tuanta" password="tuanta" authorities="ROLE_MANAGER" />
             </user-service>
         </authentication-provider>
