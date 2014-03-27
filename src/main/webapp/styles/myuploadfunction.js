@@ -31,8 +31,16 @@ $(function() {
                 $('#appAPKInput').val(data.result.fileName);
                 $('#appAPKSizeInput').val(data.result.fileSize);
                 $('#formUploadApk').html("");
-                $('#formUploadApk').append("Version (format x.x.x): <input type=\"text\" class=\"form-control\" style=\"width: 100px\" name=\"appVersion\" value=\"1.0.0\" />");
-                $('#formUploadApk').append("<br/><button type=\"submit\" class=\"btn btn-primary\">Upload App</button>");
+                console.log(data.result.fileStatus);
+                if (data.result.fileStatus === 3) {
+                    $('#formUploadApk').append("<span class=\"text-danger\">File uploaded not support</span>");
+                } else if (data.result.fileStatus === 2) {
+                    $('#formUploadApk').append("<span class=\"text-danger\">File upload is exist</span>");
+                } else if (data.result.fileStatus === 1) {
+                    $('#formUploadApk').append("<span class=\"text-danger\">Upload failure</span>");
+                } else {
+                    window.location.replace(location.href);
+                }
             }
         },
         progressall: function(e, data) {
@@ -47,7 +55,7 @@ $(function() {
     $('#appScreenShootFileUpload').fileupload({
         dataType: 'json',
         done: function(e, data) {
-            
+
         },
         progressall: function(e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -55,7 +63,7 @@ $(function() {
                     'width',
                     progress + '%'
                     );
-            if (progress === 100){
+            if (progress === 100) {
                 window.location.replace(location.href);
             }
         }
