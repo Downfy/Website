@@ -1,14 +1,14 @@
-<html xmlns:jsp="http://java.sun.com/JSP/Page" 
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
       xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:fn="http://java.sun.com/jsp/jstl/functions"
-      xmlns:tiles="http://tiles.apache.org/tags-tiles" 
-      xmlns:spring="http://www.springframework.org/tags" 
-      xmlns:util="urn:jsptagdir:/WEB-INF/tags/util">  
+      xmlns:tiles="http://tiles.apache.org/tags-tiles"
+      xmlns:spring="http://www.springframework.org/tags"
+      xmlns:util="urn:jsptagdir:/WEB-INF/tags/util">
 
     <jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" />
 
-    <jsp:directive.page contentType="text/html;charset=UTF-8" />  
-    <jsp:directive.page pageEncoding="UTF-8" /> 
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:directive.page pageEncoding="UTF-8" />
     <jsp:output omit-xml-declaration="yes"/>
 
     <head>
@@ -16,12 +16,12 @@
             Mobile apps store - Downfy.com
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=8" />	
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
         <meta name="description" content="${description}"/>
         <meta  content="--allow-file-access-from-files" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <spring:url value="/resources/styles" var="js_path"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery/jquery-1.10.2.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/jquery/jquery-ui-1.10.3.custom.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/jquery/jquery.kinetic.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/jquery/jquery.mousewheel.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
@@ -65,7 +65,7 @@
         </script>-->
     </head>
     <body>
-        <tiles:insertAttribute name="header"/> 
+        <tiles:insertAttribute name="header"/>
         <div class="advertising-center">
             <tiles:insertAttribute name="center-advertising"/>
         </div>
