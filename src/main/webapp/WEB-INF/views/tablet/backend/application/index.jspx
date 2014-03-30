@@ -44,9 +44,6 @@
                                 <span class="btn text-info">Total Downloaded</span>
                             </th>
                             <th>
-                                <span class="btn text-info">Current Version</span>
-                            </th>
-                            <th>
                                 <span class="btn text-info">Last Updated</span>
                             </th>
                             <th>
@@ -65,9 +62,6 @@
                                 </td>
                                 <td>
                                     <span class="btn">${item.appDownload}</span>
-                                </td>
-                                <td>
-                                    <span class="btn">${item.appCurrentVersion}</span>
                                 </td>
                                 <td>
                                     <span class="btn">

@@ -8,7 +8,6 @@
     <spring:url var="register_url" value="/create-account.html" />
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
-
     <div id="header">
         <div class="top">
             <div class="wrap-content clearfix">
@@ -28,7 +27,7 @@
             </div>
         </div>
         <div class="navigation-bar clearfix">
-            <div class="wrap-content"> 
+            <div class="wrap-content">
                 <ul class="navigation">
                     <li>
                         <a id="browse-cats" class="show" href="javascript:void(0)" title="Categories"><span class="glyphicon glyphicon-th"><!----></span> Categories</a>
@@ -46,7 +45,7 @@
                 <ul class="navigation pull-right">
                     <c:if test="${pageContext['request'].userPrincipal == null}">
                         <li>
-                            <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>    
+                            <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>
                         </li>
                         <li>
                             <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
@@ -58,7 +57,7 @@
                         </li>
                         <spring:url value="/resources/j_spring_security_logout" var="logout_url"/>
                         <li>
-                            <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>    
+                            <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>
                         </li>
                     </c:if>
                 </ul>
