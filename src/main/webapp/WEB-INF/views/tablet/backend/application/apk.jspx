@@ -73,7 +73,7 @@
                         <c:forEach items="${apps}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
-                                    <span class="btn">#</span>
+                                    <span class="btn">${rowCounter.count}</span>
                                 </td>
                                 <td>
                                     <span class="btn">${item.appPackage}</span>
@@ -88,17 +88,33 @@
                                     <span class="btn">0</span>
                                 </td>
                                 <td>
-                                    <div class="pull-left" style="padding-right: 5px">
-                                        <form:form id="verify-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_verify_url}" method="POST">
-                                            <input type="hidden" name="appId" value="${item.appId}"/>
-                                            <input type="hidden" name="appVersion" value="${item.appVersion}"/>
-                                            <input type="hidden" name="appPackage" value="${item.appPackage}"/>
-                                            <button class="btn btn-primary start" type="submit" onclick="">
-                                                <i class="glyphicon glyphicon-upload"><!----></i>
-                                                <span> Request publish</span>
+                                    <c:choose>
+                                        <c:when test="${item.status == 4}">
+                                            <button class="btn btn-warning">
+                                                Published
                                             </button>
-                                        </form:form>
-                                    </div>
+                                        </c:when>
+                                        <c:when test="${item.status == 3}">
+                                            <button class="btn btn-warning">
+                                                Pending
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 2}">
+                                            <button class="btn btn-primary">
+                                                <a style="color: white" href="${application_apk_url}/${item.appId}/requestpublish/${item.id}.html" title="${item.appPackage}">Request Publish</a>
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 1}">
+                                            <button class="btn btn-danger">
+                                                Blocked
+                                            </button>
+                                        </c:when>
+                                        <c:when test="${item.status == 0}">
+                                            <button class="btn btn-danger">
+                                                Deleted
+                                            </button>
+                                        </c:when>
+                                    </c:choose>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -141,7 +157,7 @@
                         <c:forEach items="${files}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
-                                    <span class="btn">#</span>
+                                    <span class="btn">${rowCounter.count}</span>
                                 </td>
                                 <td>
                                     <span class="btn">${item.appPackage}</span>
@@ -185,7 +201,7 @@
             </div>
             <script type="text/javascript">
                 <!--//--><![CDATA[//><!--
-                function collectFormData($form) {
+                            function collectFormData($form) {
                     var fields = $form.find('input');
                     var data = {};
                     for (var i = 0; i < fields.length; i++) {
