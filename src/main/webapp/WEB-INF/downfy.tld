@@ -4,21 +4,21 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
         version="2.0">
    
-    <short-name>MTDFunctions</short-name>    
+    <short-name>DownfyFunctions</short-name>    
     <tlib-version>1.0</tlib-version>
-    <uri>http://mangtuyendung.vn/functions</uri>         
+    <uri>http://downfy.com/functions</uri>         
  
     <!-- Define a Custom EL Function -->
     <function>
         <name>convertURL</name> 
         <!-- Will be used to call your El Function:   ${myTagLibrary:randomColor()} inside your JSP page -->
-        <function-class>com.downfy.common.JobUtils</function-class>
+        <function-class>com.downfy.common.Utils</function-class>
         <function-signature>java.lang.String convertURL(java.lang.String)</function-signature>
     </function>
     <function>
         <name>encodeURL</name> 
         <!-- Will be used to call your El Function:   ${myTagLibrary:randomColor()} inside your JSP page -->
-        <function-class>com.downfy.common.JobUtils</function-class>
+        <function-class>com.downfy.common.Utils</function-class>
         <function-signature>java.lang.String encodeURL(java.lang.String)</function-signature>
     </function>
     <function>

@@ -69,7 +69,7 @@
         <div class="advertising-center">
             <tiles:insertAttribute name="center-advertising"/>
         </div>
-        <div class="mainContent">
+        <div class="mainContent container">
             <!--Body content-->
             <tiles:insertAttribute name="body"/>
         </div>

@@ -2,6 +2,7 @@
      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
      xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:sec="http://www.springframework.org/security/tags"
+     xmlns:df="http://downfy.com/functions"
      xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
@@ -124,7 +125,7 @@
             </div>
             <div class="app-description" itemprop="reviews" itemscope="" itemtype="http://schema.org/Review">
                 <div class="review-widget">
-                    <div class="cms-title"><span class="review-ico"><!----></span>Expert's Review</div>
+                    <div class="cms-title"><span class="review-ico"><!----></span> Expert's Review</div>
                     <div class="wrap clearfix">
                         <div class="reviewer-rating fright">
                             <div class="rating9">
@@ -149,29 +150,23 @@
                 </div>
                 <span class="review-description">
                     <h2 itemprop="description">Browse through your favorites websites using Dolphin</h2>
-                    <p>
-                        SohaPhim là ứng dụng xem phim hàng đầu tại Việt Nam với lượng phim khổng lồ được biên tập và cập nhật nhanh nhất.
-                    </p>
-                    <p>
-                        Ứng dụng SohaPhim là một phiên bản đầy đủ của dịch vụ xem phim Soha trên cả 2 nền tảng iOs và Android. Vì vậy các chức năng và trải nghiệm xem phim độ nét cao như chúng tôi đã và đang phục vụ trên máy tính vẫn giữ nguyên.
-                        Tại sao bạn nên cài đặt ứng dụng SohaPhim?- Xem phim ổn định với chất lượng cao.- Chức năng tìm kiếm và duyệt phim tiện lợi, dễ dàng để tìm phim bạn muốn xem 1 cách nhanh chóng.- SohaPhim giới thiệu cho bạn những bộ phim hay hàng ngày.- Bình luận, đánh giá về phim mà bạn đã xem.- Chia sẻ lên Facebook về phim mà bạn yêu thích.- Thấy phim hay nhưng chưa có thời gian để xem, bạn có thể đánh dấu để xem sau.
-                    </p>
-                    <p>
-                        Và còn nhiều tính năng thú vị khác.
-                    </p>
+                    <p>${df:escapeBr(app.appDescription)}</p>
+                </span>
+            </div>
+            <div class="app-description">
+                <div class="review-widget">
+                    <div class="cms-title">Description</div>
+                </div>
+                <span class="review-description">
+                    <p>${df:escapeBr(app.appDescription)}</p>
                 </span>
             </div>
             <div class="app-screenshoot">
-                <div class="cms-title">Screenshoots</div>
+                <div class="cms-title">Screen shoots</div>
                 <div id="makeMeScrollable">
-                    <img src="${images_url}/demo/field.jpg" alt="Field" id="field" />
-                    <img src="${images_url}/demo/gnome.jpg" alt="Gnome" id="gnome" />
-                    <img src="${images_url}/demo/pencils.jpg" alt="Pencils" id="pencils" />
-                    <img src="${images_url}/demo/golf.jpg" alt="Golf" id="golf" />
-                    <img src="${images_url}/demo/river.jpg" alt="River" id="river" />
-                    <img src="${images_url}/demo/train.jpg" alt="Train" id="train" />
-                    <img src="${images_url}/demo/leaf.jpg" alt="Leaf" id="leaf" />
-                    <img src="${images_url}/demo/dog.jpg" alt="Dog" id="dog" />
+                    <c:forEach items="${screenshoots}" var="item" varStatus="rowCounter">
+                        <img src="${resource_url}/${item.appScreenShoot}" alt="${item.appScreenShoot}" id="${item.appId}" />
+                    </c:forEach>
                 </div>
                 <script type="text/javascript">
                     <!--//--><![CDATA[//><!--
@@ -204,7 +199,14 @@
                 <c:set var="req" value="${pageContext.request}" />
                 <c:set var="baseURL" value="${fn:replace(req.requestURL, fn:substring(req.requestURI, 1, fn:length(req.requestURI)), req.contextPath)}" />
                 <c:url var="myUrl" value="${fn:replace(baseURL, req.contextPath, '')}/${req.getAttribute('javax.servlet.forward.request_uri')}"/>
-                <div class="fb-comments col-md-8 col-xs-9" data-href="${fn:replace(myUrl, '///', '/')}" data-numposts="5" data-colorscheme="light"><!----></div>
+                <div class="fb-comments" data-href="${fn:replace(myUrl, '///', '/')}" data-numposts="15" data-colorscheme="light"><!----></div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    $('document').ready(function() {
+                        $('.fb-comments').attr('data-width', $('.app-comments').width());
+                    });
+                    //--><!]]>
+                </script>
             </div>
         </div>
         <div class="col-md-4 col-xs-3">

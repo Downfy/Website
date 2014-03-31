@@ -11,6 +11,7 @@
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
     <spring:url value="/backend/application" var="application_url" />
+    <spring:url value="/app" var="application_view_url" />
 
     <div class="col-md-3 backend-create-form">
         <ul class="nav nav-pills nav-stacked">
@@ -60,7 +61,7 @@
                                 </td>
                                 <td>
                                     <span class="btn">
-                                        <a href="${application_url}/preview/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
+                                        <a href="${application_view_url}/${item.appName}/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
                                     </span>
                                 </td>
                                 <td>

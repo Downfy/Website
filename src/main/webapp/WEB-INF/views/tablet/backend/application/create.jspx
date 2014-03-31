@@ -37,6 +37,11 @@
                         <form:input path="appName" class="form-control" placeholder="Application name"/>
                         <span class="help-inline text-danger"><form:errors path="appName" /></span>
                     </div>
+                    <div class="form-group" id="appAuthor">
+                        <label>Application Author</label>
+                        <form:input path="appAuthor" class="form-control" placeholder="Application author"/>
+                        <span class="help-inline text-danger"><form:errors path="appAuthor" /></span>
+                    </div>
                     <div class="form-group" id="appDescription">
                         <label>Application Description</label>
                         <textarea name="appDescription" class="form-control" rows="5"><!----></textarea>
@@ -88,8 +93,8 @@
                                 var item = response[i];
                                 $('#category')
                                         .append($("<option></option>")
-                                        .attr("value", item.key)
-                                        .text(item.value));
+                                                .attr("value", item.key)
+                                                .text(item.value));
                             }
                         }, 'json');
                     });
