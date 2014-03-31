@@ -89,9 +89,16 @@
                                             </button>
                                         </c:when>
                                         <c:when test="${item.status == 2}">
-                                            <button class="btn btn-primary">
-                                                <a style="color: white" href="${application_url}/${item.appId}/requestpublish.html" title="${item.appName}">Request Publish</a>
-                                            </button>
+                                            <c:if test="${empty item.appPackage}">
+                                                <button class="btn btn-primary">
+                                                    <a style="color: white" href="${application_url}/${item.appId}/apk.html" title="${item.appName}">Upload file apk</a>
+                                                </button>
+                                            </c:if>
+                                            <c:if test="${not empty item.appPackage}">
+                                                <button class="btn btn-primary">
+                                                    <a style="color: white" href="${application_url}/${item.appId}/requestpublish.html" title="${item.appName}">Request Publish</a>
+                                                </button>
+                                            </c:if>
                                         </c:when>
                                         <c:when test="${item.status == 1}">
                                             <button class="btn btn-danger">
