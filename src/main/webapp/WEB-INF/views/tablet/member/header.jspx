@@ -7,7 +7,7 @@
     <jsp:output omit-xml-declaration="yes" />
     <spring:url var="home_url" value="/" />
     <spring:url var="member_url" value="/member.html" />
-    <div id="header">
+    <div id="header" style="padding: 0">
         <div class="top">
             <div class="wrap-content clearfix">
                 <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
@@ -25,7 +25,7 @@
                 </ul>
             </div>
         </div>
-        <nav class="navbar" role="navigation">
+        <nav class="navbar" role="navigation" style="margin: 0">
             <div class="container">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <ul class="nav navbar-nav">

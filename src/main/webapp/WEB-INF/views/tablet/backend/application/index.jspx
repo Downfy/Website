@@ -30,7 +30,7 @@
         <div class="container-fluid">
             <div class="panel panel-success">
                 <div class="panel-heading"><strong>Applications</strong></div>
-                <div class="panel-body">
+                <div class="panel-body" style="padding: 0">
                     <!-- Table -->
                     <table class="table table-hover">
                         <tr>
@@ -38,16 +38,16 @@
                                 <span class="btn text-info">#</span>
                             </th>
                             <th>
-                                <span class="btn text-info">Package name</span>
+                                <span class="btn text-info">Package</span>
                             </th>
                             <th>
-                                <span class="btn text-info">Application Name</span>
+                                <span class="btn text-info">Name</span>
                             </th>
                             <th>
-                                <span class="btn text-info">Total Downloaded</span>
+                                <span class="btn text-info">Downloaded</span>
                             </th>
                             <th>
-                                <span class="btn text-info">Last Updated</span>
+                                <span class="btn text-info">Updated</span>
                             </th>
                             <th>
                                 <span class="btn text-info">Status</span>
