@@ -2,13 +2,13 @@
      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
      xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:sec="http://www.springframework.org/security/tags"
-     xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" 
+     xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
-
+    <spring:url value="/app" var="app_url" />
     <spring:url var="images_url" value="/resources/images" />
     <ol class="breadcrumb" >
         <li><a href="#">Downfy.com</a></li>
@@ -28,12 +28,12 @@
                 </div>
                 <div class="app-detail no-padding">
                     <div class="pull-left">
-                        <a itemprop="url" href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                        <a itemprop="url" href="${app_url}/demo/jp.fx.videomemo.html">
                             <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${images_url}/60c938c4.png" class="img-rounded"/>
                         </a>
                     </div>
                     <div class="pull-left">
-                        <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                        <a href="${app_url}/demo/jp.fx.videomemo.html">
                             <h1 class="name-app" itemprop="name">
                                 Dolphin Browser
                             </h1>
@@ -64,7 +64,7 @@
                                 <span itemprop="name" content="Android"/>
                             </span>
                         </div>
-                    </div>    
+                    </div>
                 </div>
                 <div class="app-info">
                     <ul class="nav nav-tabs" id="myTab">
@@ -136,12 +136,12 @@
                             </div>
                         </div>
                         <div class="fleft">
-                            <a class="" href="http://www.appszoom.com/user/801299843120/community/me" title="All reviews by Emmanuel Lund"> 
-                                <img src="http://cdn3.staztic.com/f/images_reviewers_emman_2_20130307125232.png" class="reviewer-avatar" alt="Emmanuel Lund"/> </a> 
+                            <a class="" href="http://www.appszoom.com/user/801299843120/community/me" title="All reviews by Emmanuel Lund">
+                                <img src="http://cdn3.staztic.com/f/images_reviewers_emman_2_20130307125232.png" class="reviewer-avatar" alt="Emmanuel Lund"/> </a>
                         </div>
                         <h2 class="review-title">"Discovering the Best Android Apps"</h2>
                         <p>Reviewed by: <a rel="author" href="http://www.appszoom.com/user/801299843120" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-                                <span itemprop="name">Emmanuel Lund</span></a> / 
+                                <span itemprop="name">Emmanuel Lund</span></a> /
                             <meta itemprop="datePublished" content="2011-03-25"/>Jun 21, 2013
                         </p>
                     </div>
@@ -212,12 +212,12 @@
                 <div class="container">
                     <div class="app-detail no-padding border-bottom">
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html">
                                 <img width="84px" alt="" src="${images_url}/1a4ddb1d.jpg" class="img-rounded"/>
                             </a>
                         </div>
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/thoi-dai-hac-am-721.html"><h3 class="name-app">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html"><h3 class="name-app">
                                     Thời Đại Hắc Ám
                                 </h3>
                             </a>
@@ -244,12 +244,12 @@
                     </div>
                     <div class="app-detail no-padding border-bottom">
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/ionline-536.html">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html">
                                 <img src="${images_url}/60c938c4.png" alt="" width="84px" class="img-rounded"/>
                             </a>
                         </div>
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/ionline-536.html">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html">
                                 <h3 class="name-app">
                                     iOnline
                                 </h3>
@@ -277,12 +277,12 @@
                     </div>
                     <div class="app-detail no-padding border-bottom">
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/ionline-536.html">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html">
                                 <img src="${images_url}/60c938c4.png" alt="" width="84px" class="img-rounded"/>
                             </a>
                         </div>
                         <div class="pull-left">
-                            <a href="http://sohastore.vn/ionline-536.html">
+                            <a href="${app_url}/demo/jp.fx.videomemo.html">
                                 <h3 class="name-app">
                                     iOnline
                                 </h3>

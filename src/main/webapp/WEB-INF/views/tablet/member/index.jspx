@@ -16,15 +16,20 @@
                 <span class="browse-emph">Filter by</span>
                 <a class="filterlink" href="/apps/hot-week/social/"><div class="filterbox filterbox-chosen"><!----></div>
                     Off
-                </a><a class="filterlink" href="/apps/hot-week/social/free/"><div class="filterbox"><!----></div>
+                </a>
+                <a class="filterlink" href="/apps/hot-week/social/free/"><div class="filterbox"><!----></div>
                     Apps pending
-                </a><a class="filterlink" href="/apps/hot-week/social/paid/"><div class="filterbox"><!----></div>
+                </a>
+                <a class="filterlink" href="/apps/hot-week/social/paid/"><div class="filterbox"><!----></div>
                     Apps reviewed
-                </a><a class="filterlink" href="/apps/hot-week/social/new/"><div class="filterbox"><!----></div>
+                </a>
+                <a class="filterlink" href="/apps/hot-week/social/new/"><div class="filterbox"><!----></div>
                     Apps updated
-                </a><a class="filterlink" href="/apps/hot-week/social/updated/"><div class="filterbox"><!----></div>
+                </a>
+                <a class="filterlink" href="/apps/hot-week/social/updated/"><div class="filterbox"><!----></div>
                     Apps
-                </a><a class="filterlink" href="/apps/hot-week/social/price-drop/"><div class="filterbox"><!----></div>
+                </a>
+                <a class="filterlink" href="/apps/hot-week/social/price-drop/"><div class="filterbox"><!----></div>
                     Apps
                 </a>
             </div>

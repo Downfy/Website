@@ -9,6 +9,7 @@
     <jsp:output omit-xml-declaration="yes" />
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
+    <spring:url value="/app" var="app_url" />
     <spring:url var="images" value="/resources/images" />
     <div class="contentContainer">
         <div class="app-container">
@@ -21,13 +22,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             Thời Đại Hắc Ám
                                         </h3>
@@ -52,13 +53,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -83,13 +84,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -114,13 +115,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -145,13 +146,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -176,13 +177,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -207,13 +208,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -238,13 +239,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -269,13 +270,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -300,13 +301,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -340,13 +341,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/thoi-dai-hac-am-721.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             Thời Đại Hắc Ám
                                         </h3>
@@ -371,13 +372,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -402,13 +403,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -433,13 +434,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -464,13 +465,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -495,13 +496,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -526,13 +527,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -557,13 +558,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -588,13 +589,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
@@ -619,13 +620,13 @@
                         <div class="app-detail col-sm-6 col-md-4 col-lg-3 pull-left">
                             <div class="wrapper">
                                 <div class="thumb pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <img src="${images}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
                                 <div class="infos-app pull-left">
-                                    <a href="http://sohastore.vn/ionline-536.html">
+                                    <a href="${app_url}/demo/jp.fx.videomemo.html">
                                         <h3 class="name-app">
                                             iOnline
                                         </h3>
