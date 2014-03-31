@@ -10,6 +10,7 @@
     <spring:url value="/" var="home_url" />
     <spring:url value="/app" var="app_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <spring:url var="resource_url" value="/resources" />
     <ol class="breadcrumb" >
         <li><a href="#">Downfy.com</a></li>
         <li><a href="#">Android Apps</a></li>
@@ -28,19 +29,19 @@
                 </div>
                 <div class="app-detail no-padding">
                     <div class="pull-left">
-                        <a itemprop="url" href="${app_url}/demo/jp.fx.videomemo.html">
-                            <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${images_url}/60c938c4.png" class="img-rounded"/>
+                        <a itemprop="url" href="${app_url}/${app.appName}/${app.appPackage}.html">
+                            <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${resource_url}/${app.appIcon}" class="img-rounded"/>
                         </a>
                     </div>
                     <div class="pull-left">
-                        <a href="${app_url}/demo/jp.fx.videomemo.html">
+                        <a href="${app_url}/${app.appName}/${app.appPackage}.html">
                             <h1 class="name-app" itemprop="name">
-                                Dolphin Browser
+                                ${app.appName}
                             </h1>
                         </a>
                         <div class="cat-name" itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
                             <a itemprop="url" href="#" title="See more apps by Dolphin Browser">
-                                <span itemprop="name">Dolphin Browser</span>
+                                <span itemprop="name">${app.appAuthor}</span>
                             </a>
                         </div>
                         <div class="stars">

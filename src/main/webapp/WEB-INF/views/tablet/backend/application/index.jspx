@@ -59,7 +59,9 @@
                                     <span class="btn">${rowCounter.count}</span>
                                 </td>
                                 <td>
-                                    <span class="btn">${item.appPackage}</span>
+                                    <span class="btn">
+                                        <a href="${application_url}/preview/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
+                                    </span>
                                 </td>
                                 <td>
                                     <span class="btn">
