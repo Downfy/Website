@@ -144,6 +144,10 @@
     white-space:nowrap;
 }
 
+.mainContent {
+    width: 1000px;
+}
+
 .mainContentWrapper .contentContainer {
     -moz-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
     -webkit-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);

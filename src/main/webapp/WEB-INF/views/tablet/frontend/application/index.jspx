@@ -3,6 +3,7 @@
      xmlns:jsp="http://java.sun.com/JSP/Page"
      xmlns:sec="http://www.springframework.org/security/tags"
      xmlns:df="http://downfy.com/functions"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
      xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8" />
@@ -79,22 +80,24 @@
                                 <div class="col-md-6">
                                     <b>Current Version</b>
                                     <br/>
-                                    1.1
+                                    ${apk.versionName}
                                 </div>
                                 <div class="col-md-6">
                                     <b>Requires Android</b>
                                     <br/>
-                                    2.3
+                                    ${apk.minSdkVersion}
                                 </div>
                                 <div class="col-md-6">
                                     <b>Size</b>
                                     <br/>
-                                    17M
+                                    ${apk.appSize}
                                 </div>
                                 <div class="col-md-6">
                                     <b>Updated</b>
                                     <br/>
-                                    December 16, 2013
+                                    <fmt:formatDate type="both"
+                                                    dateStyle="short" timeStyle="short"
+                                                    value="${apk.created}" />
                                 </div>
                             </div>
                         </div>
