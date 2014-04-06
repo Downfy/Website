@@ -13,7 +13,7 @@ $(function() {
             $('#appIconImage').removeClass('img-thumbnail');
             $('#appIconImage').addClass('img-circle');
             $('#appIconInput').val(data.result.fileName);
-            $('#appIconImage').attr("src", '/mystore/resources' + data.result.fileName);
+            $('#appIconImage').attr("src", '/spring-social-showcase/resources' + data.result.fileName);
         },
         progressall: function(e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);

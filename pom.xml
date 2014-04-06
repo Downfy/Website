@@ -7,7 +7,7 @@
     <groupId>com.downfy</groupId>
     <artifactId>downfy-website</artifactId>
     <packaging>war</packaging>
-    <version>1.0.0-M6</version>
+    <version>1.0.0-M7</version>
     <name>Downfy Website</name>
     <repositories>
         <repository>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.downfy</groupId>
             <artifactId>downfy-controller</artifactId>
-            <version>1.0.0-M6</version>
+            <version>1.0.0-M7</version>
         </dependency>
     </dependencies>
     <build>

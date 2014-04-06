@@ -2,6 +2,7 @@
      xmlns:sec="http://www.springframework.org/security/tags"
      xmlns:fn="http://java.sun.com/jsp/jstl/functions"
      xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:df="http://downfy.com/functions"
      xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
      xmlns:form="http://www.springframework.org/tags/form"
      xmlns:spring="http://www.springframework.org/tags" version="2.0">
@@ -61,7 +62,7 @@
                                 </td>
                                 <td>
                                     <span class="btn">
-                                        <a href="${application_view_url}/${item.appName}/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
+                                        <a href="${application_view_url}/${df:convertURL(item.appName)}/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
                                     </span>
                                 </td>
                                 <td>

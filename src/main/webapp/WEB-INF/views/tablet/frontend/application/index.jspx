@@ -90,7 +90,8 @@
                                 <div class="col-md-6">
                                     <b>Size</b>
                                     <br/>
-                                    ${apk.appSize}
+                                    <fmt:formatNumber type="number" maxIntegerDigits="3" value="${apk.appSize / 1024 / 1024}"/>
+                                    MB
                                 </div>
                                 <div class="col-md-6">
                                     <b>Updated</b>
