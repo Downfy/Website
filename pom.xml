@@ -106,7 +106,7 @@
                 <version>8.1.14.v20131031</version>
                 <configuration>
                     <webAppConfig>
-                        <contextPath>/mystore</contextPath>
+                        <contextPath>/spring-social-showcase</contextPath>
                     </webAppConfig>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">

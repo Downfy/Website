@@ -75,7 +75,7 @@
                         <li>
                             <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
                         </li>
-                        <spring:url value="/resources/j_spring_security_logout" var="logout_url"/>
+                        <spring:url value="/signout" var="logout_url"/>
                         <li>
                             <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>
                         </li>
