@@ -67,9 +67,6 @@
                         <li>
                             <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>
                         </li>
-                        <li>
-                            <a title="Sign in" href="${register_url}"><span class="glyphicon glyphicon-plus"><!----></span> Sign in</a>
-                        </li>
                     </c:if>
                     <c:if test="${pageContext['request'].userPrincipal != null}">
                         <li>
