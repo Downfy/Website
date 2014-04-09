@@ -9,23 +9,6 @@
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
     <div id="header">
-        <div class="top">
-            <div class="wrap-content clearfix">
-                <a href="${home_url}" id="logo" title="Android apps">Android apps</a>
-                <ul class="platform-tabs android">
-                    <li class="android active">
-                        <a class="android" href="${home_url}" title="Android apps">
-                            <span class="ico"><!----></span> ANDROID
-                        </a>
-                    </li>
-                    <li class="iphone ">
-                        <a class="iphone" href="#" title="Iphone apps">
-                            <span class="ico"><!----></span> IPHONE
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
         <div class="navigation-bar clearfix">
             <div class="wrap-content">
                 <ul class="navigation">
@@ -52,7 +35,7 @@
                         <li>
                             <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
                         </li>
-                        <spring:url value="/signout" var="logout_url"/>
+                        <spring:url value="/signout.html" var="logout_url"/>
                         <li>
                             <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>
                         </li>

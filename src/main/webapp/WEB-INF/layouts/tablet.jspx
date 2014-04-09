@@ -54,13 +54,8 @@
 
     <body>
         <tiles:insertAttribute name="header"/>
-        <div style="position: relative;">
-            <div class="reviews-top">
-                <tiles:insertAttribute name="top-reviews"/>
-            </div>
-            <div class="advertising-top">
-                <tiles:insertAttribute name="top-advertising"/>
-            </div>
+        <div class="advertising-center">
+            <tiles:insertAttribute name="box-search"/>
         </div>
         <div class="advertising-center">
             <tiles:insertAttribute name="center-advertising"/>

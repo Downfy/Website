@@ -85,10 +85,10 @@
                         <span id="appIconButton" class="btn fileinput-button">
                             <c:choose>
                                 <c:when test="${not empty app.appIcon}">
-                                    <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${home_url}resources${app.appIcon}"/>
+                                    <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${app.appIcon}"/>
                                 </c:when>
                                 <c:otherwise>
-                                    <img id="appIconImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/app-icon-detail.png"/>
+                                    <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
                                 </c:otherwise>
                             </c:choose>
                             <input id="appIconInput" name="appIcon" type="hidden" value="${app.appIcon}" />
@@ -96,7 +96,7 @@
                             <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/${app.appId}/icon"/>
                             <br/>
                             <br/>
-                            <div id="progress" class="progress progress-striped active" style="width: 84px;">
+                            <div id="progress" class="progress progress-striped active" style="width: 124px;">
                                 <div class="progress-bar progress-bar-success"><!----></div>
                             </div>
                         </span>
@@ -132,8 +132,8 @@
                                 var item = response[i];
                                 $('#category')
                                         .append($("<option></option>")
-                                        .attr("value", item.key)
-                                        .text(item.value));
+                                                .attr("value", item.key)
+                                                .text(item.value));
                             }
                         }, 'json');
                     });

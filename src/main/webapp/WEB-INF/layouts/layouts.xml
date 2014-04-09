@@ -12,8 +12,7 @@
     
     <definition name="tablet-home" template="/WEB-INF/layouts/tablet.jspx">
         <put-attribute name="header" value="/WEB-INF/views/tablet/frontend/home/header.jspx" />
-        <put-attribute name="top-reviews" value="/WEB-INF/views/tablet/frontend/home/top-reviews.jspx" />
-        <put-attribute name="top-advertising" value="/WEB-INF/views/tablet/frontend/home/top-advertising.jspx" />
+        <put-attribute name="box-search" value="/WEB-INF/views/tablet/frontend/home/box-search.jspx" />
         <put-attribute name="center-advertising" value="/WEB-INF/views/tablet/frontend/home/center-advertising.jspx" />
         <put-attribute name="menu" value="/WEB-INF/views/tablet/frontend/home/menu.jspx" />
         <put-attribute name="footer" value="/WEB-INF/views/tablet/frontend/home/footer.jspx" />

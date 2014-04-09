@@ -1,12 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:c="http://java.sun.com/jsp/jstl/core" 
-     xmlns:fn="http://java.sun.com/jsp/jstl/functions" 
-     xmlns:jsp="http://java.sun.com/JSP/Page" 
-     xmlns:spring="http://www.springframework.org/tags" 
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
      xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" id="footer" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <span class="text-danger">
-        <center>Application and Games Store - Downfy.com</center>
-    </span>
+    <center>
+        <div id="footer-wrap">
+            <div id="footer" class="clearfix">
+                <div class="col1 col">
+                    <p class="title">SERVICES</p>
+                    <ul>
+                        <li><a href="http://www.appszoom.com/developers" title="Developers services">Developers services</a></li>
+                        <li><a href="http://www.appszoom.com/appcenter" title="App Center">App Center</a></li>
+                        <li><a href="http://www.appszoom.com/advertising" title="Advertise">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="col2 col">
+                    <p class="title">APPSZOOM+</p>
+                    <ul>
+                        <li><a href="http://blog.appszoom.com" title="AppsZoom blog">AppsZoom blog</a></li>
+                        <li><a href="http://www.appszoom.com/android_applications/by_review_date?with_review=1" title="Latest reviews">Latest reviews</a></li>
+                        <li><a href="http://www.appszoom.com/android/best-apps" title="BEst apps">Best apps</a></li>
+                        <li><a href="http://www.appszoom.com/android/todays-picks" title="Today's pick">Today's pick</a></li>
+                    </ul>
+                </div>
+                <div class="col3 col">
+                    <p class="title">ABOUT</p>
+                    <ul>
+                        <li><a href="http://www.appszoom.com/w/content/contactUs" title="Contact Us">Contact Us</a></li>
+                        <li><a href="http://www.appszoom.com/faq" title="FAQ">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col4 col">
+                    <p class="title">Our apps:</p>
+                    <ul class="our-apps">
+                        <li><a class="discoverer" href="http://www.appszoom.com/android_applications/tools/appszoom-apps-discoverer_ckhhq.html" title="Apps Discoverer"><span class="ico"><!----></span>Apps Discoverer</a></li>
+                        <li><a class="pick" href="http://todays-pick.appszoom.com/android" title="Today's Pick"><span class="ico"><!----></span>Today's Pick</a></li>
+                        <li><a class="qr" href="http://www.appszoom.com/android_applications/tools/appszoom-qr-reader_hvlmb.html" title="QR Reader"><span class="ico"><!----></span>QR Reader</a></li>
+                    </ul>
+                </div>
+                <div class="col5 col">
+                    <p class="title">SOCIAL</p>
+                    <ul class="social">
+                        <li><a class="fb" href="http://www.facebook.com/appszoom" title="AppFacebook"><span class="ico"></span>Facebook</a></li>
+                        <li><a class="tw" href="http://www.twitter.com/appszoom" title="Twitter"><span class="ico"></span>Twitter</a></li>
+                        <li><a class="gplus" href="https://plus.google.com/108994123994537213735" title="Google +" rel="publisher"><span class="ico"><!----></span>Google +</a></li>
+                        <li><a class="link" href="http://www.linkedin.com/company/appszoom" title="LinkedIn"><span class="ico"><!----></span>LinkedIn</a></li>
+                        <li><a class="pin" href="http://pinterest.com/appszoom/" title="Pinterest"><span class="ico"></span>Pinterest</a></li>
+                        <li><a class="inst" href="http://instagram.com/appszoom" title="Instagram"><span class="ico"></span>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </center>
 </div>

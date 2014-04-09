@@ -1,5 +1,5 @@
 #header {
-    background:#ededed;
+    background:#35353e;
     padding-bottom:15px;
 }
 
@@ -74,7 +74,8 @@
 }
 
 #header .navigation-bar {
-    background:#35353e;
+    //background:#35353e;
+    background: #2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
     border-bottom:7px solid #71a00e;
     color:#fff;
     font-size:13px;
@@ -228,10 +229,6 @@
 
 #header .categories-list ul {
     padding-left:10px;
-}
-
-.advertising-center {
-    margin-top:1px;
 }
 
 ul {
