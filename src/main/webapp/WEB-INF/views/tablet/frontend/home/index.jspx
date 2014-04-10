@@ -10,7 +10,41 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url value="/app" var="app_url" />
-    <spring:url var="images" value="/resources/images" />
+    <spring:url var="images_url" value="/resources/images" />
+    <center>
+        <div class="carousel slide" style="width: 960px; height: 360px" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-captions" data-slide-to="1"></li>
+                <li data-target="#carousel-example-captions" data-slide-to="2"></li>
+                <li data-target="#carousel-example-captions" data-slide-to="3"></li>
+                <li data-target="#carousel-example-captions" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img data-src="${images_url}/sliders-01.jpg" src="${images_url}/sliders-01.jpg" alt="First slide image"/>
+                </div>
+                <div class="item">
+                    <img data-src="${images_url}/sliders-02.jpg" src="${images_url}/sliders-02.jpg" alt="Second slide image"/>
+                </div>
+                <div class="item">
+                    <img data-src="${images_url}/sliders-03.jpg" src="${images_url}/sliders-03.jpg" alt="Third slide image"/>
+                </div>
+                <div class="item">
+                    <img data-src="${images_url}/sliders-04.jpg" src="${images_url}/sliders-04.jpg" alt="Third slide image"/>
+                </div>
+                <div class="item">
+                    <img data-src="${images_url}/sliders-05.jpg" src="${images_url}/sliders-05.jpg" alt="Third slide image"/>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </center>
     <div class="contentContainer container">
         <div class="app-container">
             <div class="app-wrapper">
@@ -23,7 +57,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
+                                        <img src="${images_url}/1a4ddb1d.jpg" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -54,7 +88,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -85,7 +119,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -116,7 +150,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -147,7 +181,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -178,7 +212,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -209,7 +243,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -240,7 +274,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -271,7 +305,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -302,7 +336,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -342,7 +376,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/1a4ddb1d.jpg" alt="" width="84px"/>
+                                        <img src="${images_url}/1a4ddb1d.jpg" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -373,7 +407,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -404,7 +438,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -435,7 +469,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -466,7 +500,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -497,7 +531,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -528,7 +562,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -559,7 +593,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -590,7 +624,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>
@@ -621,7 +655,7 @@
                             <div class="wrapper">
                                 <div class="thumb pull-left">
                                     <a href="${app_url}/demo/jp.fx.videomemo.html">
-                                        <img src="${images}/60c938c4.png" alt="" width="84px"/>
+                                        <img src="${images_url}/60c938c4.png" alt="" width="84px"/>
                                         <span class="mask"><!----></span>
                                     </a>
                                 </div>

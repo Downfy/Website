@@ -54,9 +54,6 @@
 
     <body>
         <tiles:insertAttribute name="header"/>
-        <div class="advertising-center">
-            <tiles:insertAttribute name="center-advertising"/>
-        </div>
         <div class="mainContentWrapper">
             <!--Body content-->
             <tiles:insertAttribute name="body"/>

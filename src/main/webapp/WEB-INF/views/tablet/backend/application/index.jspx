@@ -29,97 +29,85 @@
         </ul>
     </div>
     <div class="col-md-9 backend-create-detail">
-        <div class="container-fluid">
-            <div class="panel panel-success">
-                <div class="panel-heading"><strong>Applications</strong></div>
-                <div class="panel-body" style="padding: 0">
-                    <!-- Table -->
-                    <table class="table table-hover">
+        <div class="panel panel-success">
+            <div class="panel-heading"><strong>Applications</strong></div>
+            <div class="panel-body" style="padding: 0">
+                <!-- Table -->
+                <table class="table table-hover">
+                    <tr>
+                        <th>
+                            <span class="btn text-info">#</span>
+                        </th>
+                        <th>
+                            <span class="btn text-info">Package</span>
+                        </th>
+                        <th>
+                            <span class="btn text-info">Name</span>
+                        </th>
+                        <th>
+                            <span class="btn text-info">Downloaded</span>
+                        </th>
+                        <th>
+                            <span class="btn text-info">Status</span>
+                        </th>
+                    </tr>
+                    <c:forEach items="${apps}" var="item" varStatus="rowCounter">
                         <tr>
-                            <th>
-                                <span class="btn text-info">#</span>
-                            </th>
-                            <th>
-                                <span class="btn text-info">Package</span>
-                            </th>
-                            <th>
-                                <span class="btn text-info">Name</span>
-                            </th>
-                            <th>
-                                <span class="btn text-info">Downloaded</span>
-                            </th>
-                            <th>
-                                <span class="btn text-info">Updated</span>
-                            </th>
-                            <th>
-                                <span class="btn text-info">Status</span>
-                            </th>
+                            <td>
+                                <span class="btn">${rowCounter.count}</span>
+                            </td>
+                            <td>
+                                <span class="btn">
+                                    <a href="${application_view_url}/${df:convertURL(item.appName)}/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="btn">
+                                    <a href="${application_url}/${item.appId}.html" title="${item.appName}">${item.appName}</a>
+                                </span>
+                            </td>
+                            <td>
+                                <span class="btn">${item.appDownload}</span>
+                            </td>
+                            <td>
+                                <c:choose>
+                                    <c:when test="${item.status == 4}">
+                                        <button class="btn btn-warning">
+                                            Published
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 3}">
+                                        <button class="btn btn-warning">
+                                            Pending
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 2}">
+                                        <c:if test="${empty item.appPackage}">
+                                            <button class="btn btn-primary">
+                                                <a style="color: white" href="${application_url}/${item.appId}/apk.html" title="${item.appName}">Upload file apk</a>
+                                            </button>
+                                        </c:if>
+                                        <c:if test="${not empty item.appPackage}">
+                                            <button class="btn btn-primary">
+                                                <a style="color: white" href="${application_url}/${item.appId}/requestpublish.html" title="${item.appName}">Request Publish</a>
+                                            </button>
+                                        </c:if>
+                                    </c:when>
+                                    <c:when test="${item.status == 1}">
+                                        <button class="btn btn-danger">
+                                            Blocked
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 0}">
+                                        <button class="btn btn-danger">
+                                            Deleted
+                                        </button>
+                                    </c:when>
+                                </c:choose>
+                            </td>
                         </tr>
-                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
-                            <tr>
-                                <td>
-                                    <span class="btn">${rowCounter.count}</span>
-                                </td>
-                                <td>
-                                    <span class="btn">
-                                        <a href="${application_view_url}/${df:convertURL(item.appName)}/${item.appPackage}.html" title="${item.appPackage}">${item.appPackage}</a>
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="btn">
-                                        <a href="${application_url}/${item.appId}.html" title="${item.appName}">${item.appName}</a>
-                                    </span>
-                                </td>
-                                <td>
-                                    <span class="btn">${item.appDownload}</span>
-                                </td>
-                                <td>
-                                    <span class="btn">
-                                        <fmt:formatDate type="both"
-                                                        dateStyle="short" timeStyle="short"
-                                                        value="${item.updated}" />
-                                    </span>
-                                </td>
-                                <td>
-                                    <c:choose>
-                                        <c:when test="${item.status == 4}">
-                                            <button class="btn btn-warning">
-                                                Published
-                                            </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 3}">
-                                            <button class="btn btn-warning">
-                                                Pending
-                                            </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 2}">
-                                            <c:if test="${empty item.appPackage}">
-                                                <button class="btn btn-primary">
-                                                    <a style="color: white" href="${application_url}/${item.appId}/apk.html" title="${item.appName}">Upload file apk</a>
-                                                </button>
-                                            </c:if>
-                                            <c:if test="${not empty item.appPackage}">
-                                                <button class="btn btn-primary">
-                                                    <a style="color: white" href="${application_url}/${item.appId}/requestpublish.html" title="${item.appName}">Request Publish</a>
-                                                </button>
-                                            </c:if>
-                                        </c:when>
-                                        <c:when test="${item.status == 1}">
-                                            <button class="btn btn-danger">
-                                                Blocked
-                                            </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 0}">
-                                            <button class="btn btn-danger">
-                                                Deleted
-                                            </button>
-                                        </c:when>
-                                    </c:choose>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-                </div>
+                    </c:forEach>
+                </table>
             </div>
         </div>
     </div>

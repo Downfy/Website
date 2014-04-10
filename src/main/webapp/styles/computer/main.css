@@ -214,22 +214,14 @@ p {
 #footer-wrap {
     background: #2a2a32;
     margin-top: 50px;
-    position: relative;
     width: 100%;
 }
 
 #footer-wrap #footer {
-    width: 990px;
     margin: 0 auto;
     padding: 35px 0;
     text-align: left;
     font-size: 14px;
-}
-
-#footer .col {
-    width: 150px;
-    margin-right: 47px;
-    float: left;
 }
 
 #footer .col .title {
@@ -262,33 +254,4 @@ p {
 
 a {
     color: #0089CC;
-}
-
-#box-search {
-    background: #2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
-    text-align: center;
-    height: 180px;
-    color: #d6d7d8;
-}
-
-#box-search div.logo {
-    margin: 0 auto 30px auto;
-    height: 86px;
-    width: 500px;
-    background-size: 500px 86px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("https://cdn1.iconfinder.com/static/5a8fe200b416c5d92391aa2f64dd6322/assets/img/homepage-logo.png");
-}
-
-#box-search input {
-    padding: 13px 13px;
-    height: 48px;
-    width: 400px
-}
-
-#box-search button {
-    padding: 13px 13px;
-    height: 48px;
-    width: 100px
 }

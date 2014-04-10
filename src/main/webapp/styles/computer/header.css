@@ -1,5 +1,29 @@
 #header {
-    background:#35353e;
+    background: #2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
+    text-align: center;
+    color: #d6d7d8;
+}
+
+#header div.logo {
+    margin: 0 auto 30px auto;
+    height: 86px;
+    width: 500px;
+    background-size: 500px 86px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://cdn1.iconfinder.com/static/5a8fe200b416c5d92391aa2f64dd6322/assets/img/homepage-logo.png");
+}
+
+#header input {
+    padding: 13px 13px;
+    height: 48px;
+    width: 400px
+}
+
+#header button {
+    padding: 13px 13px;
+    height: 48px;
+    width: 100px
 }
 
 #header #logo {
@@ -73,21 +97,18 @@
 }
 
 #header .navigation-bar {
-    background: #2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
     border-bottom:7px solid #71a00e;
     color:#fff;
     font-size:13px;
 }
 
 #header .navbar {
-    background:#35353e;
     border-bottom:7px solid #71a00e;
     color:#fff;
     font-size:13px;
 }
 
 #header .navbar a {
-    background:#35353e;
     color: #bfbfc8;
     font-size: 13px;
     text-transform: uppercase;
@@ -183,7 +204,14 @@
     margin:0 auto;
     padding:0;
     position:relative;
-    width:990px;
+}
+
+#header .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+    background-color: #35353e;
+}
+
+#header .dropdown-menu {
+    text-align: left;
 }
 
 #header .wrap-content ul {

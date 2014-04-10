@@ -8,20 +8,18 @@
     <spring:url var="register_url" value="/create-account.html" />
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
-    <div id="box-search">
+    <div id="header">
         <div class="logo"><!----></div>
         <center>
             <form class="navbar-form" style="position: relative;" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search"/>
+                    <input type="text" class="form-control" placeholder="Input application name"/>
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success">Search</button>
             </form>
         </center>
-    </div>
-    <div id="header">
         <div class="navigation-bar clearfix">
-            <div class="wrap-content">
+            <div class="wrap-content container">
                 <ul class="navigation">
                     <li>
                         <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>

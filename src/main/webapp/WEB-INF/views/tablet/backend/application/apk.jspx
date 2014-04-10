@@ -44,11 +44,98 @@
         </ul>
     </div>
     <div class="col-md-9 backend-create-detail">
-        <div class="container-fluid">
-            <div class="panel panel-success">
-                <div class="panel-heading"><strong>Applications</strong></div>
-                <div class="panel-body">
-                    <!-- Table -->
+        <div class="panel panel-success">
+            <div class="panel-heading"><strong>Applications</strong></div>
+            <div class="panel-body">
+                <!-- Table -->
+                <table class="table table-hover">
+                    <tr>
+                        <th>
+                            <span class="btn">Id</span>
+                        </th>
+                        <th>
+                            <span class="btn">Package</span>
+                        </th>
+                        <th>
+                            <span class="btn">Version</span>
+                        </th>
+                        <th>
+                            <span class="btn">Link</span>
+                        </th>
+                        <th>
+                            <span class="btn">Downloaded</span>
+                        </th>
+                        <th>
+                            <span class="btn">Status</span>
+                        </th>
+                    </tr>
+                    <c:forEach items="${apps}" var="item" varStatus="rowCounter">
+                        <tr>
+                            <td>
+                                <span class="btn">${rowCounter.count}</span>
+                            </td>
+                            <td>
+                                <span class="btn">${item.appPackage}</span>
+                            </td>
+                            <td>
+                                <span class="btn">${item.appVersion}</span>
+                            </td>
+                            <td>
+                                <span class="btn"><a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a></span>
+                            </td>
+                            <td>
+                                <span class="btn">0</span>
+                            </td>
+                            <td>
+                                <c:choose>
+                                    <c:when test="${item.status == 4}">
+                                        <button class="btn btn-warning">
+                                            Published
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 3}">
+                                        <button class="btn btn-warning">
+                                            Pending
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 2}">
+                                        <button class="btn btn-primary">
+                                            <a style="color: white" href="${application_apk_url}/${item.appId}/requestpublish/${item.id}.html" title="${item.appPackage}">Request Publish</a>
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 1}">
+                                        <button class="btn btn-danger">
+                                            Blocked
+                                        </button>
+                                    </c:when>
+                                    <c:when test="${item.status == 0}">
+                                        <button class="btn btn-danger">
+                                            Deleted
+                                        </button>
+                                    </c:when>
+                                </c:choose>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </table>
+                <label>Application APK</label>
+                <br/>
+                <span id="appAPKButton" class="btn fileinput-button">
+                    <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/>
+                    <input id="appAPKInput" name="appPath" type="hidden" />
+                    <!-- The file input field used as target for the file upload widget -->
+                    <input id="appAPKFileUpload" type="file" name="appAPKFile" accept=".apk" data-url="${application_url}/upload/${app.appId}/apk"/>
+                    <br/>
+                    <br/>
+                    <div id="progress" class="progress progress-striped active" style="width: 84px;">
+                        <div class="progress-bar progress-bar-success"><!----></div>
+                    </div>
+                </span>
+                <div id="formUploadApk"><!----></div>
+
+                <div class="clearfix" style="padding-bottom: 10px"><!----></div>
+
+                <c:if test="${fn:length(files) gt 0}">
                     <table class="table table-hover">
                         <tr>
                             <th>
@@ -64,13 +151,10 @@
                                 <span class="btn">Link</span>
                             </th>
                             <th>
-                                <span class="btn">Downloaded</span>
-                            </th>
-                            <th>
-                                <span class="btn">Status</span>
+                                <!---->
                             </th>
                         </tr>
-                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
+                        <c:forEach items="${files}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
                                     <span class="btn">${rowCounter.count}</span>
@@ -85,195 +169,109 @@
                                     <span class="btn"><a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a></span>
                                 </td>
                                 <td>
-                                    <span class="btn">0</span>
-                                </td>
-                                <td>
-                                    <c:choose>
-                                        <c:when test="${item.status == 4}">
-                                            <button class="btn btn-warning">
-                                                Published
+                                    <div class="pull-left" style="padding-right: 5px">
+                                        <form:form id="verify-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_verify_url}" method="POST">
+                                            <input type="hidden" name="appId" value="${item.appId}"/>
+                                            <input type="hidden" name="apkId" value="${item.id}"/>
+                                            <input type="hidden" name="appVersion" value="${item.appVersion}"/>
+                                            <input type="hidden" name="appPackage" value="${item.appPackage}"/>
+                                            <button class="btn btn-primary start" type="submit" onclick="">
+                                                <i class="glyphicon glyphicon-upload"><!----></i>
+                                                <span> Verify</span>
                                             </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 3}">
-                                            <button class="btn btn-warning">
-                                                Pending
+                                        </form:form>
+                                    </div>
+                                    <div class="pull-left">
+                                        <form:form id="remove-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_remove_url}" method="POST">
+                                            <input type="hidden" name="appId" value="${item.appId}"/>
+                                            <input type="hidden" name="apkId" value="${item.id}"/>
+                                            <input type="hidden" name="appVersion" value="${item.appVersion}"/>
+                                            <input type="hidden" name="appPackage" value="${item.appPackage}"/>
+                                            <button class="btn btn-warning cancel" type="submit">
+                                                <i class="glyphicon glyphicon-ban-circle"><!----></i>
+                                                <span> Remove</span>
                                             </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 2}">
-                                            <button class="btn btn-primary">
-                                                <a style="color: white" href="${application_apk_url}/${item.appId}/requestpublish/${item.id}.html" title="${item.appPackage}">Request Publish</a>
-                                            </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 1}">
-                                            <button class="btn btn-danger">
-                                                Blocked
-                                            </button>
-                                        </c:when>
-                                        <c:when test="${item.status == 0}">
-                                            <button class="btn btn-danger">
-                                                Deleted
-                                            </button>
-                                        </c:when>
-                                    </c:choose>
+                                        </form:form>
+                                    </div>
                                 </td>
                             </tr>
                         </c:forEach>
                     </table>
-                    <label>Application APK</label>
-                    <br/>
-                    <span id="appAPKButton" class="btn fileinput-button">
-                        <img id="appAPKImage" class="img-thumbnail" alt="140x140" style="width: 84px; height: 84px;" src="${images_url}/android-icon.png"/>
-                        <input id="appAPKInput" name="appPath" type="hidden" />
-                        <!-- The file input field used as target for the file upload widget -->
-                        <input id="appAPKFileUpload" type="file" name="appAPKFile" accept=".apk" data-url="${application_url}/upload/${app.appId}/apk"/>
-                        <br/>
-                        <br/>
-                        <div id="progress" class="progress progress-striped active" style="width: 84px;">
-                            <div class="progress-bar progress-bar-success"><!----></div>
-                        </div>
-                    </span>
-                    <div id="formUploadApk"><!----></div>
-
-                    <div class="clearfix" style="padding-bottom: 10px"><!----></div>
-
-                    <c:if test="${fn:length(files) gt 0}">
-                        <table class="table table-hover">
-                            <tr>
-                                <th>
-                                    <span class="btn">Id</span>
-                                </th>
-                                <th>
-                                    <span class="btn">Package</span>
-                                </th>
-                                <th>
-                                    <span class="btn">Version</span>
-                                </th>
-                                <th>
-                                    <span class="btn">Link</span>
-                                </th>
-                                <th>
-                                    <!---->
-                                </th>
-                            </tr>
-                            <c:forEach items="${files}" var="item" varStatus="rowCounter">
-                                <tr>
-                                    <td>
-                                        <span class="btn">${rowCounter.count}</span>
-                                    </td>
-                                    <td>
-                                        <span class="btn">${item.appPackage}</span>
-                                    </td>
-                                    <td>
-                                        <span class="btn">${item.appVersion}</span>
-                                    </td>
-                                    <td>
-                                        <span class="btn"><a href="${resources_url}${item.appPath}" type="application/vnd.android.package-archive">Download</a></span>
-                                    </td>
-                                    <td>
-                                        <div class="pull-left" style="padding-right: 5px">
-                                            <form:form id="verify-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_verify_url}" method="POST">
-                                                <input type="hidden" name="appId" value="${item.appId}"/>
-                                                <input type="hidden" name="apkId" value="${item.id}"/>
-                                                <input type="hidden" name="appVersion" value="${item.appVersion}"/>
-                                                <input type="hidden" name="appPackage" value="${item.appPackage}"/>
-                                                <button class="btn btn-primary start" type="submit" onclick="">
-                                                    <i class="glyphicon glyphicon-upload"><!----></i>
-                                                    <span> Verify</span>
-                                                </button>
-                                            </form:form>
-                                        </div>
-                                        <div class="pull-left">
-                                            <form:form id="remove-apk-form" role="form" modelAttribute="appApkForm" action="${application_apk_remove_url}" method="POST">
-                                                <input type="hidden" name="appId" value="${item.appId}"/>
-                                                <input type="hidden" name="apkId" value="${item.id}"/>
-                                                <input type="hidden" name="appVersion" value="${item.appVersion}"/>
-                                                <input type="hidden" name="appPackage" value="${item.appPackage}"/>
-                                                <button class="btn btn-warning cancel" type="submit">
-                                                    <i class="glyphicon glyphicon-ban-circle"><!----></i>
-                                                    <span> Remove</span>
-                                                </button>
-                                            </form:form>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </table>
-                    </c:if>
-                </div>
+                </c:if>
             </div>
-            <script type="text/javascript">
-                <!--//--><![CDATA[//><!--
-                            function collectFormData($form) {
-                    var fields = $form.find('input');
-                    var data = {};
-                    for (var i = 0; i < fields.length; i++) {
-                        var $item = $(fields[i]);
-                        data[$item.attr('name')] = $item.val();
-                    }
-                    fields = $form.find('select');
-                    for (var i = 0; i < fields.length; i++) {
-                        var $item = $(fields[i]);
-                        data[$item.attr('name')] = $item.val();
-                    }
-                    return data;
-                }
-
-                $(document).ready(function() {
-
-                    var $verify = $('#verify-apk-form');
-                    $verify.bind('submit', function(e) {
-                        // Ajax validation
-                        var data = collectFormData($verify);
-
-                        $.post('${application_apk_json_verify_url}', data, function(response) {
-                            $verify.find('.form-group').removeClass('has-error');
-                            $verify.find('.help-inline').empty();
-
-                            if (response.status === 'FAIL') {
-                                for (var i = 0; i < response.errorMessageList.length; i++) {
-                                    var item = response.errorMessageList[i];
-                                    var $controlGroup = $('#' + item.fieldName);
-                                    $controlGroup.find('.help-inline').html(item.message);
-                                    $controlGroup.addClass('has-error');
-                                }
-                            } else {
-                                $verify.unbind('submit');
-                                $verify.submit();
-                            }
-                        }, 'json');
-
-                        e.preventDefault();
-                        return false;
-                    });
-
-                    var $remove = $('#remove-apk-form');
-                    $remove.bind('submit', function(e) {
-                        // Ajax validation
-                        var data = collectFormData($remove);
-
-                        $.post('${application_apk_json_remove_url}', data, function(response) {
-                            $remove.find('.form-group').removeClass('has-error');
-                            $remove.find('.help-inline').empty();
-
-                            if (response.status === 'FAIL') {
-                                for (var i = 0; i < response.errorMessageList.length; i++) {
-                                    var item = response.errorMessageList[i];
-                                    var $controlGroup = $('#' + item.fieldName);
-                                    $controlGroup.find('.help-inline').html(item.message);
-                                    $controlGroup.addClass('has-error');
-                                }
-                            } else {
-                                $remove.unbind('submit');
-                                $remove.submit();
-                            }
-                        }, 'json');
-
-                        e.preventDefault();
-                        return false;
-                    });
-                });
-                //--><!]]>
-            </script>
         </div>
+        <script type="text/javascript">
+            <!--//--><![CDATA[//><!--
+                        function collectFormData($form) {
+                var fields = $form.find('input');
+                var data = {};
+                for (var i = 0; i < fields.length; i++) {
+                    var $item = $(fields[i]);
+                    data[$item.attr('name')] = $item.val();
+                }
+                fields = $form.find('select');
+                for (var i = 0; i < fields.length; i++) {
+                    var $item = $(fields[i]);
+                    data[$item.attr('name')] = $item.val();
+                }
+                return data;
+            }
+
+            $(document).ready(function() {
+
+                var $verify = $('#verify-apk-form');
+                $verify.bind('submit', function(e) {
+                    // Ajax validation
+                    var data = collectFormData($verify);
+
+                    $.post('${application_apk_json_verify_url}', data, function(response) {
+                        $verify.find('.form-group').removeClass('has-error');
+                        $verify.find('.help-inline').empty();
+
+                        if (response.status === 'FAIL') {
+                            for (var i = 0; i < response.errorMessageList.length; i++) {
+                                var item = response.errorMessageList[i];
+                                var $controlGroup = $('#' + item.fieldName);
+                                $controlGroup.find('.help-inline').html(item.message);
+                                $controlGroup.addClass('has-error');
+                            }
+                        } else {
+                            $verify.unbind('submit');
+                            $verify.submit();
+                        }
+                    }, 'json');
+
+                    e.preventDefault();
+                    return false;
+                });
+
+                var $remove = $('#remove-apk-form');
+                $remove.bind('submit', function(e) {
+                    // Ajax validation
+                    var data = collectFormData($remove);
+
+                    $.post('${application_apk_json_remove_url}', data, function(response) {
+                        $remove.find('.form-group').removeClass('has-error');
+                        $remove.find('.help-inline').empty();
+
+                        if (response.status === 'FAIL') {
+                            for (var i = 0; i < response.errorMessageList.length; i++) {
+                                var item = response.errorMessageList[i];
+                                var $controlGroup = $('#' + item.fieldName);
+                                $controlGroup.find('.help-inline').html(item.message);
+                                $controlGroup.addClass('has-error');
+                            }
+                        } else {
+                            $remove.unbind('submit');
+                            $remove.submit();
+                        }
+                    }, 'json');
+
+                    e.preventDefault();
+                    return false;
+                });
+            });
+            //--><!]]>
+        </script>
     </div>
 </div>

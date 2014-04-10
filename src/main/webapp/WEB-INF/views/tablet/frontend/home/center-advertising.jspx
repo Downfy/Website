@@ -6,37 +6,6 @@
     <jsp:output omit-xml-declaration="yes" />
     <spring:url var="images_url" value="/resources/images" />
     <center>
-        <div class="carousel slide" style="width: 960px; height: 360px" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-captions" data-slide-to="1"></li>
-                <li data-target="#carousel-example-captions" data-slide-to="2"></li>
-                <li data-target="#carousel-example-captions" data-slide-to="3"></li>
-                <li data-target="#carousel-example-captions" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img data-src="${images_url}/sliders-01.jpg" src="${images_url}/sliders-01.jpg" alt="First slide image"/>
-                </div>
-                <div class="item">
-                    <img data-src="${images_url}/sliders-02.jpg" src="${images_url}/sliders-02.jpg" alt="Second slide image"/>
-                </div>
-                <div class="item">
-                    <img data-src="${images_url}/sliders-03.jpg" src="${images_url}/sliders-03.jpg" alt="Third slide image"/>
-                </div>
-                <div class="item">
-                    <img data-src="${images_url}/sliders-04.jpg" src="${images_url}/sliders-04.jpg" alt="Third slide image"/>
-                </div>
-                <div class="item">
-                    <img data-src="${images_url}/sliders-05.jpg" src="${images_url}/sliders-05.jpg" alt="Third slide image"/>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
+        <img src="${images_url}/728x90.png" alt="Quang cao"/>
     </center>
 </div>
