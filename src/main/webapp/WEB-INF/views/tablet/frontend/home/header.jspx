@@ -24,6 +24,9 @@
             <div class="wrap-content">
                 <ul class="navigation">
                     <li>
+                        <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>
+                    </li>
+                    <li>
                         <a id="browse-cats" class="show" href="javascript:void(0)" title="Categories"><span class="glyphicon glyphicon-th"><!----></span> Categories</a>
                     </li>
                     <li>

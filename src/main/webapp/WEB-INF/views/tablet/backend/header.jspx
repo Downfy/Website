@@ -30,6 +30,9 @@
             <div class="container">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>
+                    </li>
                     <li class="active"><a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a></li>
                     <li>
                         <a href="#" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
