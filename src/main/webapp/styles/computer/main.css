@@ -140,10 +140,6 @@
     white-space:nowrap;
 }
 
-.mainContent {
-    width: 1000px;
-}
-
 .mainContentWrapper .contentContainer {
     -moz-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
     -webkit-box-shadow:inset 2px 0 2px rgba(0,0,0,0.1);
@@ -269,11 +265,9 @@ a {
 }
 
 #box-search {
+    background: #2a2a32 url(http://cdn1.staztic.com/f/images_special_days_header-snow_1_20131220104137.png) center center no-repeat;
     text-align: center;
-    //background: #01596e;
-    //background-color: #1a1c1f;
-    background: #35353e;
-    height: 230px;
+    height: 180px;
     color: #d6d7d8;
 }
 
@@ -285,4 +279,16 @@ a {
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("https://cdn1.iconfinder.com/static/5a8fe200b416c5d92391aa2f64dd6322/assets/img/homepage-logo.png");
+}
+
+#box-search input {
+    padding: 13px 13px;
+    height: 48px;
+    width: 400px
+}
+
+#box-search button {
+    padding: 13px 13px;
+    height: 48px;
+    width: 100px
 }

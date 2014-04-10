@@ -11,7 +11,7 @@
     <spring:url value="/" var="home_url" />
     <spring:url value="/app" var="app_url" />
     <spring:url var="images" value="/resources/images" />
-    <div class="contentContainer">
+    <div class="contentContainer container">
         <div class="app-container">
             <div class="app-wrapper">
                 <div class="panel panel-success" style="margin-bottom:0">
