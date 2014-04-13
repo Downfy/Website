@@ -61,11 +61,12 @@
                         $(this).toggleClass('show');
                         $('#cat-list').slideDown();
                         $('#header').css('border-bottom', '7px solid #71a00e');
-                    }
-                    else {
+                        $('#header .navigation-bar').css('border-bottom', '0px');
+                    } else {
                         $(this).toggleClass('show');
                         $('#cat-list').slideUp();
                         $('#header').css('border-bottom', '7px');
+                        $('#header .navigation-bar').css('border-bottom', '7px solid #71a00e');
                     }
                 });
             });</script>
@@ -117,7 +118,7 @@
                     <li><a href="http://downfy.com/android-applications/parents">Parents</a></li>
                     <li><a href="http://downfy.com/android-applications/photography">Photography</a></li>
                 </ul>
-                <ul>
+                <ul class="col-md-4">
                     <li><a href="http://downfy.com/android-applications/productivity">Productivity</a></li>
                     <li><a href="http://downfy.com/android-applications/running">Running</a></li>
                     <li><a href="http://downfy.com/android-applications/seniors">Seniors</a></li>
