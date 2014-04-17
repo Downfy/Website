@@ -24,7 +24,7 @@
                     <spring:message code="security_login_message" />
                 </div>
             </c:if>
-            <div class="col-md-12">
+            <div class="container-fluid">
                 <div class="col-md-2">
                     <spring:url value="/auth/facebook" var="signin_facebook_url" />
                     <!-- FACEBOOK SIGNIN -->

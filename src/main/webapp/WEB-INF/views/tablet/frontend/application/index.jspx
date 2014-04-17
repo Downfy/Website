@@ -24,199 +24,10 @@
         <li class="active">Facebook</li>
     </ol>
     <div class="main-item" itemscope="" itemtype="http://schema.org/SoftwareApplication">
-        <div class="col-md-8 col-xs-9">
-            <div class="app-item">
-                <div class="advertising">
-                    <img src="${images_url}/300x250.jpg" alt="Quang cao"/>
-                </div>
-                <div class="app-detail no-padding">
-                    <div class="pull-left">
-                        <a itemprop="url" href="${app_url}/${app.appName}/${app.appPackage}.html">
-                            <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${resource_url}/${app.appIcon}" class="img-rounded"/>
-                        </a>
-                    </div>
-                    <div class="pull-left">
-                        <a href="${app_url}/${app.appName}/${app.appPackage}.html">
-                            <h1 class="name-app" itemprop="name">
-                                ${app.appName}
-                            </h1>
-                        </a>
-                        <div class="cat-name" itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
-                            <a itemprop="url" href="#" title="See more apps by Dolphin Browser">
-                                <span itemprop="name">${app.appAuthor}</span>
-                            </a>
-                        </div>
-                        <div class="stars">
-                            <span class="gold-star"><!----></span>
-                            <span class="gold-star"><!----></span>
-                            <span class="gold-star"><!----></span>
-                            <span class="gold-star"><!----></span>
-                            <span class="gold-star"><!----></span>
-                        </div>
-                        <div class="view" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-                            <span class="glyphicon glyphicon-thumbs-up"><!----></span>
-                            <span itemprop="ratingcount"> 29</span>
-                            <meta itemprop="worstRating" content="0"/>
-                            <meta itemprop="bestRating" content="5"/>
-                            <span class="hidden" itemprop="ratingValue">5</span>
-                        </div>
-                        <div class="free" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                            FREE
-                            <meta itemprop="price" content="0"/>
-                            <span itemprop="seller" itemscope="" itemtype="http://schema.org/Organization">
-                                <span itemprop="name" content="Android"/>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="app-info">
-                    <ul class="nav nav-tabs" id="myTab">
-                        <li class="active"><a href="#android" data-toggle="tab"><i class="android"><!----></i></a></li>
-                        <li><a href="#apple" data-toggle="tab"><i class="apple"><!----></i></a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="android">
-                            <div class="row-fluid">
-                                <div class="col-md-6">
-                                    <b>Current Version</b>
-                                    <br/>
-                                    ${apk.versionName}
-                                </div>
-                                <div class="col-md-6">
-                                    <b>Requires Android</b>
-                                    <br/>
-                                    ${apk.minSdkVersion}
-                                </div>
-                                <div class="col-md-6">
-                                    <b>Size</b>
-                                    <br/>
-                                    <fmt:formatNumber type="number" maxIntegerDigits="3" value="${apk.appSize / 1024 / 1024}"/>
-                                    MB
-                                </div>
-                                <div class="col-md-6">
-                                    <b>Updated</b>
-                                    <br/>
-                                    <fmt:formatDate type="both"
-                                                    dateStyle="short" timeStyle="short"
-                                                    value="${apk.created}" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="apple">
-                            <div class="col-md-6">
-                                <b>Current Version</b>
-                                <br/>
-                                1.2
-                            </div>
-                            <div class="col-md-6">
-                                <b>Requires IOS</b>
-                                <br/>
-                                5.0
-                            </div>
-                            <div class="col-md-6">
-                                <b>Size</b>
-                                <br/>
-                                18M
-                            </div>
-                            <div class="col-md-6">
-                                <b>Updated</b>
-                                <br/>
-                                November 11, 2013
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="app-description" itemprop="reviews" itemscope="" itemtype="http://schema.org/Review">
-                <div class="review-widget">
-                    <div class="cms-title"><span class="review-ico"><!----></span> Expert's Review</div>
-                    <div class="wrap clearfix">
-                        <div class="reviewer-rating fright">
-                            <div class="rating9">
-                                <div class="number" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
-                                    <meta itemprop="worstRating" content="0"/>
-                                    <meta itemprop="bestRating" content="10"/>
-                                    <span itemprop="ratingValue">9.0</span>
-                                </div>
-                                <div class="text">Awesome</div>
-                            </div>
-                        </div>
-                        <div class="fleft">
-                            <a class="" href="http://www.appszoom.com/user/801299843120/community/me" title="All reviews by Emmanuel Lund">
-                                <img src="http://cdn3.staztic.com/f/images_reviewers_emman_2_20130307125232.png" class="reviewer-avatar" alt="Emmanuel Lund"/> </a>
-                        </div>
-                        <h2 class="review-title">"Discovering the Best Android Apps"</h2>
-                        <p>Reviewed by: <a rel="author" href="http://www.appszoom.com/user/801299843120" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-                                <span itemprop="name">Emmanuel Lund</span></a> /
-                            <meta itemprop="datePublished" content="2011-03-25"/>Jun 21, 2013
-                        </p>
-                    </div>
-                </div>
-                <span class="review-description">
-                    <h2 itemprop="description">Browse through your favorites websites using Dolphin</h2>
-                    <p>${df:escapeBr(app.appDescription)}</p>
-                </span>
-            </div>
-            <div class="app-description">
-                <div class="review-widget">
-                    <div class="cms-title">Description</div>
-                </div>
-                <span class="review-description">
-                    <p>${df:escapeBr(app.appDescription)}</p>
-                </span>
-            </div>
-            <div class="app-screenshoot">
-                <div class="cms-title">Screen shoots</div>
-                <div id="makeMeScrollable">
-                    <c:forEach items="${screenshoots}" var="item" varStatus="rowCounter">
-                        <img src="${resource_url}/${item.appScreenShoot}" alt="${item.appScreenShoot}" id="${item.appId}" />
-                    </c:forEach>
-                </div>
-                <script type="text/javascript">
-                    <!--//--><![CDATA[//><!--
-                    // Initialize the plugin with no custom options
-                    $(document).ready(function() {
-                        // None of the options are set
-                        $("div#makeMeScrollable").smoothDivScroll({
-                            // autoScrollingMode: "onStart"
-                        });
-                    });
-                    //--><!]]>
-                </script>
-            </div>
-            <div class="app-comments">
-                <div class="cms-title">Comments</div>
-                <div id="fb-root"><!----></div>
-                <script type="text/javascript">
-                    <!--//--><![CDATA[//><!--
-                    (function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id))
-                            return;
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=483721638415122";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'facebook-jssdk'));
-                    //--><!]]>
-                </script>
-                <c:set var="req" value="${pageContext.request}" />
-                <c:set var="baseURL" value="${fn:replace(req.requestURL, fn:substring(req.requestURI, 1, fn:length(req.requestURI)), req.contextPath)}" />
-                <c:url var="myUrl" value="${fn:replace(baseURL, req.contextPath, '')}/${req.getAttribute('javax.servlet.forward.request_uri')}"/>
-                <div class="fb-comments" data-href="${fn:replace(myUrl, '///', '/')}" data-numposts="15" data-colorscheme="light"><!----></div>
-                <script type="text/javascript">
-                    <!--//--><![CDATA[//><!--
-                    $('document').ready(function() {
-                        $('.fb-comments').attr('data-width', $('.app-comments').width());
-                    });
-                    //--><!]]>
-                </script>
-            </div>
-        </div>
-        <div class="col-md-4 col-xs-3">
+        <div class="col-md-4">
             <div class="suggest suggest-item">
                 <div class="cms-title">Suggested apps</div>
-                <div class="container">
+                <div>
                     <div class="app-detail no-padding border-bottom">
                         <div class="pull-left">
                             <a href="${app_url}/demo/jp.fx.videomemo.html">
@@ -322,6 +133,178 @@
             </div>
             <div class="suggest suggest-advertising">
                 <img src="${images_url}/300x600.png" alt="Suggest Review" id="item" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <ul class="nav nav-tabs" style="padding-top: 3px">
+                <li class="active"><a href="#">Overview</a></li>
+                <li><a href="${app_url}">Download</a></li>
+                <li><a href="${app_url}">Screen shoots</a></li>
+            </ul>
+            <div class="app-item">
+                <div class="advertising">
+                    <img src="${images_url}/300x250.jpg" alt="Quang cao"/>
+                </div>
+                <div class="app-detail no-padding">
+                    <div class="pull-left">
+                        <a itemprop="url" href="${app_url}/${app.appName}/${app.appPackage}.html">
+                            <img itemprop="image" width="84px" alt="Thời Đại Hắc Ám" src="${resource_url}/${app.appIcon}" class="img-rounded"/>
+                        </a>
+                    </div>
+                    <div class="pull-left">
+                        <a href="${app_url}/${app.appName}/${app.appPackage}.html">
+                            <h1 class="name-app" itemprop="name">
+                                ${app.appName}
+                            </h1>
+                        </a>
+                        <div class="cat-name" itemprop="author" itemscope="" itemtype="http://schema.org/Organization">
+                            <a itemprop="url" href="#" title="See more apps by Dolphin Browser">
+                                <span itemprop="name">${app.appAuthor}</span>
+                            </a>
+                        </div>
+                        <div class="stars">
+                            <span class="gold-star"><!----></span>
+                            <span class="gold-star"><!----></span>
+                            <span class="gold-star"><!----></span>
+                            <span class="gold-star"><!----></span>
+                            <span class="gold-star"><!----></span>
+                        </div>
+                        <div class="view" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                            <span class="glyphicon glyphicon-thumbs-up"><!----></span>
+                            <span itemprop="ratingcount"> 29</span>
+                            <meta itemprop="worstRating" content="0"/>
+                            <meta itemprop="bestRating" content="5"/>
+                            <span class="hidden" itemprop="ratingValue">5</span>
+                        </div>
+                        <div class="free" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            FREE
+                            <meta itemprop="price" content="0"/>
+                            <span itemprop="seller" itemscope="" itemtype="http://schema.org/Organization">
+                                <span itemprop="name" content="Android"/>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-info">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#android" data-toggle="tab"><i class="android"><!----></i></a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="android">
+                            <div class="row-fluid">
+                                <div class="col-md-6">
+                                    <b>Current Version</b>
+                                    <br/>
+                                    ${apk.versionName}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Requires Android</b>
+                                    <br/>
+                                    ${apk.minSdkVersion}
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Size</b>
+                                    <br/>
+                                    <fmt:formatNumber type="number" maxIntegerDigits="3" value="${apk.appSize / 1024 / 1024}"/>
+                                    MB
+                                </div>
+                                <div class="col-md-6">
+                                    <b>Updated</b>
+                                    <br/>
+                                    <fmt:formatDate type="both"
+                                                    dateStyle="short" timeStyle="short"
+                                                    value="${apk.created}" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-screenshoot">
+                <div class="cms-title">Screen shoots</div>
+                <div id="makeMeScrollable">
+                    <c:forEach items="${screenshoots}" var="item" varStatus="rowCounter">
+                        <img src="${resource_url}/${item.appScreenShoot}" alt="${item.appScreenShoot}" id="${item.appId}" />
+                    </c:forEach>
+                </div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    // Initialize the plugin with no custom options
+                    $(document).ready(function() {
+                        // None of the options are set
+                        $("div#makeMeScrollable").smoothDivScroll({
+                            // autoScrollingMode: "onStart"
+                        });
+                    });
+                    //--><!]]>
+                </script>
+            </div>
+            <div class="app-description" itemprop="reviews" itemscope="" itemtype="http://schema.org/Review">
+                <div class="review-widget">
+                    <div class="cms-title"><span class="review-ico"><!----></span> Expert's Review</div>
+                    <div class="wrap clearfix">
+                        <div class="reviewer-rating fright">
+                            <div class="rating9">
+                                <div class="number" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                    <meta itemprop="worstRating" content="0"/>
+                                    <meta itemprop="bestRating" content="10"/>
+                                    <span itemprop="ratingValue">9.0</span>
+                                </div>
+                                <div class="text">Awesome</div>
+                            </div>
+                        </div>
+                        <div class="fleft">
+                            <a class="" href="http://www.appszoom.com/user/801299843120/community/me" title="All reviews by Emmanuel Lund">
+                                <img src="http://cdn3.staztic.com/f/images_reviewers_emman_2_20130307125232.png" class="reviewer-avatar" alt="Emmanuel Lund"/> </a>
+                        </div>
+                        <h2 class="review-title">"Discovering the Best Android Apps"</h2>
+                        <p>Reviewed by: <a rel="author" href="http://www.appszoom.com/user/801299843120" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                                <span itemprop="name">Emmanuel Lund</span></a> /
+                            <meta itemprop="datePublished" content="2011-03-25"/>Jun 21, 2013
+                        </p>
+                    </div>
+                </div>
+                <span class="review-description">
+                    <h2 itemprop="description">Browse through your favorites websites using Dolphin</h2>
+                    <p>${df:escapeBr(app.appDescription)}</p>
+                </span>
+            </div>
+
+            <div class="app-description">
+                <div class="review-widget">
+                    <div class="cms-title">Description</div>
+                </div>
+                <span class="review-description">
+                    <p>${df:escapeBr(app.appDescription)}</p>
+                </span>
+            </div>
+            <div class="app-comments">
+                <div class="cms-title">Comments</div>
+                <div id="fb-root"><!----></div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    (function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id))
+                            return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=483721638415122";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    //--><!]]>
+                </script>
+                <c:set var="req" value="${pageContext.request}" />
+                <c:set var="baseURL" value="${fn:replace(req.requestURL, fn:substring(req.requestURI, 1, fn:length(req.requestURI)), req.contextPath)}" />
+                <c:url var="myUrl" value="${fn:replace(baseURL, req.contextPath, '')}/${req.getAttribute('javax.servlet.forward.request_uri')}"/>
+                <div class="fb-comments" data-href="${fn:replace(myUrl, '///', '/')}" data-numposts="15" data-colorscheme="light"><!----></div>
+                <script type="text/javascript">
+                    <!--//--><![CDATA[//><!--
+                    $('document').ready(function() {
+                        $('.fb-comments').attr('data-width', $('.app-comments').width());
+                    });
+                    //--><!]]>
+                </script>
             </div>
         </div>
     </div>
