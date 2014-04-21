@@ -8,6 +8,8 @@
     <spring:url var="home_url" value="/" />
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
+    <spring:url var="member_apps_url" value="/member/application.html" />
+    <spring:url var="member_create_app_url" value="/member/application/create.html" />
     <div id="header" style="padding: 0">
         <div class="logo"><!----></div>
         <center>
@@ -25,21 +27,15 @@
                     <li>
                         <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>
                     </li>
-                    <li class="active"><a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a></li>
                     <li>
-                        <a href="#" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
+                        <a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a>
                     </li>
-                    <sec:authorize access="hasRole('ROLE_DEVELOPER')">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="glyphicon glyphicon-user"><!----></span> MANAGEMENT
-                                <b class="caret"><!----></b></a>
-                                <spring:url var="management_application_url" value="/backend/application.html" />
-                            <ul class="dropdown-menu">
-                                <li><a href="${management_application_url}">Management Application</a></li>
-                            </ul>
-                        </li>
-                    </sec:authorize>
+                    <li>
+                        <a href="${member_apps_url}" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
+                    </li>
+                    <li>
+                        <a href="${member_create_app_url}" title="Create App"><span class="glyphicon glyphicon-plus"><!----></span> Create App</a>
+                    </li>
                     <sec:authorize access="hasRole('ROLE_MANAGER')">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">

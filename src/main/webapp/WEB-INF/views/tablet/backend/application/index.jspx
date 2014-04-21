@@ -14,21 +14,7 @@
     <spring:url value="/backend/application" var="application_url" />
     <spring:url value="/app" var="application_view_url" />
 
-    <div class="col-md-3 backend-create-form">
-        <ul class="nav nav-pills nav-stacked">
-            <li class="active">
-                <a href="${application_url}.html">
-                    All applications
-                </a>
-            </li>
-            <li>
-                <a href="${application_url}/create.html">
-                    Add new application
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-9 backend-create-detail">
+    <div class="backend-create-detail">
         <div class="panel panel-success">
             <div class="panel-heading"><strong>Applications</strong></div>
             <div class="panel-body" style="padding: 0">

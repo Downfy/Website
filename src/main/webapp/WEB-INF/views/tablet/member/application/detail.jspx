@@ -9,15 +9,36 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
-    <spring:url value="/backend/application" var="application_url" />
-    <spring:url value="/backend/application/create/json" var="application_json_url" />
-    <spring:url value="/backend/category" var="category_url" />
+    <spring:url value="/resources/images" var="images_url" />
+    <spring:url value="/resources" var="resources_url" />
+    <spring:url value="/member/application" var="application_url" />
+    <spring:url value="/member/application/create/json" var="application_json_url" />
+    <spring:url value="/member/category" var="category_url" />
 
-    <div class="backend-create-detail">
+    <div class="col-md-3 backend-create-form">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active">
+                <a href="${application_url}/${app.appId}.html">
+                    Product Detail
+                </a>
+            </li>
+            <li>
+                <a href="${application_url}/${app.appId}/apk.html">
+                    Management apk
+                </a>
+            </li>
+            <li>
+                <a href="${application_url}/${app.appId}/screenshoots.html">
+                    Management screen shoots
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 backend-create-detail">
         <div class="panel panel-success">
-            <div class="panel-heading"><strong>New application</strong></div>
+            <div class="panel-heading"><strong>Application Detail</strong></div>
             <div class="panel-body">
-                <form:form id="add-application-form" role="form" modelAttribute="applicationForm" action="${application_url}/create" method="POST">
+                <form:form id="add-application-form" role="form" modelAttribute="app" action="${application_url}/create" method="POST">
                     <div class="form-group" id="appName">
                         <label>Application Name</label>
                         <form:input path="appName" class="form-control" placeholder="Application name"/>
@@ -30,26 +51,52 @@
                     </div>
                     <div class="form-group" id="appDescription">
                         <label>Application Description</label>
-                        <textarea name="appDescription" class="form-control" rows="5"><!----></textarea>
+                        <textarea name="appDescription" class="form-control" rows="5">${app.appDescription}</textarea>
                         <span class="help-inline text-danger"><form:errors path="appDescription" /></span>
                     </div>
                     <div class="form-group" id="appCategoryParent">
                         <label>Application Type</label>
-                        <select id="parentCategory" class="form-control input-lg" name="appCategoryParent">
-                            <option value=''>Select an application type</option>
-                            <option value='GAMES'>Android Games</option>
-                            <option value='APPLICATIONS'>Android Apps</option>
-                        </select>
+                        <form:select path="appCategoryParent" id="parentCategory" class="form-control input-lg">
+                            <form:option value="">Select an application type</form:option>
+                            <form:option value="GAMES">Android Games</form:option>
+                            <form:option value="APPLICATIONS">Android Apps</form:option>
+                        </form:select>
                         <span class="help-inline text-danger"><form:errors path="appCategoryParent" /></span>
                     </div>
                     <div class="form-group" id="appCategory">
                         <label>Category</label>
-                        <select id="category" class="form-control input-lg" disabled="" name="appCategory">
+                        <form:select path="appCategory" id="category" class="form-control input-lg">
                             <option value=''>Select a category</option>
-                        </select>
+                            <c:forEach items="${app.appCategories}" var="item" varStatus="rowCounter">
+                                <form:option value='${item.key}'>${item.value}</form:option>
+                            </c:forEach>
+                        </form:select>
                         <span class="help-inline text-danger"><form:errors path="appCategory" /></span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Create App</button>
+                    <div class="form-group" id="appCategory">
+                        <label>Application Icon</label>
+                        <br/>
+                        <span id="appIconButton" class="btn fileinput-button">
+                            <c:choose>
+                                <c:when test="${not empty app.appIcon}">
+                                    <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${app.appIcon}"/>
+                                </c:when>
+                                <c:otherwise>
+                                    <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
+                                </c:otherwise>
+                            </c:choose>
+                            <input id="appIconInput" name="appIcon" type="hidden" value="${app.appIcon}" />
+                            <!-- The file input field used as target for the file upload widget -->
+                            <input id="appIconFileUpload" type="file" name="appIconFile" data-url="${application_url}/upload/${app.appId}/icon"/>
+                            <br/>
+                            <br/>
+                            <div id="progress" class="progress progress-striped active" style="width: 124px;">
+                                <div class="progress-bar progress-bar-success"><!----></div>
+                            </div>
+                        </span>
+                    </div>
+                    <input type="hidden" name="appId" value="${app.appId}"/>
+                    <button type="submit" class="btn btn-primary">Update App</button>
                 </form:form>
             </div>
             <script type="text/javascript">

@@ -9,9 +9,9 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="images_url" value="/resources/images" />
-    <spring:url value="/backend/application" var="application_url" />
-    <spring:url value="/backend/application/create/json" var="application_json_url" />
-    <spring:url value="/backend/category" var="category_url" />
+    <spring:url value="/member/application" var="application_url" />
+    <spring:url value="/member/application/create/json" var="application_json_url" />
+    <spring:url value="/member/category" var="category_url" />
 
     <div class="backend-create-detail">
         <div class="panel panel-success">

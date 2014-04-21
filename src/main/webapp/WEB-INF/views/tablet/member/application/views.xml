@@ -5,4 +5,20 @@
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/member/application/index.jspx" />
     </definition>
+    <definition extends="member" name="home/member/application/create">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/application/create.jspx" />
+    </definition>
+    <definition extends="member" name="home/member/application/apk">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/application/apk.jspx" />
+    </definition>
+    <definition extends="member" name="home/member/application/detail">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/application/detail.jspx" />
+    </definition>
+    <definition extends="member" name="home/member/application/screenshoots">
+        <put-attribute name="body"
+                       value="/WEB-INF/views/tablet/member/application/screenshoots.jspx" />
+    </definition>
 </tiles-definitions>

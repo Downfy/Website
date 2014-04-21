@@ -258,3 +258,99 @@ p {
 a {
     color: #0089CC;
 }
+
+
+.apps-block .app-module {
+    box-shadow: 2px 2px 2px #d5d5d5;
+}
+.apps-block .user {
+    width: 159px;
+    height: 309px;
+}
+.apps-block .user {
+    border: 5px solid #FFFFFF;
+    padding: 11px 11px 5px 11px;
+}
+.apps-block .app-module {
+    background: #fff;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.captureLinkBox, .captureLinkBox * {
+    cursor: pointer;
+}
+
+.app-module .mark-favorite {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+.mark-favorite {
+}
+
+.apps-block .user .top-info, .apps-block .user .top-info a {
+    color: #9a9aa0;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+}
+.apps-block .user .top-info {
+    padding-left: 50px;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 10px;
+}
+
+.apps-block .user .top-info .user-image {
+    display: inline-block;
+    margin-left: -50px;
+    float: left;
+    margin-top: 2px;
+}
+.apps-block .user .top-info a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.apps-block .user .top-info .user-image img {
+    width: 40px;
+    border-radius: 999px;
+}
+
+.apps-block .user .top-info p {
+    line-height: 14px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.apps-block .user .app-ico {
+    margin: 20px 0 10px 0;
+}
+
+.apps-block .user a.app-name {
+    font-size: 17px;
+    margin-bottom: 7px;
+    color: #4a4a55;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.apps-block .user .app-desc {
+    color: #85858f;
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.apps-block .user .price {
+    text-align: right;
+    color: #85858f;
+    font-size: 13px;
+}

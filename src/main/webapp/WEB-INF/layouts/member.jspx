@@ -20,9 +20,19 @@
         <meta name="description" content="${description}"/>
         <meta  content="--allow-file-access-from-files" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="_csrf" content="${_csrf.token}"/>
+        <!-- default header name is X-CSRF-TOKEN -->
+        <meta name="_csrf_header" content="${_csrf.headerName}"/>
         <spring:url value="/resources/styles" var="js_path"/>
         <script src="${js_path}/jquery/jquery-1.10.2.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
         <script src="${js_path}/bootstrap/js/bootstrap.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/vendor/jquery.ui.widget.js"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery.iframe-transport.js"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery.fileupload.js"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/myuploadfunction.js"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery/jquery.kinetic.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery/jquery.mousewheel.min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
+        <script src="${js_path}/jquery/jquery.smoothdivscroll-1.3-min.js" type="text/javascript"><!-- required for FF3 and Opera --></script>
 
         <link rel="stylesheet" href="${js_path}/bootstrap/css/bootstrap.min.css" type="text/css" title="ui-theme" />
         <link rel="stylesheet" href="${js_path}/computer/header.css" type="text/css" title="ui-theme" />

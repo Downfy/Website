@@ -1,0 +1,173 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:sec="http://www.springframework.org/security/tags"
+     xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+     xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+     xmlns:c="http://java.sun.com/jsp/jstl/core"
+     xmlns:form="http://www.springframework.org/tags/form"
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <jsp:useBean id="date" class="java.util.Date" />
+    <spring:url value="/" var="home_url" />
+    <spring:url var="images_url" value="/resources/images" />
+    <spring:url var="resource_url" value="/resources" />
+    <spring:url value="/member/application" var="application_url" />
+    <spring:url value="/member/application/screenshoots/json/remove" var="application_screenshoot_json_remove_url" />
+    <spring:url value="/member/application/screenshoots/json/verify" var="application_screenshoot_json_verify_url" />
+    <spring:url value="/member/application/screenshoots/remove" var="application_screenshoot_remove_url" />
+    <spring:url value="/member/application/screenshoots/verify" var="application_screenshoot_verify_url" />
+
+    <div class="col-md-3 backend-create-form">
+        <ul class="nav nav-pills nav-stacked">
+            <li>
+                <a href="${application_url}/${app.appId}.html">
+                    Product Detail
+                </a>
+            </li>
+            <li>
+                <a href="${application_url}/${app.appId}/apk.html">
+                    Management apk
+                </a>
+            </li>
+            <li class="active">
+                <a href="${application_url}/${app.appId}/screenshoots.html">
+                    Management screen shoots
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-9 backend-create-detail">
+        <div class="panel panel-success">
+            <div class="panel-heading"><strong>Screen shoots</strong></div>
+            <div class="panel-body">
+                <c:forEach items="${verifyscreenshoots}" var="item" varStatus="rowCounter">
+                    <div class="col-md-3 col-lg-3" style="padding-bottom: 5px">
+                        <img class="img-thumbnail" src="${resource_url}${item.appScreenShoot}"/>
+                        <br/>
+                        <center>
+                            <form:form id="remove-screenshoot-form" role="form" modelAttribute="appScreenShootForm" action="${application_screenshoot_remove_url}" method="POST">
+                                <input type="hidden" name="appId" value="${item.appId}"/>
+                                <input type="hidden" name="screenShootId" value="${item.id}"/>
+                                <button class="btn btn-warning cancel" type="submit">
+                                    <i class="glyphicon glyphicon-ban-circle"><!----></i>
+                                    <span> Remove</span>
+                                </button>
+                            </form:form>
+                        </center>
+                    </div>
+                </c:forEach>
+                <div class="clearfix"><!----></div>
+                <div style="padding: 20px">
+                    <span class="btn btn-success fileinput-button">
+                        <i class="glyphicon glyphicon-plus"><!----></i>
+                        <span>Select files...</span>
+                        <!-- The file input field used as target for the file upload widget -->
+                        <input id="appScreenShootFileUpload" type="file" multiple="" name="files" data-url="${application_url}/upload/${app.appId}/screenshoots"/>
+                    </span>
+                    <br/>
+                    <br/>
+                    <div id="progress" class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success"><!----></div>
+                    </div>
+                </div>
+                <c:forEach items="${screenshoots}" var="item" varStatus="rowCounter">
+                    <div class="clearfix" style="padding-bottom: 5px">
+                        <div class="col-md-3 col-lg-3">
+                            <img class="img-thumbnail" src="${resource_url}${item.appPath}"/>
+                        </div>
+                        <div class="col-md-5 col-lg-5">File size: <fmt:formatNumber type="number" maxIntegerDigits="2" value="${item.size / 1024}" /> KB</div>
+                        <div class="col-md-4 col-lg-4">
+                            <div class="pull-left" style="padding-right: 5px">
+                                <form:form id="verify-screenshoot-form" role="form" modelAttribute="appScreenShootForm" action="${application_screenshoot_verify_url}" method="POST">
+                                    <input type="hidden" name="appId" value="${item.appId}"/>
+                                    <input type="hidden" name="screenShootId" value="${item.id}"/>
+                                    <button class="btn btn-primary start" type="submit" onclick="">
+                                        <i class="glyphicon glyphicon-upload"><!----></i>
+                                        <span> Verify</span>
+                                    </button>
+                                </form:form>
+                            </div>
+                            <div class="pull-left">
+                                <form:form id="remove-screenshoot-form" role="form" modelAttribute="appScreenShootForm" action="${application_screenshoot_remove_url}" method="POST">
+                                    <input type="hidden" name="appId" value="${item.appId}"/>
+                                    <input type="hidden" name="screenShootId" value="${item.id}"/>
+                                    <button class="btn btn-warning cancel" type="submit">
+                                        <i class="glyphicon glyphicon-ban-circle"><!----></i>
+                                        <span> Remove</span>
+                                    </button>
+                                </form:form>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+                <div id="idScreenShoots"><!----></div>
+            </div>
+            <script type="text/javascript">
+                <!--//--><![CDATA[//><!--
+                function collectFormData($form) {
+                    var fields = $form.find('input');
+                    var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    fields = $form.find('select');
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    return data;
+                }
+
+                $(document).ready(function() {
+                    var $verify = $('#verify-screenshoot-form');
+                    $verify.bind('submit', function(e) {
+                        // Ajax validation
+                        var data = collectFormData($verify);
+                        $.post('${application_screenshoot_json_verify_url}', data, function(response) {
+                            $verify.find('.form-group').removeClass('has-error');
+                            $verify.find('.help-inline').empty();
+                            if (response.status === 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $verify.unbind('submit');
+                                $verify.submit();
+                            }
+                        }, 'json');
+                        e.preventDefault();
+                        return false;
+                    });
+
+                    var $remove = $('#removescreenshoot-form');
+                    $remove.bind('submit', function(e) {
+                        // Ajax validation
+                        var data = collectFormData($remove);
+                        $.post('${application_screenshoot_json_remove_url}', data, function(response) {
+                            $verify.find('.form-group').removeClass('has-error');
+                            $verify.find('.help-inline').empty();
+                            if (response.status === 'FAIL') {
+                                for (var i = 0; i < response.errorMessageList.length; i++) {
+                                    var item = response.errorMessageList[i];
+                                    var $controlGroup = $('#' + item.fieldName);
+                                    $controlGroup.find('.help-inline').html(item.message);
+                                    $controlGroup.addClass('has-error');
+                                }
+                            } else {
+                                $remove.unbind('submit');
+                                $remove.submit();
+                            }
+                        }, 'json');
+                        e.preventDefault();
+                        return false;
+                    });
+                });
+                //--><!]]>
+            </script>
+        </div>
+    </div>
+</div>

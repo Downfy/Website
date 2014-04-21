@@ -8,7 +8,9 @@
     <spring:url var="home_url" value="/" />
     <spring:url var="login_url" value="/login.html" />
     <spring:url var="member_url" value="/member.html" />
-    <div id="header">
+    <spring:url var="member_apps_url" value="/member/application.html" />
+    <spring:url var="member_create_app_url" value="/member/application/create.html" />
+    <div id="header" style="padding: 0">
         <div class="logo"><!----></div>
         <center>
             <form class="navbar-form" style="position: relative;" role="search">
@@ -18,17 +20,33 @@
                 <button type="submit" class="btn btn-success">Search</button>
             </form>
         </center>
-        <nav class="navbar" role="navigation">
+        <nav class="navbar" role="navigation" style="margin: 0">
             <div class="container">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>
                     </li>
-                    <li class="active"><a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a></li>
                     <li>
-                        <a href="#" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
+                        <a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a>
                     </li>
+                    <li>
+                        <a href="${member_apps_url}" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>
+                    </li>
+                    <li>
+                        <a href="${member_create_app_url}" title="Create App"><span class="glyphicon glyphicon-plus"><!----></span> Create App</a>
+                    </li>
+                    <sec:authorize access="hasRole('ROLE_DEVELOPER')">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-user"><!----></span> MANAGEMENT
+                                <b class="caret"><!----></b></a>
+                                <spring:url var="management_application_url" value="/backend/application.html" />
+                            <ul class="dropdown-menu">
+                                <li><a href="${management_application_url}">Management Application</a></li>
+                            </ul>
+                        </li>
+                    </sec:authorize>
                     <sec:authorize access="hasRole('ROLE_MANAGER')">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -48,6 +66,11 @@
                     </sec:authorize>
                 </ul>
                 <ul class="nav navbar-nav pull-right">
+                    <c:if test="${pageContext['request'].userPrincipal == null}">
+                        <li>
+                            <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>
+                        </li>
+                    </c:if>
                     <c:if test="${pageContext['request'].userPrincipal != null}">
                         <li>
                             <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
