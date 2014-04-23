@@ -1,0 +1,222 @@
+.apps-block {
+    margin-top: 20px;
+}
+
+.apps-block .small {
+    height: 289px;
+}
+
+.apps-block .app-module {
+    box-shadow: 2px 2px 2px #d5d5d5;
+}
+
+.apps-block .app-module:hover {
+    cursor: pointer;
+}
+
+.apps-block .small {
+    width: 190px;
+}
+
+.apps-block .app-module {
+    background: #fff;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.app-module .app-details {
+    background-color: #f9f9f9;
+    border-top: 1px solid #dbdbdc;
+    padding: 7px 9px;
+    padding-left: 48px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.app-module .app-details .az-rating {
+    display: block;
+    font-size: 19px;
+    margin-left: -39px;
+    text-align: center;
+    float: left;
+}
+.az-rating {
+    color: #fff;
+    display: block;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.app-module .app-details .az-rating span {
+    border-radius: 2px 2px 2px 2px;
+    display: block;
+    height: 28px;
+    line-height: 27px;
+    padding-top: 2px;
+    width: 31px;
+}
+.az-rating span.rating8 {
+    background-color: #85b82f;
+}
+.az-rating span {
+    border-radius: 2px;
+    line-height: 42px;
+    width: 44px;
+    height: 42px;
+    display: block;
+    padding-top: 2px;
+    color: #fff;
+    letter-spacing: -0.1em;
+}
+
+.app-module .app-details a.app-name {
+    font-size: 14px;
+    color: #35353e;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1px;
+    margin-top: -2px;
+}
+
+.app-module .app-details a.app-name strong {
+    font-weight: normal;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.apps-block .small a.app-name strong {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 133px;
+    max-width: 133px;
+    text-overflow: ellipsis;
+}
+
+.app-module .app-details .price-free {
+    color: #00A222;
+    font-weight: bold;
+}
+.app-module .app-details .price,
+.app-module .app-details .price-free,
+.app-module .app-details .before-price {
+    font-size: 12px;
+    float: left;
+    background: none!important;
+    padding: 0!important;
+    margin-right: 4px!important;
+}
+
+
+.apps-block .app-module:hover .border {
+    background: #EFF0F3;
+    cursor: pointer;
+}
+.apps-block .small .border {
+    position: relative;
+    overflow: hidden;
+}
+
+.apps-block .small .border {
+    height: 234px;
+}
+
+.app-module .border {
+    border: 5px solid #fff;
+}
+
+/*.apps-block .small .app-teaser {
+    background-color: transparent;
+    bottom: 0;
+}
+.apps-block .small .app-teaser {
+    position: absolute;
+    width: 173px;
+    height: 51px;
+    left: 0;
+    background-color: #EFF0F3;
+    background-color: rgba(239,240,243,0.9);
+    bottom: -65px;
+    transition: all 0.4s ease;
+    line-height: 17px;
+    padding: 4px 4px 8px 4px;
+    overflow: hidden;
+    z-index: 2;
+}*/
+
+/*.apps-block .small .app-teaser strong {
+    color: #85858F;
+}
+.apps-block .small .app-teaser strong {
+    font-weight: normal;
+    font-size: 13px;
+    color: #52525a;
+}*/
+
+.apps-block .small .app-icon {
+    margin: 14px 21px 10px;
+}
+
+.apps-block .promo {
+    color: #4a4a55;
+    text-align: center;
+    color: #ffffff;
+    background: #4a4a55;
+    width: 190px;
+    padding: 20px 11px 11px 11px;
+    height: 289px;
+    box-shadow: none;
+}
+
+.promo .join {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    text-align:center;
+    color: #fff;
+    padding: 0;
+}
+
+.promo .join span {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.promo .sign-in {
+    color: #9f9f9f;
+    font-size: 13px;
+    margin-bottom: 13px;
+    text-align:center;
+    padding: 0;
+}
+
+.promo a.fb {
+    background-color: #5e7dbe;
+}
+
+.promo a {
+    display: block;
+    line-height: 30px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #989898;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.promo img.logo {
+    margin-top: 19px;
+}
+
+li {
+    list-style-type: none;
+}

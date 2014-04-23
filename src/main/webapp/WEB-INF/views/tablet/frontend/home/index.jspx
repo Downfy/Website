@@ -59,9 +59,8 @@
                     <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
                 </div>
                 <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/tools/cm-security-antivirus-free_jdpbm.html?ref=home-today-leader#nav=new_home_tl" title="CM Security - Antivirus FREE">
+                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
                         <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                    <div class="number"><span class="ico"></span>2.38M</div>
                 </div>
             </li>
             <li class="app-module small captureLinkBox">
@@ -71,9 +70,8 @@
                     <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
                 </div>
                 <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/tools/cm-security-antivirus-free_jdpbm.html?ref=home-today-leader#nav=new_home_tl" title="CM Security - Antivirus FREE">
+                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
                         <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                    <div class="number"><span class="ico"></span>2.38M</div>
                 </div>
             </li>
             <li class="app-module small captureLinkBox">
@@ -83,9 +81,8 @@
                     <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
                 </div>
                 <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/tools/cm-security-antivirus-free_jdpbm.html?ref=home-today-leader#nav=new_home_tl" title="CM Security - Antivirus FREE">
+                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
                         <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                    <div class="number"><span class="ico"></span>2.38M</div>
                 </div>
             </li>
             <li class="app-module small captureLinkBox">
@@ -95,23 +92,33 @@
                     <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
                 </div>
                 <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/tools/cm-security-antivirus-free_jdpbm.html?ref=home-today-leader#nav=new_home_tl" title="CM Security - Antivirus FREE">
+                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
                         <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                    <div class="number"><span class="ico"></span>2.38M</div>
                 </div>
             </li>
-            <li class="app-module small captureLinkBox">
-                <div class="border">
-                    <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
-                    </p>
-                    <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
-                </div>
-                <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/tools/cm-security-antivirus-free_jdpbm.html?ref=home-today-leader#nav=new_home_tl" title="CM Security - Antivirus FREE">
-                        <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                    <div class="number"><span class="ico"></span>2.38M</div>
-                </div>
-            </li>
+            <c:if test="${pageContext['request'].userPrincipal == null}">
+                <li class="app-module promo break">
+                    <spring:url value="/auth/facebook" var="signin_facebook_url" />
+                    <p class="join"><span>JOIN US</span>and start <br/>downloading <br/>great apps!</p>
+                    <p class="sign-in">Sign in with your <br/>Facebook or <br/>Google account </p>
+                    <a class="fb" href="${signin_facebook_url}" title="Facebook login">Facebook</a>
+                    <spring:url value="/auth/google" var="signin_google_url" />
+                    <a class="google" href="${signin_google_url}" title="Google login">Google</a>
+                </li>
+            </c:if>
+            <c:if test="${pageContext['request'].userPrincipal != null}">
+                <li class="app-module small captureLinkBox">
+                    <div class="border">
+                        <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
+                        </p>
+                        <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
+                    </div>
+                    <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
+                        <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
+                            <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
+                    </div>
+                </li>
+            </c:if>
         </div>
     </div>
 </div>

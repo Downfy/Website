@@ -37,13 +37,8 @@
                         <a href="#" title="Community"><span class="glyphicon glyphicon-globe"><!----></span> Community</a>
                     </li>
                 </ul>
-                <ul class="navigation pull-right">
-                    <c:if test="${pageContext['request'].userPrincipal == null}">
-                        <li>
-                            <a title="Log in" href="${login_url}"><span class="glyphicon glyphicon-log-in"><!----></span> Log in</a>
-                        </li>
-                    </c:if>
-                    <c:if test="${pageContext['request'].userPrincipal != null}">
+                <c:if test="${pageContext['request'].userPrincipal != null}">
+                    <ul class="navigation pull-right">
                         <li>
                             <a title="My account" href="${member_url}"><span class="glyphicon glyphicon-user"><!----></span> My Account</a>
                         </li>
@@ -51,8 +46,8 @@
                         <li>
                             <a title="Log out" href="${logout_url}"><span class="glyphicon glyphicon-log-out"><!----></span> Log out</a>
                         </li>
-                    </c:if>
-                </ul>
+                    </ul>
+                </c:if>
             </div>
         </div>
         <script type="text/javascript">$(document).ready(function() {
