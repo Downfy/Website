@@ -53,47 +53,53 @@
     <div class="container">
         <div class="apps-block clearfix">
             <li class="app-module small captureLinkBox">
+                <div class="app-details">
+                    <div class="az-rating"><span class="rating8"><strong>8.0</strong></span></div>
+                    <a class="app-name goTo" href="http://www.appszoom.com/android_applications/communication/mail-wise-clear-email-client_htimu.html#nav=new_home_candidates" title="Mail Wise - Clear Email Client"><strong class="app-name">Mail Wise - Clear Email Client</strong></a>
+                    <span class="price-free">FREE</span>
+                    <div class="number"><span class="ico"></span>652</div>
+                </div>
                 <div class="border">
-                    <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
+                    <p class="app-teaser">An email client which holds simplicity as fundamental</p>
+                    <img class="app-icon" width="140" height="140" src="http://cdn8.staztic.com/app/a/3096/3096869/mailwisebeta-email-client-419003-l-124x124.png" alt="Mail Wise - Clear Email Client"/>
+                </div>
+            </li>
+            <li class="app-module small captureLinkBox">
+                <div class="app-details">
+                    <div class="az-rating"><span class="rating7"><strong>7.5</strong></span></div>
+                    <a class="app-name goTo" href="http://www.appszoom.com/android_games/family/farmville-2-country-escape_kafxt.html#nav=new_home_candidates" title="FarmVille 2: Country Escape"><strong class="app-name">FarmVille 2: Country Escape</strong></a>
+                    <span class="price-free">FREE</span>
+                    <div class="number"><span class="ico"></span>8.92K</div>
+                </div>
+                <div class="border">
+                    <p class="app-teaser">A beautiful farming game which is surprisingly addictive</p>
+                    <img class="app-icon" width="140" height="140" src="http://cdn8.staztic.com/app/a/3963/3963701/farmville-2-country-escape-10441-l-124x124.png" alt="FarmVille 2: Country Escape"/>
+                </div>
+            </li>
+            <li class="app-module small captureLinkBox">
+                <div class="border">
+                    <p class="app-teaser">
+                        Keep your phone safe by protecting it regularly
                     </p>
                     <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
                 </div>
-                <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
+                <div class="app-details">
+                    <div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
                     <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
                         <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
                 </div>
             </li>
             <li class="app-module small captureLinkBox">
+                <div class="app-details">
+                    <div class="az-rating">
+                        <span class="rating9"><strong>9.1</strong></span></div>
+                    <a class="app-name goTo" href="http://www.appszoom.com/android-game/running-shadow-kfjsx.html#nav=new_home_candidates" title="Running Shadow"><strong class="app-name">Running Shadow</strong></a>
+                    <span class="price-free">FREE</span>
+                    <div class="number"><span class="ico"></span>5.38K</div>
+                </div>
                 <div class="border">
-                    <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
-                    </p>
-                    <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
-                </div>
-                <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
-                        <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                </div>
-            </li>
-            <li class="app-module small captureLinkBox">
-                <div class="border">
-                    <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
-                    </p>
-                    <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
-                </div>
-                <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
-                        <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
-                </div>
-            </li>
-            <li class="app-module small captureLinkBox">
-                <div class="border">
-                    <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
-                    </p>
-                    <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/3627/3627891/cm-cleanmaster-security-free-10000141-l-124x124.png" alt="CM Security - Antivirus FREE"/>
-                </div>
-                <div class="app-details"><div class="az-rating"><span class="rating8"><strong>8.5</strong></span></div>
-                    <a class="app-name goTo" href="#" title="CM Security - Antivirus FREE">
-                        <strong class="app-name">CM Security - Antivirus FREE</strong></a><span class="price-free">FREE</span>
+                    <p class="app-teaser">A 3D endless running with storyline and baroque setting</p>
+                    <img class="app-icon" width="140" height="140" src="http://cdn9.staztic.com/app/a/4035/4035318/running-shadow-33-l-124x124.png" alt="Running Shadow"/>
                 </div>
             </li>
             <c:if test="${pageContext['request'].userPrincipal == null}">
@@ -107,7 +113,7 @@
                 </li>
             </c:if>
             <c:if test="${pageContext['request'].userPrincipal != null}">
-                <li class="app-module small captureLinkBox">
+                <li class="app-module small break captureLinkBox">
                     <div class="border">
                         <p class="app-teaser"><strong>Keep your phone safe by protecting it regularly</strong>
                         </p>

@@ -15,7 +15,7 @@
 }
 
 .apps-block .small {
-    width: 190px;
+    width: 191px;
 }
 
 .apps-block .app-module {
@@ -26,7 +26,7 @@
     position: relative;
 }
 
-.app-module .app-details {
+.apps-block .app-module .app-details {
     background-color: #f9f9f9;
     border-top: 1px solid #dbdbdc;
     padding: 7px 9px;
@@ -36,14 +36,15 @@
     left: 0;
 }
 
-.app-module .app-details .az-rating {
+.apps-block .app-module .app-details .az-rating {
     display: block;
     font-size: 19px;
     margin-left: -39px;
     text-align: center;
     float: left;
 }
-.az-rating {
+
+.apps-block .az-rating {
     color: #fff;
     display: block;
     font-size: 28px;
@@ -51,7 +52,7 @@
     font-weight: bold;
 }
 
-.app-module .app-details .az-rating span {
+.apps-block .app-module .app-details .az-rating span {
     border-radius: 2px 2px 2px 2px;
     display: block;
     height: 28px;
@@ -59,10 +60,20 @@
     padding-top: 2px;
     width: 31px;
 }
-.az-rating span.rating8 {
+
+.apps-block .az-rating span.rating9 {
+    background-color: #61af34;
+}
+
+.apps-block .az-rating span.rating8 {
     background-color: #85b82f;
 }
-.az-rating span {
+
+.apps-block .az-rating span.rating7 {
+    background-color: #aac129;
+}
+
+.apps-block .az-rating span {
     border-radius: 2px;
     line-height: 42px;
     width: 44px;
@@ -73,7 +84,7 @@
     letter-spacing: -0.1em;
 }
 
-.app-module .app-details a.app-name {
+.apps-block .app-module .app-details a.app-name {
     font-size: 14px;
     color: #35353e;
     display: block;
@@ -82,7 +93,7 @@
     margin-top: -2px;
 }
 
-.app-module .app-details a.app-name strong {
+.apps-block .app-module .app-details a.app-name strong {
     font-weight: normal;
     display: block;
     overflow: hidden;
@@ -98,13 +109,14 @@
     text-overflow: ellipsis;
 }
 
-.app-module .app-details .price-free {
+.apps-block .app-module .app-details .price-free {
     color: #00A222;
     font-weight: bold;
 }
-.app-module .app-details .price,
-.app-module .app-details .price-free,
-.app-module .app-details .before-price {
+
+.apps-block .app-module .app-details .price,
+.apps-block .app-module .app-details .price-free,
+.apps-block .app-module .app-details .before-price {
     font-size: 12px;
     float: left;
     background: none!important;
@@ -117,46 +129,16 @@
     background: #EFF0F3;
     cursor: pointer;
 }
+
 .apps-block .small .border {
+    height: 234px;
     position: relative;
     overflow: hidden;
 }
 
-.apps-block .small .border {
-    height: 234px;
-}
-
-.app-module .border {
+.apps-block .app-module .border {
     border: 5px solid #fff;
 }
-
-/*.apps-block .small .app-teaser {
-    background-color: transparent;
-    bottom: 0;
-}
-.apps-block .small .app-teaser {
-    position: absolute;
-    width: 173px;
-    height: 51px;
-    left: 0;
-    background-color: #EFF0F3;
-    background-color: rgba(239,240,243,0.9);
-    bottom: -65px;
-    transition: all 0.4s ease;
-    line-height: 17px;
-    padding: 4px 4px 8px 4px;
-    overflow: hidden;
-    z-index: 2;
-}*/
-
-/*.apps-block .small .app-teaser strong {
-    color: #85858F;
-}
-.apps-block .small .app-teaser strong {
-    font-weight: normal;
-    font-size: 13px;
-    color: #52525a;
-}*/
 
 .apps-block .small .app-icon {
     margin: 14px 21px 10px;
@@ -167,13 +149,13 @@
     text-align: center;
     color: #ffffff;
     background: #4a4a55;
-    width: 190px;
+    width: 191px;
     padding: 20px 11px 11px 11px;
     height: 289px;
     box-shadow: none;
 }
 
-.promo .join {
+.apps-block .promo .join {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 15px;
@@ -182,14 +164,14 @@
     padding: 0;
 }
 
-.promo .join span {
+.apps-block .promo .join span {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 10px;
     display: block;
 }
 
-.promo .sign-in {
+.apps-block .promo .sign-in {
     color: #9f9f9f;
     font-size: 13px;
     margin-bottom: 13px;
@@ -197,11 +179,11 @@
     padding: 0;
 }
 
-.promo a.fb {
+.apps-block .promo a.fb {
     background-color: #5e7dbe;
 }
 
-.promo a {
+.apps-block .promo a {
     display: block;
     line-height: 30px;
     color: #fff;
@@ -213,10 +195,19 @@
     text-transform: uppercase;
 }
 
-.promo img.logo {
+.apps-block .promo img.logo {
     margin-top: 19px;
 }
 
-li {
+.apps-block li {
     list-style-type: none;
+}
+
+.apps-block .break {
+    margin-right: 0!important;
+}
+
+.apps-block .app-module .border p {
+    height: 45px;
+    overflow: hidden;
 }
