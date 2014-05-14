@@ -1,0 +1,309 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:sec="http://www.springframework.org/security/tags"
+     xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" 
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+    <jsp:useBean id="date" class="java.util.Date" />
+    <spring:url value="/" var="home_url" />
+    <spring:url var="images_url" value="/resources/images" />
+    <ol class="breadcrumb">
+        <li><a href="#">Downfy.com</a></li>
+        <li class="active">Android Apps</li>
+    </ol>
+    <div style="position: relative;">
+        <div class="group-content">
+            <div class="heading">
+                <div class="new-header">
+                    <h2 class="new-header-text">Hot Paid Social apps over last week</h2>
+                </div>
+            </div>
+            <div>
+                <div class="app-result-large-top">
+                    <a href="/app/supersnap-for-snapchat/com.cfg.supersnap" class="app-result app-result-large safelink" >
+                        <div class="tr">
+                            <div class="td" style="padding: 8px">
+                                <div style="margin: 5px 0 10px 0">
+                                    <div class="browse-emph"><h2>SuperSnap for Snapchat</h2></div>
+                                    <div class="app-result-desc-mid"><h3>cfg apps</h3></div>
+                                </div>
+                                <div>
+                                    <img class="img-rounded pull-left" width="84px" src="http://lh6.ggpht.com/JJW72EG7rX_ACL1m1BmO1uiSLnmOIQgf_gBgKQu4ChZ8NmQ9uyp-Ky1Q7g1CMjcvmjNbb7FHAHB7A6e_af141zc=s72"/>
+                                    <div class="app-result-desc-low" >Send Snapchat snaps from gallery and automatically save snaps to your phone, and more!
+                                        Use your existing Snapchat username and password to get started right away.
+
+                                        ***Note: Turn off "Save snaps I send" (default is off), causes text to not s</div>
+                                </div>
+                            </div>
+                            <div class="td app-result-large-screens" style="vertical-align: top;">
+                                <div style="position: relative"><div style="position:absolute; top: 0px; left: 0px; width: 500px">
+                                        <img src="http://lh3.ggpht.com/-09MJWEtJ3CLeP6g25O4FdgbcslXzojSaTwLVAytWjNC7p81o0GOgLTZvTWDUHZRN-8hfMxhq6JEBthzGfre_q2_=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh4.ggpht.com/Z0HC86tvmDN8f-RxzKXcgBesFrGRQoTvUxAUL8nO7x2IRJLxWNyiLK_j14W0mmIH9WhL0IqqOJr4MI8CYjEpMw=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh6.ggpht.com/0Q7HrI2JGWUVZPmHhh-8LrQ5KtC66Y--fiFZnfw6b-iqnvYS1rupulWOx65iBzKklkHq28UzmM-aD7LssqMsl_c=h150" style="height: 150px; float:left"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="app-result-desc-mid" style="padding: 2px 8px;">
+                    <div style="display: inline-block; margin-right: 15px;">
+                        <div class="browse-price price-free">Free</div>
+                    </div>
+                    <div class="app-result-score" title="AppBrain Score (0-100)" style="display:inline-block; margin-right: 15px; background-color: #f8a43e">73</div>
+                    <div style="display: inline-block; margin-right: 5px;">5,000+ downloads</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block; margin-right: 5px;">Social</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block; margin-right: 5px;">
+                        <div class="browse-price price-free">
+                            <span class="glyphicon glyphicon-download-alt"><!----></span> Downloaded
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="app-result-large-top">
+                    <a href="/app/tapatalk-pro/com.quoord.tapatalkHD" class="app-result app-result-large safelink" >
+                        <div class="tr">
+                            <div class="td" style="padding: 8px">
+                                <div style="margin: 5px 0 10px 0">
+                                    <div class="browse-emph"><h2>Tapatalk Pro</h2></div>
+                                    <div class="app-result-desc-mid"><h3>Tapatalk Inc.</h3></div>
+                                </div>
+                                <div>
+                                    <img class="img-rounded pull-left" width="84px" src="http://lh5.ggpht.com/vY-ChDfW43l6erMCXsgUgkaYoB6xVdzaX3WJdp0ExpsYDZIHrHQpGhH11mUCOkN927fCj1EgJm5uRRKMv-5fGQ=s72"/>
+                                    <div class="app-result-desc-low" >This is an all new tablet-optimized version of Tapatalk with built-in Photo Editor, unlimited photo sharing to Tapatalk without Tapatalk logo watermark. Fully tablet optimized layout to make use of additional screen real-estate. While this </div>
+                                </div>
+                            </div>
+                            <div class="td app-result-large-screens" style="vertical-align: top;">
+                                <div style="position: relative"><div style="position:absolute; top: 0px; left: 0px; width: 500px">
+                                        <img src="http://lh4.ggpht.com/minxqusTB8QwvctsZYNTKIvLpdixRUvhS54UYKwBKUwbxcWG674Foqqazqh6MGjkWrKKrvE5KrUvYCJYu6gsxys=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh4.ggpht.com/nv2Q9Zt9OI1WfgpcDI9k9-4DeMoF9HZZL7Hx6cWGH2_NduErNuw_7OVJ7hEiOfjTxVqVCuqb1lk9Ab2fr8ZiHQ=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh5.ggpht.com/iyl8NFsStnlr6DHrta2YTmjUcdQWyCJvqLjyDDYs3-fCh4Y2CP7QPNr_dfncOBWuhBlkH8BfPl_GrRVrer5-DOo=h150" style="height: 150px; float:left"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="app-result-desc-mid" style="padding: 2px 8px;">
+                    <div style="display: inline-block; margin-right: 15px;"><div class="browse-price">$2.99</div></div>
+                    <div class="app-result-score" title="AppBrain Score (0-100)" style="display:inline-block; margin-right: 15px; background-color: #c7b33f">84</div>
+                    <div style="display: inline-block; margin-right: 5px;">100,000+ downloads</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block;">Social</div>
+                </div>
+            </div>
+            <div>
+                <div class="app-result-large-top">
+                    <a href="/app/plume-premium-for-twitter/com.levelup.touiteurpremium" class="app-result app-result-large safelink" >
+                        <div class="tr" >
+                            <div class="td" style="padding: 8px">
+                                <div style="margin: 5px 0 10px 0">
+                                    <div class="browse-emph"><h2>Plume Premium for Twitter</h2></div>
+                                    <div class="app-result-desc-mid"><h3>LevelUp Studio</h3></div>
+                                </div>
+                                <div>
+                                    <img class="img-rounded pull-left" width="84px" src="http://lh5.ggpht.com/EIdxbqWOfosO3_T3-8iqCDgLawxSjW-WWRL8F06OLoqOVJMP2k-05Mr8wie8ZLLW2vJf1rvvHZAscBYm1axwf3U=s72"/>
+                                    <div class="app-result-desc-low" >Plume Premium (formerly known as Touiteur) is a key that will remove the sponsored contents in the free version of our twitter client. You will experience Plume ad-free and will support further development!
+
+                                        Important Note: You need to KEEP</div>
+                                </div>
+                            </div>
+                            <div class="td app-result-large-screens" style="vertical-align: top;">
+                                <div style="position: relative"><div style="position:absolute; top: 0px; left: 0px; width: 500px">
+                                        <img src="http://lh5.ggpht.com/884-mDNXIJvqIfsSSaIYzHy4wnSyLawrFukG_43lN1ILlnAnb9aER668a6DnSWGsSOWZcGnNx-cdeNNoAQqQlQ=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh5.ggpht.com/4UqfKcwX7hR5c7mFc376PLL-UWYAm18RT50c9giLpL90feFq_ez6jGmKEzch_TQYimGEQ8a8c4uBIeDCYjSWnHVQ=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh3.ggpht.com/9J7S8Txs36rkiZ38fTXJgEIyUfDLtD34kQEPm5qf3MdR3vI4bNKCwCxGeoiDbVUBl7ircoZd8nr2edgqZUdT6A=h150" style="height: 150px; float:left"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="app-result-desc-mid" style="padding: 2px 8px;">
+                    <div style="display: inline-block; margin-right: 15px;"><div class="browse-price">$4.78</div></div>
+                    <div class="app-result-score" title="AppBrain Score (0-100)" style="display:inline-block; margin-right: 15px; background-color: #c0b33f">85</div>
+                    <div style="display: inline-block; margin-right: 5px;">50,000+ downloads</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block;">Social</div>
+                </div>
+            </div>
+            <div>
+                <div class="app-result-large-top">
+                    <a href="/app/supersnap-for-snapchat/com.cfg.supersnap" class="app-result app-result-large safelink" >
+                        <div class="tr">
+                            <div class="td" style="padding: 8px">
+                                <div style="margin: 5px 0 10px 0">
+                                    <div class="browse-emph"><h2>SuperSnap for Snapchat</h2></div>
+                                    <div class="app-result-desc-mid"><h3>cfg apps</h3></div>
+                                </div>
+                                <div>
+                                    <img class="img-rounded pull-left" width="84px" src="http://lh6.ggpht.com/JJW72EG7rX_ACL1m1BmO1uiSLnmOIQgf_gBgKQu4ChZ8NmQ9uyp-Ky1Q7g1CMjcvmjNbb7FHAHB7A6e_af141zc=s72"/>
+                                    <div class="app-result-desc-low" >Send Snapchat snaps from gallery and automatically save snaps to your phone, and more!
+                                        Use your existing Snapchat username and password to get started right away.
+
+                                        ***Note: Turn off "Save snaps I send" (default is off), causes text to not s</div>
+                                </div>
+                            </div>
+                            <div class="td app-result-large-screens" style="vertical-align: top;">
+                                <div style="position: relative"><div style="position:absolute; top: 0px; left: 0px; width: 500px">
+                                        <img src="http://lh3.ggpht.com/-09MJWEtJ3CLeP6g25O4FdgbcslXzojSaTwLVAytWjNC7p81o0GOgLTZvTWDUHZRN-8hfMxhq6JEBthzGfre_q2_=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh4.ggpht.com/Z0HC86tvmDN8f-RxzKXcgBesFrGRQoTvUxAUL8nO7x2IRJLxWNyiLK_j14W0mmIH9WhL0IqqOJr4MI8CYjEpMw=h150" style="height: 150px; float:left"/>
+                                        <img src="http://lh6.ggpht.com/0Q7HrI2JGWUVZPmHhh-8LrQ5KtC66Y--fiFZnfw6b-iqnvYS1rupulWOx65iBzKklkHq28UzmM-aD7LssqMsl_c=h150" style="height: 150px; float:left"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="app-result-desc-mid" style="padding: 2px 8px;">
+                    <div style="display: inline-block; margin-right: 15px;">
+                        <div class="browse-price price-free">Free</div>
+                    </div>
+                    <div class="app-result-score" title="AppBrain Score (0-100)" style="display:inline-block; margin-right: 15px; background-color: #f8a43e">73</div>
+                    <div style="display: inline-block; margin-right: 5px;">5,000+ downloads</div>
+                    <div style="display: inline-block; margin-right: 5px;">|</div>
+                    <div style="display: inline-block;">Social</div>
+                </div>
+
+            </div>
+            <center>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">«</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+            </center>
+        </div>
+        <div class="group-sidebar">
+            <div class="browseside">
+                <div>
+                    <span class="browse-emph">Sort by</span>
+                    <a href="/apps/hot/social/paid/">
+                        <button type="button" class="sexy-button browsesort-button">
+                            Hot today
+                        </button>
+                    </a>
+
+                    <a href="/apps/hot-week/social/paid/">
+                        <button type="button" class="sexy-button browsesort-button chosen-button">
+                            <div class="chosen-button-line"><!----></div>
+                            Hot this week
+                        </button>
+                    </a>
+
+                    <a href="/apps/popular/social/paid/">
+                        <button type="button" class="sexy-button browsesort-button">
+                            All-time popular
+                        </button>
+                    </a>
+
+                    <a href="/apps/highest-rated/social/paid/">
+                        <button type="button" class="sexy-button browsesort-button">
+                            Top rated
+                        </button>
+                    </a>
+                    <div id="countrymenu" class="browsesort-menu" style="display: none;">
+                        <div class="table" style="width: 100%;"><div class="tr">
+                                <div class="td" style="width: 50%;"><div class="table" style="width: 100%;">
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-united-states/social/paid/">United States</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-united-kingdom/social/paid/">United Kingdom</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-germany/social/paid/">Germany</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-norway/social/paid/">Norway</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-sweden/social/paid/">Sweden</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-australia/social/paid/">Australia</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-netherlands/social/paid/">Netherlands</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-italy/social/paid/">Italy</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-denmark/social/paid/">Denmark</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-hong-kong/social/paid/">Hong Kong</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-brazil/social/paid/">Brazil</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-france/social/paid/">France</a></div></div>
+                                    </div>
+                                </div>
+                                <div class="td browsesort-menu-separator" style="width: 50%;"><div class="table" style="width: 100%;">
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-canada/social/paid/">Canada</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-spain/social/paid/">Spain</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-portugal/social/paid/">Portugal</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-south-korea/social/paid/">South Korea</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-japan/social/paid/">Japan</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-poland/social/paid/">Poland</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-hungary/social/paid/">Hungary</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-india/social/paid/">India</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-finland/social/paid/">Finland</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-thailand/social/paid/">Thailand</a></div></div>
+                                        <div class="tr"><div class="td header-menu-cell" style="display: block">
+                                                <a href="/apps/country-russia/social/paid/">Russia</a></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="countrybutton" type="button" class="sexy-button browsesort-button" onclick="javascript:clickCountry();">
+                        Popular in
+                    </button>
+                </div>
+                <br/>
+                <span class="browse-emph">Filter by</span>
+                <a href="/apps/hot-week/social/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    Off
+                </a>
+                <a href="/apps/hot-week/social/free/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    Free
+                </a>
+                <a href="/apps/hot-week/social/paid/" class="filterlink">
+                    <div class="filterbox filterbox-chosen"><!----></div>
+                    Paid
+                </a>
+                <a href="/apps/hot-week/social/new/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    New
+                </a>
+                <a href="/apps/hot-week/social/updated/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    Updated
+                </a>
+                <a href="/apps/hot-week/social/price-drop/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    Price Reduced
+                </a>
+                <a href="/apps/hot-week/social/app2sd/" class="filterlink">
+                    <div class="filterbox"><!----></div>
+                    App2SD supported
+                </a>
+            </div>
+            <div>
+                <img src="${images_url}/300x250.jpg" alt="Suggest Review" id="item" />
+            </div>
+        </div>
+    </div>
+</div>
