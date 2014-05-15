@@ -12,9 +12,9 @@
     <http use-expressions="true">
         <form-login login-page="/login.html"/>
         <logout logout-url="/signout.html" delete-cookies="JSESSIONID" />
-        <!-- Configure these elements to secure URIs in your application -->
-        <intercept-url pattern="/member/**" access="isAuthenticated()" />
-        <intercept-url pattern="/member**" access="isAuthenticated()" />
+        <!--Configure these elements to secure URIs in your application -->
+        <!--<intercept-url pattern="/member/**" access="isAuthenticated()" />-->
+        <!--<intercept-url pattern="/member**" access="isAuthenticated()" />-->
         <intercept-url pattern="/admin/**" access="isAuthenticated()" />
         <intercept-url pattern="/admin**" access="isAuthenticated()" />
         <intercept-url pattern="/backend/**" access="isAuthenticated()" />
@@ -35,13 +35,13 @@
 
     <authentication-manager alias="authenticationManager">
         <authentication-provider ref="socialAuthenticationProvider" />
-    </authentication-manager>	
+    </authentication-manager>
 
     <beans:bean id="userDetailsService" class="com.downfy.security.MyUserDetailsService" />
-    
+
     <beans:bean id="textEncryptor" class="org.springframework.security.crypto.encrypt.Encryptors"
                 factory-method="noOpText" />
-    
+
     <beans:bean id="rememberMeServices" class="com.downfy.security.PersistentTokenBasedRememberMeServicesCustom">
         <beans:property name="useSecureCookie" value="true" />
         <beans:property name="userDetailsService" ref="userDetailsService" />
@@ -51,7 +51,7 @@
         <beans:property name="key" value="myAppKey"/>
         <beans:property name="tokenRepository" ref="tokenRepository"/>
     </beans:bean>
-    
+
     <beans:bean id="tokenRepository"
                 class="org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl">
     </beans:bean>
