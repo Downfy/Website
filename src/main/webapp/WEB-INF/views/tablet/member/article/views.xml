@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 <tiles-definitions>
-    <definition extends="member" name="home/member/news/index">
+    <definition extends="member" name="home/member/article/index">
         <put-attribute name="body"
-                       value="/WEB-INF/views/tablet/member/news/index.jspx" />
+                       value="/WEB-INF/views/tablet/member/article/index.jspx" />
     </definition>
-    <definition extends="member" name="home/member/news/create">
+    <definition extends="member" name="home/member/article/create">
         <put-attribute name="body"
-                       value="/WEB-INF/views/tablet/member/news/create.jspx" />
+                       value="/WEB-INF/views/tablet/member/article/create.jspx" />
     </definition>
 </tiles-definitions>
