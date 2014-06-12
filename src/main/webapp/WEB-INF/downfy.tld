@@ -27,4 +27,10 @@
         <function-class>com.downfy.common.HtmlEscape</function-class>
         <function-signature>java.lang.String escapeBr(java.lang.String)</function-signature>
     </function>
+    <function>
+        <name>decodeMarkdown</name> 
+        <!-- Will be used to call your El Function:   ${myTagLibrary:randomColor()} inside your JSP page -->
+        <function-class>com.downfy.common.Utils</function-class>
+        <function-signature>java.lang.String decodeMarkdown(java.lang.String)</function-signature>
+    </function>
 </taglib>
