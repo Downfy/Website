@@ -30,6 +30,11 @@
         <put-attribute name="footer" value="/WEB-INF/views/tablet/member/footer.jspx" />
     </definition>
     
+    <definition name="editor" template="/WEB-INF/layouts/editor.jspx">
+        <put-attribute name="header" value="/WEB-INF/views/tablet/member/header.jspx" />
+        <put-attribute name="footer" value="/WEB-INF/views/tablet/member/footer.jspx" />
+    </definition>
+    
     <definition name="backend" template="/WEB-INF/layouts/backend.jspx">
         <put-attribute name="header" value="/WEB-INF/views/tablet/backend/header.jspx" />
         <put-attribute name="footer" value="/WEB-INF/views/tablet/backend/footer.jspx" />

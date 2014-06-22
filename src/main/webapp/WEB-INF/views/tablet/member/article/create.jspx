@@ -16,48 +16,80 @@
     <spring:url value="/member/application/create/json" var="application_json_url" />
     <spring:url value="/member/category" var="category_url" />
     <spring:url var="images_url" value="/resources/images" />
+    <spring:url var="home_url" value="/" />
+    <spring:url var="login_url" value="/login.html" />
+    <spring:url var="member_url" value="/member.html" />
+    <spring:url var="member_apps_url" value="/member/application.html" />
+    <spring:url var="member_create_app_url" value="/member/application/create.html" />
     <div class="panel panel-success">
         <div class="panel-heading"><strong>Create article</strong></div>
+        <span class="help-inline text-danger"><form:errors path="*" /></span>
         <div class="panel-body">
             <form:form id="add-article-form" role="form" modelAttribute="articleForm" action="${article_news_url}/create" method="POST">
+                <input type="hidden" name="id" value="${articleForm.id}"/>
+                <span class="help-inline text-danger"><form:errors path="id" /></span>
+                <button type="submit" class="btn btn-primary">Create article</button>
+                <p/>
                 <div class="form-group" id="appTitle">
                     <label>Title</label>
                     <form:input path="appTitle" class="form-control" placeholder="Title article"/>
                     <span class="help-inline text-danger"><form:errors path="appTitle" /></span>
                 </div>
                 <div class="form-group" id="appDescription">
-                    <label>Description</label>
-                    <textarea name="appDescription" class="form-control" rows="20"><!----></textarea>
                     <span class="help-inline text-danger"><form:errors path="appDescription" /></span>
+                    <div class="features">
+                        <section class="editor">
+                            <div class="outer">
+                                <div class="editorwrap">
+                                    <section class="entry-markdown">
+                                        <header class="floatingheader">
+                                            <label>Description</label>
+                                        </header>
+                                        <section class="entry-markdown-content">
+                                            <textarea id="entry-markdown" name="appDescription">
+####Input content article
+                                            </textarea>
+                                        </section>
+                                    </section>
+                                    <section class="entry-preview active">
+                                        <header class="floatingheader">
+                                            <label>Preview</label> <span class="entry-word-count">0 words</span>
+                                        </header>
+                                        <section class="entry-preview-content">
+                                            <div class="rendered-markdown"><!----></div>
+                                        </section>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div class="form-group" id="appCategory">
-                    <label>Article thumbnail</label>
-                    <br/>
-                    <span class="help-inline text-danger"><form:errors path="appThumbnail" /></span>
-                    <br/>
-                    <span id="appIconButton" class="btn fileinput-button">
-                        <c:choose>
-                            <c:when test="${not empty app.appIcon}">
-                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${app.appIcon}"/>
-                            </c:when>
-                            <c:otherwise>
-                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
-                            </c:otherwise>
-                        </c:choose>
-                        <input id="appIconInput" name="appThumbnail" type="hidden" value="${app.appIcon}" />
-                        <!-- The file input field used as target for the file upload widget -->
-                        <input id="appIconFileUpload" type="file" name="appArticleFile" data-url="${application_url}/upload/${app.id}/article"/>
-                        <br/>
-                        <br/>
-                        <div id="progress" class="progress progress-striped active" style="width: 124px;">
-                            <div class="progress-bar progress-bar-success"><!----></div>
-                        </div>
-                        <br/>
-                    </span>
+                <!--                <div class="form-group" id="appCategory">
+                                    <label>Article thumbnail</label>
+                                    <br/>
+                                    <span class="help-inline text-danger"><form:errors path="appThumbnail" /></span>
+                                    <br/>
+                                    <span id="appIconButton" class="btn fileinput-button">
+                <c:choose>
+                    <c:when test="${not empty app.appIcon}">
+                        <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${app.appIcon}"/>
+                    </c:when>
+                    <c:otherwise>
+                        <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
+                    </c:otherwise>
+                </c:choose>
+                <input id="appIconInput" name="appThumbnail" type="hidden" value="${app.appIcon}" />
+                 The file input field used as target for the file upload widget
+                <input id="appIconFileUpload" type="file" name="appArticleFile" data-url="${application_url}/upload/${app.id}/article"/>
+                <br/>
+                <br/>
+                <div id="progress" class="progress progress-striped active" style="width: 124px;">
+                    <div class="progress-bar progress-bar-success"></div>
                 </div>
-                <input type="hidden" name="id" value="${articleForm.id}"/>
-                <span class="help-inline text-danger"><form:errors path="id" /></span>
-                <button type="submit" class="btn btn-primary">Create article</button>
+                <br/>
+            </span>
+        </div>-->
+
             </form:form>
         </div>
     </div>

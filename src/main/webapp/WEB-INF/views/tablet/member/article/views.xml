@@ -5,7 +5,7 @@
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/member/article/index.jspx" />
     </definition>
-    <definition extends="member" name="home/member/article/create">
+    <definition extends="editor" name="home/member/article/create">
         <put-attribute name="body"
                        value="/WEB-INF/views/tablet/member/article/create.jspx" />
     </definition>

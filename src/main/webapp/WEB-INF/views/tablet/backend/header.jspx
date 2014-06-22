@@ -11,15 +11,6 @@
     <spring:url var="member_apps_url" value="/member/application.html" />
     <spring:url var="member_create_app_url" value="/member/application/create.html" />
     <div id="header" style="padding: 0">
-        <div class="logo"><!----></div>
-        <center>
-            <form class="navbar-form" style="position: relative;" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Input application name"/>
-                </div>
-                <button type="submit" class="btn btn-success">Search</button>
-            </form>
-        </center>
         <nav class="navbar" role="navigation" style="margin: 0">
             <div class="container">
                 <!-- Collect the nav links, forms, and other content for toggling -->
