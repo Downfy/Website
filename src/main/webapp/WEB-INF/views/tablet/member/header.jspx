@@ -18,8 +18,27 @@
                     <li>
                         <a href="${home_url}" title="Application Store"><span class="glyphicon glyphicon-home"><!----></span> Home</a>
                     </li>
-                    <li>
-                        <a href="#" title="Review Apps"><span class="glyphicon glyphicon-edit"><!----></span> Review Apps</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"><!----></span> Management Content
+                            <b class="caret"><!----></b>
+                        </a>
+                        <spring:url var="member_article_create_url" value="/member/article/create.html" />
+                        <spring:url var="member_article_url" value="/member/article.html" />
+                        <spring:url var="member_review_create_url" value="/member/review/create.html" />
+                        <spring:url var="member_review_url" value="/member/review.html" />
+                        <spring:url var="member_compare_create_url" value="/member/compare/create.html" />
+                        <spring:url var="member_compare_url" value="/member/compare.html" />
+                        <ul class="dropdown-menu">
+                            <li><a href="${member_article_create_url}">Create article</a></li>
+                            <li><a href="${member_article_url}">My article</a></li>
+                            <li class="divider"><!----></li>
+                            <li><a href="${member_review_create_url}">Create review</a></li>
+                            <li><a href="${member_review_url}">My review</a></li>
+                            <li class="divider"><!----></li>
+                            <li><a href="${member_compare_create_url}">Create compare</a></li>
+                            <li><a href="${member_compare_url}">My compare</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="${member_apps_url}" title="My Apps"><span class="glyphicon glyphicon-file"><!----></span> My Apps</a>

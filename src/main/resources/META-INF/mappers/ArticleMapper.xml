@@ -50,6 +50,21 @@
         WHERE CREATER = #{creater}
     </select>
 
+    <select id="findByType" parameterType="long" resultType="ArticleDomain">
+        SELECT
+        ID,
+        TITLE as appTitlte,
+        DESCRIPTION as appDescription,
+        THUMBNAIL as appThumbnail,
+        POINT as appPoint,
+        STATUS,
+        TYPE,
+        CREATER,
+        CREATED
+        FROM articles
+        WHERE TYPE = #{type}
+    </select>
+
     <select id="findByCreaterAndType" parameterType="long" resultType="ArticleDomain">
         SELECT
         ID,
@@ -76,6 +91,16 @@
         VALUES
         (#{id}, #{appTitle}, #{appDescription}, #{appThumbnail}, #{appPoint}, #{status}, #{type}, #{creater})
     </insert>
+
+    <update id="update" parameterType="ArticleDomain">
+        UPDATE articles 
+        SET
+        TITLE = #{appTitle},
+        DESCRIPTION = #{appDescription},
+        THUMBNAIL = #{appThumbnail},
+        POINT = #{appPoint}
+        WHERE ID = #{id}
+    </update>
 
     <update id="active" parameterType="long">
         UPDATE articles SET ENABLED = 2 WHERE ID = #{id}

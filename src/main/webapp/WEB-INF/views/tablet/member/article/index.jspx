@@ -9,14 +9,35 @@
     <jsp:useBean id="date" class="java.util.Date" />
     <spring:url value="/" var="home_url" />
     <spring:url var="resource_url" value="/resources" />
+    <spring:url var="article_url" value="/member/article" />
+    <spring:url var="images_url" value="/resources/images" />
+
     <ol class="breadcrumb">
         <li><a href="#">Downfy.com</a></li>
-        <li class="active">Android Apps</li>
+        <li class="active">Article</li>
     </ol>
     <c:forEach items="${articles}" var="item" varStatus="rowCounter">
-        ${item.id} <br/>
-        ${item.appTitle} <br/>
-        ${df:decodeMarkdown(item.appDescription)} <br/>
-        <img src="${resource_url}/${item.appThumbnail}"/> <br/>
+        <div class="col-md-3">
+            <a href="${article_url}/${item.id}">
+                <div style="overflow: hidden">
+                    <c:choose>
+                        <c:when test="${not empty item.appTitle}">
+                            ${item.appTitle}
+                        </c:when>
+                        <c:otherwise>
+                            Missing title
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+                <c:choose>
+                    <c:when test="${not empty item.appThumbnail}">
+                        <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${resource_url}/${item.appThumbnail}"/> <br/>
+                    </c:when>
+                    <c:otherwise>
+                        <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/> <br/>
+                    </c:otherwise>
+                </c:choose>
+            </a>
+        </div>
     </c:forEach>
 </div>
