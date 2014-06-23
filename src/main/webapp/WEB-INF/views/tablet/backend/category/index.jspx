@@ -17,6 +17,7 @@
             <div class="panel-heading"><strong>New category</strong></div>
             <div class="panel-body">
                 <form:form id="add-category-form" role="form" modelAttribute="categoryForm" action="${category_url}" method="POST">
+                    <span class="help-inline text-danger"><form:errors path="*" /></span>
                     <div class="form-group" id="name">
                         <label>Category Name</label>
                         <form:input path="name" class="form-control" placeholder="Category name"/>
@@ -29,19 +30,33 @@
                     </div>
                     <div class="form-group" id="parent">
                         <label>Category Parent</label>
-                        <select class="form-control input-lg" name="parent">
+                        <form:select path="parent" id="parent" class="form-control input-lg">
                             <option value="">Select a category</option>
-                            <option value="GAMES">Android Games</option>
-                            <option value="APPLICATIONS">Android Apps</option>
-                        </select>
+                            <form:option value="GAMES">Android Games</form:option>
+                            <form:option value="APPLICATIONS">Android Apps</form:option>
+                            <form:option value="ARTICLE">Article</form:option>
+                        </form:select>
+                        <span class="help-inline text-danger"><form:errors path="parent" /></span>
+                    </div>
+                    <div class="form-group" id="enabled">
+                        <label>
+                            <form:checkbox path="enabled" value="true"/> Enable category
+                        </label>
+                        <span class="help-inline text-danger"><form:errors path="enabled" /></span>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form:form>
             </div>
             <script type="text/javascript">
                 <!--//--><![CDATA[//><!--
-                function collectFormData(fields) {
+                function collectFormData($form) {
+                    var fields = $form.find('input');
                     var data = {};
+                    for (var i = 0; i < fields.length; i++) {
+                        var $item = $(fields[i]);
+                        data[$item.attr('name')] = $item.val();
+                    }
+                    fields = $form.find('select');
                     for (var i = 0; i < fields.length; i++) {
                         var $item = $(fields[i]);
                         data[$item.attr('name')] = $item.val();
@@ -53,8 +68,7 @@
                     var $form = $('#add-category-form');
                     $form.bind('submit', function(e) {
                         // Ajax validation
-                        var $inputs = $form.find('input');
-                        var data = collectFormData($inputs);
+                        var data = collectFormData($form);
 
                         $.post('${category_json_url}', data, function(response) {
                             $form.find('.form-group').removeClass('has-error');
@@ -85,7 +99,7 @@
     <div class="col-md-8 backend-create-detail">
         <div class="container-fluid">
             <div class="panel panel-success">
-                <div class="panel-heading"><strong>Categories</strong></div>
+                <div class="panel-heading"><strong>Categories apps</strong></div>
                 <div class="panel-body">
                     <!-- Table -->
                     <table class="table table-hover">
@@ -106,10 +120,10 @@
                                 Published
                             </th>
                         </tr>
-                        <c:forEach items="${cats}" var="item" varStatus="rowCounter">
+                        <c:forEach items="${apps}" var="item" varStatus="rowCounter">
                             <tr>
                                 <td>
-                                    ${rowCounter.count}
+                                    <a href="${category_url}/${item.url}">${rowCounter.count}</a>
                                 </td>
                                 <c:if test="${item.parent eq 'GAMES'}">
                                     <td>
@@ -121,6 +135,11 @@
                                         Android Apps
                                     </td>
                                 </c:if>
+                                <c:if test="${item.parent eq 'ARTICLE'}">
+                                    <td>
+                                        Article
+                                    </td>
+                                </c:if>
                                 <td>
                                     ${item.name}
                                 </td>
@@ -128,8 +147,140 @@
                                     <a href="#${item.url}" title="${item.name}">${item.url}</a>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="enabled" checked="${item.enabled}"/>
-                                    <input type="hidden" name="id" value="${item.id}"/>
+                                    <c:choose>
+                                        <c:when test="${item.enabled}">
+                                            <input type="checkbox" name="enabled" checked=""/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <input type="checkbox" name="enabled"/>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading"><strong>Categories game</strong></div>
+                <div class="panel-body">
+                    <!-- Table -->
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Category Parent
+                            </th>
+                            <th>
+                                Category Name
+                            </th>
+                            <th>
+                                URL-Friendly
+                            </th>
+                            <th>
+                                Published
+                            </th>
+                        </tr>
+                        <c:forEach items="${games}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    <a href="${category_url}/${item.url}">${rowCounter.count}</a>
+                                </td>
+                                <c:if test="${item.parent eq 'GAMES'}">
+                                    <td>
+                                        Android Games
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 'APPLICATIONS'}">
+                                    <td>
+                                        Android Apps
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 'ARTICLE'}">
+                                    <td>
+                                        Article
+                                    </td>
+                                </c:if>
+                                <td>
+                                    ${item.name}
+                                </td>
+                                <td>
+                                    <a href="#${item.url}" title="${item.name}">${item.url}</a>
+                                </td>
+                                <td>
+                                    <c:choose>
+                                        <c:when test="${item.enabled}">
+                                            <input type="checkbox" name="enabled" checked=""/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <input type="checkbox" name="enabled"/>
+                                        </c:otherwise>
+                                    </c:choose>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading"><strong>Categories article</strong></div>
+                <div class="panel-body">
+                    <!-- Table -->
+                    <table class="table table-hover">
+                        <tr>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Category Parent
+                            </th>
+                            <th>
+                                Category Name
+                            </th>
+                            <th>
+                                URL-Friendly
+                            </th>
+                            <th>
+                                Published
+                            </th>
+                        </tr>
+                        <c:forEach items="${article}" var="item" varStatus="rowCounter">
+                            <tr>
+                                <td>
+                                    <a href="${category_url}/${item.url}">${rowCounter.count}</a>
+                                </td>
+                                <c:if test="${item.parent eq 'GAMES'}">
+                                    <td>
+                                        Android Games
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 'APPLICATIONS'}">
+                                    <td>
+                                        Android Apps
+                                    </td>
+                                </c:if>
+                                <c:if test="${item.parent eq 'ARTICLE'}">
+                                    <td>
+                                        Article
+                                    </td>
+                                </c:if>
+                                <td>
+                                    ${item.name}
+                                </td>
+                                <td>
+                                    <a href="#${item.url}" title="${item.name}">${item.url}</a>
+                                </td>
+                                <td>
+                                    <c:choose>
+                                        <c:when test="${item.enabled}">
+                                            <input type="checkbox" name="enabled" checked=""/>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <input type="checkbox" name="enabled"/>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </td>
                             </tr>
                         </c:forEach>

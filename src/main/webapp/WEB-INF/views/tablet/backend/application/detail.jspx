@@ -127,7 +127,7 @@
                         event.preventDefault();
                         $("#category").prop("disabled", false);
                         $('#category').html('<option value="0">Select a category</option>');
-                        $.get('${category_url}/' + $(this).val(), function(response) {
+                        $.get('${category_url}/parent/' + $(this).val(), function(response) {
                             for (var i = 0; i < response.length; i++) {
                                 var item = response[i];
                                 $('#category')
