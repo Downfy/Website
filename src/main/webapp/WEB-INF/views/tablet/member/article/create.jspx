@@ -26,6 +26,39 @@
                     <form:input path="appTitle" class="form-control" placeholder="Title article"/>
                     <span class="help-inline text-danger"><form:errors path="appTitle" /></span>
                 </div>
+                <div class="form-group" id="category">
+                    <label>Category Type</label>
+                    <form:select path="category" id="category" class="form-control input-lg">
+                        <form:option value="">Select an category</form:option>
+                        <c:forEach items="${categories}" var="item" varStatus="rowCounter">
+                            <form:option value='${item.key}'>${item.value}</form:option>
+                        </c:forEach>
+                    </form:select>
+                    <span class="help-inline text-danger"><form:errors path="category" /></span>
+                </div>
+                <div class="form-group" id="appThumbnail">
+                    <label>Article thumbnail</label>
+                    <span class="help-inline text-danger"><form:errors path="appThumbnail" /></span>
+                    <br/>
+                    <span id="appIconButton" class="btn fileinput-button">
+                        <c:choose>
+                            <c:when test="${not empty articleForm.appThumbnail}">
+                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${articleForm.appThumbnail}"/>
+                            </c:when>
+                            <c:otherwise>
+                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
+                            </c:otherwise>
+                        </c:choose>
+                        <input id="appIconInput" name="appThumbnail" type="hidden" value="${articleForm.appThumbnail}" />
+                        <input id="appIconFileUpload" type="file" name="appArticleFile" data-url="${application_url}/upload/article"/>
+                        <br/>
+                        <br/>
+                        <div id="progress" class="progress progress-striped active" style="width: 124px;">
+                            <div class="progress-bar progress-bar-success"><!----></div>
+                        </div>
+                        <br/>
+                    </span>
+                </div>
                 <div class="form-group" id="appDescription">
                     <span class="help-inline text-danger"><form:errors path="appDescription" /></span>
                     <div class="features">
@@ -54,29 +87,6 @@
                             </div>
                         </section>
                     </div>
-                </div>
-                <div class="form-group" id="appThumbnail">
-                    <label>Article thumbnail</label>
-                    <span class="help-inline text-danger"><form:errors path="appThumbnail" /></span>
-                    <br/>
-                    <span id="appIconButton" class="btn fileinput-button">
-                        <c:choose>
-                            <c:when test="${not empty articleForm.appThumbnail}">
-                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${home_url}resources${articleForm.appThumbnail}"/>
-                            </c:when>
-                            <c:otherwise>
-                                <img id="appIconImage" class="img-thumbnail" alt="124x124" style="width: 124px; height: 124px;" src="${images_url}/app-icon-detail.png"/>
-                            </c:otherwise>
-                        </c:choose>
-                        <input id="appIconInput" name="appThumbnail" type="hidden" value="${articleForm.appThumbnail}" />
-                        <input id="appIconFileUpload" type="file" name="appArticleFile" data-url="${application_url}/upload/article"/>
-                        <br/>
-                        <br/>
-                        <div id="progress" class="progress progress-striped active" style="width: 124px;">
-                            <div class="progress-bar progress-bar-success"></div>
-                        </div>
-                        <br/>
-                    </span>
                 </div>
             </form:form>
         </div>

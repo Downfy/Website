@@ -338,7 +338,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {
     position: absolute;
     bottom: 0;
     top: 0;
-    background: #fff
+    background: #f6f7f9;
 }
 @media (max-width: 860px), (max-width: 860px) {
     .features .editor .entry-markdown, .features .editor .entry-preview {
